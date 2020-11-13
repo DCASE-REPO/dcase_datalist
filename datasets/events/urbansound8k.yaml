@@ -1,0 +1,45 @@
+# === DATASET ===
+dataset:
+  name: UrbanSound8K
+  provider: NYU
+  abbreviation: US8K
+  year: 2014
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  url: http://urbansounddataset.weebly.com/urbansound8k.html
+  license: Creative Commons
+  cite: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
+  title: "A Dataset and Taxonomy for Urban Sound Research"
+
+# === AUDIO ===
+audio:
+  files:
+    total_count: 8732
+    total_duration_minutes: 525
+    file_length_seconds: 4
+
+  content_type: Live
+  material_source: Freesound
+
+meta:
+  scene:
+    classes: 1
+    list: street
+
+  event:
+    classes: 10
+    class_balance: Almost
+
+    annotation:
+      type: Weak
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Urban Sound Taxonomy
+
+    instance:
+      count: 8732
+      average_instaces_per_class: 873.2
+

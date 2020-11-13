@@ -1,0 +1,42 @@
+# === DATASET ===
+dataset:
+  provider: UPF
+  name: FSD50K
+  abbreviation: FSD50K
+  year: 2020
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  url: https://annotator.freesound.org/fsd/release/FSD50K/ #https://zenodo.org/record/4060432#.X65IJRGxW7A
+  license: Creative Commons
+  cite: https://arxiv.org/pdf/2010.00475.pdf;Fonseca2020
+  title: "FSD50K: an Open Dataset of Human-Labeled Sound Events"
+
+# === AUDIO ===
+audio:
+  channels:
+    setup: Mono
+    number: 1
+
+  files:
+    total_count: 51197
+    total_duration_minutes: 6498
+    file_length_seconds: 0.3 - 30
+
+  content_type: Live
+  material_source: Freesound
+
+# === META ===
+meta:
+  event:
+    classes: 200
+    annotation:
+      type: Weak
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: AudioSet
+
+info:
+  evaluation_campaign: DCASE2020 task4

@@ -1,0 +1,15 @@
+# === DATASET ===
+dataset:
+  name:                                 # [string]
+  provider:                             # [string]
+  abbreviation:                         # [string]
+  year:                                 # [int], Release year
+  modalities:                           # [string], comma separated list, possible values: Audio | Video
+
+# === DATASET SOURCE ===
+source:
+  url:                                  # [url]
+  license:                              # [string], possible values: Creative commons | Free | Commercial
+  cite:                                 # [string], Paper to cite for the dataset
+  title:                                # [string], Paper title
+  size:                                 # [string], Approximate package size (unit GB, MB)

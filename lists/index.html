@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DCASE Datasets</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.css">
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/css.min/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/css.min/bootstrap-table-filter-control.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/css.min/datatable.min.css">
+
+    <style>
+        p {
+            text-align: justify;
+        }
+        nav[data-toggle='toc'] {
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            nav.affix[data-toggle='toc'] {
+                position: static;
+            }
+            nav[data-toggle='toc'] .nav .nav {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-12">
+            <h1>DCASE datasets</h1>
+
+            <h2>Sound event datasets</h2>
+            <table class="table datatable"
+                   data-json="dcase_events_datasets.json"
+                   data-id-field="dataset-name"
+                   data-sort-name="dataset-name"
+                   data-sort-order="asc"
+                   data-pagination="false"
+                   data-show-pagination-switch="false"
+
+                   data-tag-mode="column"
+                   data-show-columns="true"
+                   data-show-chart="false"
+                   data-chart-modes="bar"
+                   data-chart-default-mode="bar"
+                   data-bar-show-xaxis="false"
+                   data-chart-tooltip-fields="dataset-provider,dataset-name"
+                   data-filter-control="true"
+                   data-filter-show-clear="true"
+            >
+                <thead>
+                    <tr>
+                        <th data-field="dataset-name"
+                            data-sortable="true">Name</th>
+                        <th data-field="dataset-provider"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">Provider</th>
+                        <th data-field="dataset-abbreviation"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">Abbreviation</th>
+                        <th data-field="source-url"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="url"
+                            data-switchable="true">Link</th>
+                        <th data-field="source-license"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">License</th>
+
+                        <th data-field="dataset-year"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">Year</th>
+
+                        <th class="small"
+                            data-field="source-cite"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="ref"
+                            data-switchable="true">Cite</th>
+                        <th class="small"
+                            data-field="source-title"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">Paper title</th>
+
+                        <th data-field="dataset-modalities"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Data <br>modalities</th>
+
+                        <th class="sep-left-cell"
+                            data-field="audio-files-total_duration_minutes"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">Total <br>duration <br>(min)</th>
+                        <th data-field="audio-files-total_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">Audio <br>files</th>
+                        <th data-field="audio-files-file_length_seconds"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">Audio <br>length (sec)</th>
+
+                        <th data-field="audio-content_type"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Audio <br>content <br>type</th>
+                        <th data-field="audio-recording_setup"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Audio <br>recording <br>setup</th>
+                        <th data-field="audio-material_source"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Audio <br>material <br>source</th>
+
+                        <th data-field="audio-channels-setup"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Channel <br>setup</th>
+                        <th data-field="audio-channels-number"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">Channels</th>
+
+                        <th class="sep-left-cell"
+                            data-field="meta-scene-classes"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">Scene <br>classes</th>
+                        <th data-field="meta-scene-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Scene <br>class <br>balance</th>
+                        <th data-field="meta-scene-list"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Scene <br>list</th>
+
+                        <th class="sep-left-cell"
+                            data-field="meta-event-classes"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">Event <br>classes</th>
+                        <th data-field="meta-event-instance-count"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-switchable="true">Event <br>instance<br> count</th>
+                        <th data-field="meta-event-instance-average_instaces_per_class"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="float1"
+                            data-switchable="true">Event <br>instance<br> per class</th>
+                        <th data-field="meta-event-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>class <br>balance</th>
+                        <th data-field="meta-event-annotation-type"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>annotation<br> type</th>
+                        <th data-field="meta-event-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>annotation<br> source</th>
+                        <th data-field="meta-event-annotation-labelled_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>annotations<br> labelled (%)</th>
+                        <th data-field="meta-event-annotation-validated_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>annotations<br> validated (%)</th>
+                        <th data-field="meta-event-annotation-strong_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>annotations<br> strong (%)</th>
+
+                        <th data-field="meta-event-labeling-hierarchical"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>labeling / <br>hierarchical</th>
+
+                        <th data-field="meta-event-labeling-ontology_name"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Event <br>labeling / <br>ontology</th>
+
+                        <th class="sep-left-cell"
+                            data-field="info-evaluation_campaign"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Evaluation campaigns</th>
+
+                        <th class="sep-left-cell"
+                            data-field="info-comments"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">Comments</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-javascript.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-markup.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-json.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/components/prism-yaml.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/bootstrap-table-filter-control.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/js-yaml.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.rawgit.com/toni-heittola/js-datatable/v1.1.0/js.min/datatable.min.js"></script>
+</body>
+
+</html>

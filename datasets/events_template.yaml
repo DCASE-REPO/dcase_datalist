@@ -1,0 +1,62 @@
+# === DATASET ===
+dataset:
+  name:                                 # [string]
+  provider:                             # [string]
+  abbreviation:                         # [string]
+  year:                                 # [int], Release year
+  modalities:                           # [string], comma separated list, possible values: Audio | Video
+
+# === DATASET SOURCE ===
+source:
+  url:                                  # [url]
+  license:                              # [string], possible values: Creative commons | Free | Commercial
+  cite:                                 # [string], Paper to cite for the dataset
+  title:                                # [string], Paper title
+  size:                                 # [string], Approximate package size (unit GB, MB)
+
+# === AUDIO ===
+audio:
+  channels:
+    setup:                              # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array
+    number:                             # [int], Number of channels
+
+  files:
+    total_count:                        # [int], Total number of files
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10
+
+  content_type:                         # [string], possible values: Freefield | Synthetic | Isolated
+  recording_setup:                      # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online
+
+# === META ===
+meta:
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [string], comma separated list of scene classes
+
+  event:
+    classes:                            # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type:                             # [string], possible values: Strong | Weak | Location | None
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | ML
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+
+    labeling:
+      hierarchical:                      # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === INFO ===
+info:
+  evaluation_campaign:                  # [string], comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  comments:                             # [string], comments
