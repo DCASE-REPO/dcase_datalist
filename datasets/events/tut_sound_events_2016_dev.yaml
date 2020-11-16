@@ -8,7 +8,7 @@ dataset:
 
 # === DATASET SOURCE ===
 source:
-  url: https://zenodo.org/record/45759
+  data_url: https://zenodo.org/record/45759
   license: Free
   cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
   title: "TUT Database for Acoustic Scene Classification and Sound Event Detection"
@@ -23,6 +23,7 @@ audio:
     total_count: 22
     total_duration_minutes: 78
     file_length_seconds: 180-300
+    file_length: Variable
 
   content_type: Live
   material_source: Original
@@ -46,6 +47,13 @@ meta:
     instance:
       count: 954
       average_instaces_per_class: 53.0
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 4
+  sets: Train, Test
+
 
 info:
   evaluation_campaign: DCASE2016 task3

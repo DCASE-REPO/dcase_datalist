@@ -8,7 +8,8 @@ dataset:
 
 # === DATASET SOURCE ===
 source:
-  url: http://urbansed.weebly.com/
+  data_url: http://urbansed.weebly.com/download.html
+  companion_site_url: http://urbansed.weebly.com/
   license: Free
   cite: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_scaper_waspaa_2017.pdf;Salamon2017
   title: "Scaper: A library for soundscape synthesis and augmentation"
@@ -23,6 +24,7 @@ audio:
     total_count: 10000
     total_duration_minutes: 1800
     file_length_seconds: 10
+    file_length: Constant
 
   content_type: Synthetic
   material_source: Freesound
@@ -48,4 +50,10 @@ meta:
     instance:
       count: 50000
       average_instaces_per_class: 5000
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
 

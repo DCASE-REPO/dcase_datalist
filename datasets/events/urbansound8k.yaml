@@ -8,7 +8,8 @@ dataset:
 
 # === DATASET SOURCE ===
 source:
-  url: http://urbansounddataset.weebly.com/urbansound8k.html
+  data_url: https://urbansounddataset.weebly.com/download-urbansound8k.html
+  companion_site_url: http://urbansounddataset.weebly.com/urbansound8k.html
   license: Creative Commons
   cite: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
   title: "A Dataset and Taxonomy for Urban Sound Research"
@@ -19,6 +20,7 @@ audio:
     total_count: 8732
     total_duration_minutes: 525
     file_length_seconds: 4
+    file_length: Constant
 
   content_type: Live
   material_source: Freesound
@@ -42,4 +44,10 @@ meta:
     instance:
       count: 8732
       average_instaces_per_class: 873.2
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 10
+  sets: Train, Test
 

@@ -37,7 +37,7 @@
             <h1>DCASE datasets</h1>
 
             <h2>Sound event datasets</h2>
-            <table class="table datatable"
+            <table class="table datatable table-condensed"
                    data-json="dcase_events_datasets.json"
                    data-id-field="dataset-name"
                    data-sort-name="dataset-name"
@@ -67,11 +67,16 @@
                             data-sortable="true"
                             data-visible="false"
                             data-switchable="true">Abbreviation</th>
-                        <th data-field="source-url"
+                        <th data-field="source-data_url"
                             data-sortable="true"
                             data-visible="true"
                             data-value-type="url"
-                            data-switchable="true">Link</th>
+                            data-switchable="true">Download</th>
+                        <th data-field="source-companion_site_url"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="url"
+                            data-switchable="true">Site</th>
                         <th data-field="source-license"
                             data-sortable="true"
                             data-visible="true"
@@ -114,10 +119,15 @@
                             data-sortable="true"
                             data-visible="false"
                             data-switchable="true">Audio <br>files</th>
+                        <th data-field="audio-files-file_length"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Audio <br>length</th>
                         <th data-field="audio-files-file_length_seconds"
                             data-sortable="true"
                             data-visible="false"
-                            data-value-type="int"
                             data-switchable="true">Audio <br>length (sec)</th>
 
                         <th data-field="audio-content_type"
@@ -151,8 +161,8 @@
                             data-value-type="int"
                             data-switchable="true">Channels</th>
 
-                        <th class="sep-left-cell"
-                            data-field="meta-scene-classes"
+                        <th data-field="meta-scene-classes"
+                            class="sep-left-cell"
                             data-sortable="true"
                             data-visible="true"
                             data-value-type="int"
@@ -170,8 +180,8 @@
                             data-filter-control="select"
                             data-switchable="true">Scene <br>list</th>
 
-                        <th class="sep-left-cell"
-                            data-field="meta-event-classes"
+                        <th data-field="meta-event-classes"
+                            class="sep-left-cell"
                             data-sortable="true"
                             data-visible="true"
                             data-value-type="int"
@@ -179,6 +189,7 @@
                         <th data-field="meta-event-instance-count"
                             data-sortable="true"
                             data-visible="true"
+                            data-value-type="int"
                             data-switchable="true">Event <br>instance<br> count</th>
                         <th data-field="meta-event-instance-average_instaces_per_class"
                             data-sortable="true"
@@ -231,21 +242,40 @@
 
                         <th data-field="meta-event-labeling-ontology_name"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Event <br>labeling / <br>ontology</th>
 
                         <th class="sep-left-cell"
-                            data-field="info-evaluation_campaign"
+                            data-field="split-provided"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Data <br>split</th>
+                        <th data-field="split-sets"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Split <br>sets</th>
+                        <th data-field="split-folds"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">Split <br>sets</th>
+
+                        <th data-field="info-evaluation_campaign"
+                            class="sep-left-cell"
                             data-sortable="true"
                             data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Evaluation campaigns</th>
 
-                        <th class="sep-left-cell"
-                            data-field="info-comments"
+                        <th data-field="info-comments"
+                            class="sep-left-cell"
                             data-sortable="true"
                             data-visible="false"
                             data-switchable="true">Comments</th>
