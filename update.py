@@ -12,9 +12,9 @@ def main(argv):
     print('===================')
 
     # Target files
-    scenes_list = os.path.join('lists', 'dcase_scenes_datasets.json')
-    events_list = os.path.join('lists', 'dcase_events_datasets.json')
-    captions_list = os.path.join('lists', 'dcase_captions_datasets.json')
+    scenes_list = os.path.join('lists', 'scenes_datasets.json')
+    events_list = os.path.join('lists', 'events_datasets.json')
+    captions_list = os.path.join('lists', 'captions_datasets.json')
 
     # Paths
     dataset_meta_path = 'datasets'
@@ -52,7 +52,11 @@ def main(argv):
                     for key2 in list(scenes_template[key1].keys()):
                         if isinstance(scenes_template[key1][key2], dict):
                             for key3 in list(scenes_template[key1][key2].keys()):
-                                item[key1 + '-' + key2+'-'+key3] = data.get(key1, {}).get(key2, {}).get(key3, None)
+                                if isinstance(scenes_template[key1][key2][key3], dict):
+                                    for key4 in list(scenes_template[key1][key2][key3].keys()):
+                                        item[key1 + '-' + key2 + '-' + key3 + '-' + key4] = data.get(key1, {}).get(key2, {}).get(key3, {}).get(key4, None)
+                                else:
+                                    item[key1 + '-' + key2+'-'+key3] = data.get(key1, {}).get(key2, {}).get(key3, None)
                         else:
                             if data.get(key1, None):
                                 item[key1+'-'+key2] = data.get(key1, {}).get(key2, None)
@@ -60,6 +64,10 @@ def main(argv):
                                 item[key1 + '-' + key2] = None
                 else:
                     item[key1] = data.get(key1, None)
+
+            for field in list(item.keys()):
+                if item[field] is None:
+                    item[field] = ''
 
             scenes_list_data.append(item)
 
@@ -70,13 +78,13 @@ def main(argv):
             data = yaml.load(file, Loader=yaml.FullLoader)
             item = {}
 
-            for key1 in list(events_template.keys()):
-                if isinstance(events_template[key1], dict):
-                    for key2 in list(events_template[key1].keys()):
-                        if isinstance(events_template[key1][key2], dict):
-                            for key3 in list(events_template[key1][key2].keys()):
-                                if isinstance(events_template[key1][key2][key3], dict):
-                                    for key4 in list(events_template[key1][key2][key3].keys()):
+            for key1 in list(scenes_template.keys()):
+                if isinstance(scenes_template[key1], dict):
+                    for key2 in list(scenes_template[key1].keys()):
+                        if isinstance(scenes_template[key1][key2], dict):
+                            for key3 in list(scenes_template[key1][key2].keys()):
+                                if isinstance(scenes_template[key1][key2][key3], dict):
+                                    for key4 in list(scenes_template[key1][key2][key3].keys()):
                                         item[key1 + '-' + key2 + '-' + key3 + '-' + key4] = data.get(key1, {}).get(key2, {}).get(key3, {}).get(key4, None)
                                 else:
                                     item[key1 + '-' + key2+'-'+key3] = data.get(key1, {}).get(key2, {}).get(key3, None)
@@ -108,6 +116,7 @@ def main(argv):
         json.dump(captions_list_data, outfile)
 
     print('  [DONE]')
+
 
 if __name__ == "__main__":
     sys.exit(main(sys.argv))
