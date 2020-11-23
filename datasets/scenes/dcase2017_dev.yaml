@@ -1,0 +1,86 @@
+# === DATASET ===
+dataset:
+  name: TUT Acoustic scenes 2017 Development dataset
+  provider: TUT
+  abbreviation: TUT-ASC2017-DEV
+  year: 2017
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  data_url: https://zenodo.org/record/400515
+  license: Free
+  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+  title: "DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System"
+  size: 10.7GB
+
+# === AUDIO ===
+audio:
+  channels:
+    setup: Binaural
+    number: 2
+
+  files:
+    total_count: 4680
+    total_duration_minutes: 780
+    file_length: Constant
+    file_length_seconds: 10
+
+  content_type: Freefield
+  recording_setup: Uncontrolled
+  material_source: Original
+  variability_source:
+    - City
+    - Location
+    - Position
+
+# === META ===
+meta:
+  scene:
+    classes: 15
+    class_balance: Yes
+    list:
+      - beach
+      - bus
+      - cafe/restaurant
+      - car
+      - city center
+      - forest path
+      - grocery store
+      - home
+      - library
+      - metro station
+      - office
+      - park
+      - residential area
+      - train
+      - tram
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 4680
+      average_instaces_per_class: 312
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 4
+  sets: Train,Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/TUT-ARG/DCASE2017-baseline-system
+  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2017 task1
+

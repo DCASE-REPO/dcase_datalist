@@ -1,0 +1,77 @@
+# === DATASET ===
+dataset:
+  name: TUT Acoustic scenes 2018 Evaluation dataset
+  provider: TUT
+  abbreviation: TUT-ASC2018-Eval
+  year: 2018
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  data_url: https://zenodo.org/record/1293883
+  license: Free
+  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+  title: "A multi-device dataset for urban acoustic scene classification"
+  size: 8.3GB
+
+# === AUDIO ===
+audio:
+  channels:
+    setup: Binaural
+    number: 2
+
+  files:
+    total_count:
+    total_duration_minutes:
+    file_length: Constant
+    file_length_seconds: 10
+
+  content_type: Freefield
+  recording_setup: Uncontrolled
+  material_source: Original
+  variability_source:
+    - Country
+    - City
+    - Location
+    - Position
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:
+      average_instaces_per_class:
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
+  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2018 task1A
+

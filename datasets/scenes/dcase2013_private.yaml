@@ -1,0 +1,76 @@
+# === DATASET ===
+dataset:
+  name: IEEE AASP CASA Challenge - Private Dataset for Scene Classification Task
+  provider: IEEE AASP Challenge 2013
+  abbreviation: DCASE2013-ASC-EVAL
+  year: 2013
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  data_url: https://archive.org/details/dcase2013_scene_classification_testset
+  companion_site_url: http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html
+  license: Free
+  cite: https://hal.archives-ouvertes.fr/hal-01253912/document;Stowell2015
+  title: Detection and classification of acoustic scenes and events
+  size: 354MB
+
+# === AUDIO ===
+audio:
+  channels:
+    setup: Binaural
+    number: 2
+
+  files:
+    total_count: 100
+    total_duration_minutes: 50
+    file_length: Constant
+    file_length_seconds: 30
+
+  content_type: Freefield
+  recording_setup: Uncontrolled
+  material_source: Original
+  variability_source:
+    - Location
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    class_balance: Yes
+    list:
+      - bus
+      - busy street
+      - office
+      - openair market
+      - park
+      - quiet street
+      - restaurant
+      - supermarket
+      - metro
+      - metro station
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 100
+      average_instaces_per_class: 10
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://code.soundsoftware.ac.uk/projects/smacpy
+  cite: https://hal.archives-ouvertes.fr/hal-01123764/document;Giannoulis2013
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2013 task 1

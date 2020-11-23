@@ -1,0 +1,86 @@
+# === DATASET ===
+dataset:
+  name: TUT Acoustic scenes 2016 Development dataset
+  provider: TUT
+  abbreviation: TUT-ASC2016-DEV
+  year: 2016
+  modalities: Audio
+
+# === DATASET SOURCE ===
+source:
+  data_url: https://zenodo.org/record/45739
+  license: Free
+  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+  title: TUT Database for Acoustic Scene Classificationand Sound Event Detection
+  size: 7.5GB
+
+# === AUDIO ===
+audio:
+  channels:
+    setup: Binaural
+    number: 2
+
+  files:
+    total_count: 1170
+    total_duration_minutes: 585
+    file_length: Constant
+    file_length_seconds: 30
+
+  content_type: Freefield
+  recording_setup: Uncontrolled
+  material_source: Original
+  variability_source:
+    - City
+    - Location
+    - Position
+
+# === META ===
+meta:
+  scene:
+    classes: 15
+    class_balance: Yes
+    list:
+      - beach
+      - bus
+      - cafe/restaurant
+      - car
+      - city center
+      - forest path
+      - grocery store
+      - home
+      - library
+      - metro station
+      - office
+      - park
+      - residential area
+      - train
+      - tram
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1170
+      average_instaces_per_class: 78
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 4
+  sets: Train,Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/TUT-ARG/DCASE2016-baseline-system-python
+  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2016 task1
+
