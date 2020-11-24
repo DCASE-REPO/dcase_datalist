@@ -10,7 +10,7 @@ dataset:
 source:
   data_url:                             # [url], Link to download the dataset
   companion_site_url:                   # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
-  license:                              # [string], possible values: Creative commons | Free | Commercial
+  license:                              # [string], possible values: Creative commons | Free | Commercial | Proprietary | R&D only
   cite:                                 # [url];[key], Paper to cite for the dataset
   title:                                # [string], Paper title
   size:                                 # [string], Approximate package size (unit GB, MB)
@@ -29,7 +29,7 @@ audio:
 
   content_type:                         # [string], possible values: Freefield | Synthetic | Isolated
   recording_setup:                      # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
-  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online
+  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online | Crowdsourced
 
 # === META ===
 meta:

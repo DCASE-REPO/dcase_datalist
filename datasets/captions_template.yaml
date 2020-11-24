@@ -29,7 +29,7 @@ audio:
 
   content_type:                         # [string], possible values: Freefield | Synthetic | Isolated
   recording_setup:                      # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
-  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online
+  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online | Crowdsourced
 
 
 # === CROSS-VALIDATION SETUP ===
