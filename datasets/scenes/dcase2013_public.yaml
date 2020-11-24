@@ -28,7 +28,9 @@ audio:
     file_length_seconds: 30
 
   content_type: Freefield
+  scene_content: Constant
   recording_setup: Uncontrolled
+  recording_spot_type: Unknown
   material_source: Original
   variability_source:
     - Location
