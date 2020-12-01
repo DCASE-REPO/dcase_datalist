@@ -2,31 +2,55 @@
 dataset:
   name: TUT Sound events 2016, Development dataset
   provider: TUT
-  abbreviation: TUT-SED2016
+  abbreviation: TUT-SED2016-DEV
   year: 2016
   modalities: Audio
+  collection_name: TUT Sound events
+  related_datasets:
+    - TUT-SED2016-EVAL
+    - TUT-SED2017-DEV
+    - TUT-SED2017-EVAL
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/45759
   license: Free
-  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
-  title: "TUT Database for Acoustic Scene Classification and Sound Event Detection"
-  size: 0.9 GB
+
+  download:
+    url: https://zenodo.org/record/45759
+    size: 0.9 GB
+
+  citation:
+    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+    title: "TUT Database for Acoustic Scene Classification and Sound Event Detection"
 
 # === AUDIO ===
 audio:
-  channels:
-    setup: Binaural
-    number: 2
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Fixed
+
   files:
     total_count: 22
     total_duration_minutes: 78
-    file_length_seconds: 180-300
     file_length: Variable
-
-  content_type: Live
-  material_source: Original
+    file_length_seconds: 180-300
 
 # === META ===
 meta:

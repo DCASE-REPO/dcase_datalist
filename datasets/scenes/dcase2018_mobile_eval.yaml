@@ -11,6 +11,12 @@ dataset:
     - TUT-ASC2018-EVAL
     - TUT-ASC2018-MOBILE-DEV
 
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/1293901
+    size: 16.0GB
+
 # === DATASET SOURCE ===
 source:
   data_url: https://zenodo.org/record/1293901
@@ -26,30 +32,35 @@ audio:
       type: Constant
       format: wav
       lossy_compression: No
-      bits: 24
+      bit_rate: 24
       sampling_rate_khz: 48
 
     channels:
       setup: Mono
       number: 1
 
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+        - Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Fixed
+
   files:
     total_count: 15120
     total_duration_minutes: 2520
     file_length: Constant
     file_length_seconds: 10
-
-  content_type: Freefield
-  scene_content: Constant
-  recording_setup: Uncontrolled
-  recording_spot_type: Fixed
-  material_source: Original
-  variability_source:
-    - Country
-    - City
-    - Location
-    - Position
-    - Device
 
 # === META ===
 meta:

@@ -11,13 +11,15 @@ dataset:
     - TUT-ASC2018-MOBILE-DEV
     - TUT-ASC2018-MOBILE-EVAL
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/1293883
   license: Free
-  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
-  title: "A multi-device dataset for urban acoustic scene classification"
-  size: 8.3GB
+
+  download:
+    url: https://zenodo.org/record/1293883
+    size: 8.3GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
+    title: "A multi-device dataset for urban acoustic scene classification"
 
 # === AUDIO ===
 audio:
@@ -26,29 +28,34 @@ audio:
       type: Constant
       format: wav
       lossy_compression: No
-      bits: 24
+      bit_rate: 24
       sampling_rate_khz: 48
 
     channels:
       setup: Binaural
       number: 2
 
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Fixed
+
   files:
     total_count: 3600
     total_duration_minutes: 600
     file_length: Constant
     file_length_seconds: 10
-
-  content_type: Freefield
-  scene_content: Constant
-  recording_setup: Uncontrolled
-  recording_spot_type: Fixed
-  material_source: Original
-  variability_source:
-    - Country
-    - City
-    - Location
-    - Position
 
 # === META ===
 meta:

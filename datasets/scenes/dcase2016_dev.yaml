@@ -11,13 +11,15 @@ dataset:
     - TUT-ASC2017-DEV
     - TUT-ASC2017-EVAL
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/45739
   license: Free
-  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
-  title: TUT Database for Acoustic Scene Classificationand Sound Event Detection
-  size: 7.5GB
+
+  download:
+    url: https://zenodo.org/record/45739
+    size: 7.5GB
+
+  citation:
+    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+    title: TUT Database for Acoustic Scene Classificationand Sound Event Detection
 
 # === AUDIO ===
 audio:
@@ -26,28 +28,33 @@ audio:
       type: Constant
       format: wav
       lossy_compression: No
-      bits: 24
+      bit_rate: 24
       sampling_rate_khz: 44.1
 
     channels:
       setup: Binaural
       number: 2
 
+    material:
+      source: Original
+      variability_sources:
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Fixed
+
   files:
     total_count: 1170
     total_duration_minutes: 585
     file_length: Constant
     file_length_seconds: 30
-
-  content_type: Freefield
-  scene_content: Constant
-  recording_setup: Uncontrolled
-  recording_spot_type: Fixed
-  material_source: Original
-  variability_source:
-    - City
-    - Location
-    - Position
 
 # === META ===
 meta:

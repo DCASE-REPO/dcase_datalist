@@ -5,25 +5,47 @@ dataset:
   abbreviation: US8K
   year: 2014
   modalities: Audio
+  collection_name: US8K
+  related_datasets:
+    - URBAN-SED
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://urbansounddataset.weebly.com/download-urbansound8k.html
-  companion_site_url: http://urbansounddataset.weebly.com/urbansound8k.html
   license: Creative Commons
-  cite: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
-  title: "A Dataset and Taxonomy for Urban Sound Research"
+
+  download:
+    url: https://urbansounddataset.weebly.com/download-urbansound8k.html
+
+  companion_site: http://urbansounddataset.weebly.com/urbansound8k.html
+
+  citation:
+    ref: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
+    title: "A Dataset and Taxonomy for Urban Sound Research"
 
 # === AUDIO ===
 audio:
+  data:
+    file_format:
+      type: Variable
+      format: wav
+      lossy_compression: No
+
+    channels:
+      setup: Variable
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
   files:
     total_count: 8732
     total_duration_minutes: 525
-    file_length_seconds: 4
     file_length: Constant
-
-  content_type: Live
-  material_source: Freesound
+    file_length_seconds: 4
 
 meta:
   scene:

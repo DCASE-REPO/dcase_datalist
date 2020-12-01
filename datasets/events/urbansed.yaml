@@ -5,29 +5,46 @@ dataset:
   abbreviation: URBAN-SED
   year: 2017
   modalities: Audio
+  collection_name: URBAN-SED
+  related_datasets:
+    - UrbanSound8K
 
-# === DATASET SOURCE ===
-source:
-  data_url: http://urbansed.weebly.com/download.html
-  companion_site_url: http://urbansed.weebly.com/
   license: Free
-  cite: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_scaper_waspaa_2017.pdf;Salamon2017
-  title: "Scaper: A library for soundscape synthesis and augmentation"
+
+  download:
+    url: http://urbansed.weebly.com/download.html
+
+  companion_site: http://urbansed.weebly.com/
+
+  citation:
+    ref: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_scaper_waspaa_2017.pdf;Salamon2017
+    title: "Scaper: A library for soundscape synthesis and augmentation"
 
 # === AUDIO ===
 audio:
-  channels:
-    setup: Mono
-    number: 1
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Synthetic
 
   files:
     total_count: 10000
     total_duration_minutes: 1800
     file_length_seconds: 10
     file_length: Constant
-
-  content_type: Synthetic
-  material_source: Freesound
 
 # === META ===
 meta:

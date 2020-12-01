@@ -8,14 +8,17 @@ dataset:
   collection_name: DCASE 2013
   related_datasets: DCASE2013-ASC-DEV
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://archive.org/details/dcase2013_scene_classification_testset
-  companion_site_url: http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html
   license: Free
-  cite: https://hal.archives-ouvertes.fr/hal-01253912/document;Stowell2015
-  title: Detection and classification of acoustic scenes and events
-  size: 354MB
+
+  download:
+    url: https://archive.org/details/dcase2013_scene_classification_testset
+    size: 354MB
+
+  companion_site: http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html
+
+  citation:
+    ref: https://hal.archives-ouvertes.fr/hal-01253912/document;Stowell2015
+    title: Detection and classification of acoustic scenes and events
 
 # === AUDIO ===
 audio:
@@ -24,26 +27,31 @@ audio:
       type: Constant
       format: wav
       lossy_compression: No
-      bits: 16
+      bit_rate: 16
       sampling_rate_khz: 44.1
 
     channels:
       setup: Binaural
       number: 2
 
+    material:
+      source: Original
+      variability_sources:
+        - Location
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Unknown
+
   files:
     total_count: 100
     total_duration_minutes: 50
     file_length: Constant
     file_length_seconds: 30
-
-  content_type: Freefield
-  scene_content: Constant
-  recording_setup: Uncontrolled
-  recording_spot_type: Unknown
-  material_source: Original
-  variability_source:
-    - Location
 
 # === META ===
 meta:

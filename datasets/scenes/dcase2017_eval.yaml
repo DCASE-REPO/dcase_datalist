@@ -10,14 +10,15 @@ dataset:
     - TUT-ASC2016-DEV
     - TUT-ASC2016-EVAL
     - TUT-ASC2017-DEV
-
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/1040168
   license: Free
-  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
-  title: "DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System"
-  size: 3.6GB
+
+  download:
+    url: https://zenodo.org/record/1040168
+    size: 3.6GB
+
+  citation:
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+    title: "DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System"
 
 # === AUDIO ===
 audio:
@@ -26,28 +27,33 @@ audio:
       type: Constant
       format: wav
       lossy_compression: No
-      bits: 24
+      bit_rate: 24
       sampling_rate_khz: 44.1
 
     channels:
       setup: Binaural
       number: 2
 
+    material:
+      source: Original
+      variability_sources:              # [list], possible values: Country | City | Location | Position | Device
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    spot_type: Fixed
+
   files:
     total_count: 1620
     total_duration_minutes: 270
     file_length: Constant
     file_length_seconds: 10
-
-  content_type: Freefield
-  scene_content: Constant
-  recording_setup: Uncontrolled
-  recording_spot_type: Fixed
-  material_source: Original
-  variability_source:
-    - City
-    - Location
-    - Position
 
 # === META ===
 meta:

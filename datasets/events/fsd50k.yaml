@@ -5,17 +5,36 @@ dataset:
   abbreviation: FSD50K
   year: 2020
   modalities: Audio
+  collection_name: FSD
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/4060432#.X65IJRGxW7A
-  companion_site_url: https://annotator.freesound.org/fsd/release/FSD50K/
   license: Creative Commons
-  cite: https://arxiv.org/pdf/2010.00475.pdf;Fonseca2020
-  title: "FSD50K: an Open Dataset of Human-Labeled Sound Events"
+
+  download:
+    url: https://zenodo.org/record/4060432#.X65IJRGxW7A
+    size: 24.5GB
+
+  companion_site: https://annotator.freesound.org/fsd/release/FSD50K/
+
+  citation:
+    ref: https://arxiv.org/pdf/2010.00475.pdf;Fonseca2020
+    title: "FSD50K: an Open Dataset of Human-Labeled Sound Events"
 
 # === AUDIO ===
 audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Variable
+
+    material:
+      source: Freesound
+
   channels:
     setup: Mono
     number: 1
