@@ -54,7 +54,7 @@
     <div class="row-fluid">
         <div class="col-md-12">
             <table class="table datatable"
-                   data-json="scenes_datasets.json"
+                   data-json="datasets_scenes.json"
                    data-id-field="dataset-name"
                    data-sort-name="dataset-year"
                    data-sort-order="desc"
@@ -76,9 +76,22 @@
             >
                 <thead>
                     <tr>
-                        <th class="col-md-2"
+                        <th class=""
                             data-field="dataset-name"
                             data-sortable="true"><span data-toggle="tooltip" title="Dataset name">Name</span></th>
+                        <th data-field="dataset-collection_name"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Collection <br>name</th>
+                        <th data-field="dataset-related_datasets"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Related <br>datasets</th>
+
                         <th data-field="dataset-provider"
                             data-sortable="true"
                             data-visible="false"
@@ -137,6 +150,7 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Data <br>modalities</th>
+
 
                         <th class="sep-left-cell"
                             data-field="audio-files-total_duration_minutes"
@@ -197,13 +211,41 @@
                             data-filter-control="select"
                             data-switchable="true">Variability <br>source</th>
 
-                        <th data-field="audio-channels-setup"
+                        <th data-field="audio-data-file_format-type"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Audio <br>type</th>
+                        <th data-field="audio-data-file_format-format"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Format</th>
+                        <th data-field="audio-data-file_format-lossy_compression"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">Lossy <br>compression</th>
+                        <th data-field="audio-data-file_format-bits"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">Bit <br>rate</th>
+                        <th data-field="audio-data-file_format-sampling_rate_khz"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">Sampling <br>rate</th>
+
+                        <th data-field="audio-data-channels-setup"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Channel <br>setup</th>
-                        <th data-field="audio-channels-number"
+                        <th data-field="audio-data-channels-number"
                             data-sortable="true"
                             data-visible="false"
                             data-value-type="int"
@@ -217,7 +259,7 @@
                             data-switchable="true">Classes</th>
                         <th data-field="meta-scene-class_balance"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Class <br>balance</th>
@@ -278,7 +320,7 @@
                         <th class="sep-left-cell"
                             data-field="split-provided"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">Data <br>split</th>
