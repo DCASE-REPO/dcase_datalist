@@ -4,18 +4,21 @@ dataset:
   provider:                             # [string]
   abbreviation:                         # [string], Official dataset abbreviation, e.g. one used in the original paper
   year:                                 # [int], Release year
-  modalities:                           # [string or list], data modalities included in the dataset, if string use a comma separated list, possible values: Audio | Video
+  modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
-# === DATASET SOURCE ===
-source:
-  data_url:                             # [url], Link to download the dataset
-  companion_site_url:                   # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
   license:                              # [string], possible values: Creative commons | Free | Commercial | Proprietary | R&D only
-  cite:                                 # [url];[key], Paper to cite for the dataset
-  title:                                # [string], Paper title
-  size:                                 # [string], Approximate package size (unit GB, MB)
+
+  download:
+    url:                                # [url], Link to download the dataset
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref:                                # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title:                              # [string], Paper title, use quotes if title contains colons
 
 # === AUDIO ===
 audio:
@@ -24,12 +27,24 @@ audio:
       type:                             # [string], possible values: Constant | Variable
       format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
       lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
-      bits:                             # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 32 | 44.1 | 48
 
     channels:
-      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
       number:                           # [int], Number of channels
+
+    material:
+      source:                           # [string], possible values: Original | Youtube | Freesound | Online | Crowdsourced
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], possible values: Constant | Variable
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
 
   files:
     total_count:                        # [int], Total number of files
@@ -37,16 +52,12 @@ audio:
     file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
     file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
 
-  content_type:                         # [string], possible values: Freefield | Synthetic | Isolated
-  recording_setup:                      # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
-  material_source:                      # [string], possible values: Original | Youtube | Freesound | Online | Crowdsourced
-
 # === META ===
 meta:
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost
-    list:                               # [string or list], if string use a comma separated list of scene classes
+    list:                               # [list], list of scene classes
 
   event:
     classes:                            # [int], Number of event classes
