@@ -13,7 +13,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
-          href="https://gitcdn.link/repo/toni-heittola/js-datatable/master/css.min/datatable.bundle.min.css">
+          href="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/css.min/datatable.bundle.min.css">
 
     <style>
         p {
@@ -66,7 +66,7 @@
                        data-id-field="dataset-name"
                        data-sort-name="dataset-year"
                        data-sort-order="desc"
-                       data-pagination="true"
+                       data-pagination="false"
                        data-show-pagination-switch="true"
                        data-show-toggle="false"
                        data-show-columns="true"
@@ -234,7 +234,14 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Recording <br>setup
+                            Recording <br>setup type
+                        </th>
+                        <th data-field="audio-recording-setup_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Recording <br>setups
                         </th>
                         <th data-field="audio-recording-spot_type"
                             data-sortable="true"
@@ -649,7 +656,7 @@
             crossorigin="anonymous"></script>
 
     <script type="text/javascript"
-            src="https://gitcdn.link/repo/toni-heittola/js-datatable/master/js.min/datatable.bundle.min.js"></script>
+            src="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/js.min/datatable.bundle.min.js"></script>
 </body>
 
 </html>
