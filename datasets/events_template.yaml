@@ -4,7 +4,9 @@ dataset:
   provider:                             # [string]
   abbreviation:                         # [string], Official dataset abbreviation, e.g. one used in the original paper
   year:                                 # [int], Release year
-  modalities:                           # [string], data modalities included in the dataset, comma separated list, possible values: Audio | Video
+  modalities:                           # [string or list], data modalities included in the dataset, if string use a comma separated list, possible values: Audio | Video
+  collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
+  related_datasets:                     # [list], related datasets (name or abbreviation)
 
 # === DATASET SOURCE ===
 source:
@@ -17,9 +19,17 @@ source:
 
 # === AUDIO ===
 audio:
-  channels:
-    setup:                              # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array
-    number:                             # [int], Number of channels
+  data:
+    file_format:
+      type:                             # [string], possible values: Constant | Variable
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bits:                             # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array
+      number:                           # [int], Number of channels
 
   files:
     total_count:                        # [int], Total number of files
@@ -36,7 +46,7 @@ meta:
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost
-    list:                               # [string], comma separated list of scene classes
+    list:                               # [string or list], if string use a comma separated list of scene classes
 
   event:
     classes:                            # [int], Number of event classes
@@ -62,7 +72,7 @@ meta:
 split:
   provided:                             # [bool], Is data splits provided, possible values: Yes | No
   folds:                                # [int], how many folds provided
-  sets:                                 # [string], set types provided in the split, comma separated list, possible values: Train | Test | Val
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val
 
 # === BASELINE SYSTEM ===
 baseline:
@@ -71,5 +81,8 @@ baseline:
 
 # === INFO ===
 info:
-  evaluation_campaign:                  # [string], comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
   comments:                             # [string], comments
+
+# === DEBUG ===
+skip:                                   # [bool], extra field to temporally omit dataset from listings, can be used while collecting meta information for the dataset, possible values: Yes | No

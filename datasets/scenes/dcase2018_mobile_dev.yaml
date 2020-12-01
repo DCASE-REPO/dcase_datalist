@@ -1,23 +1,23 @@
 # === DATASET ===
 dataset:
-  name: TUT Urban Acoustic Scenes 2018 Development dataset
+  name: TUT Urban Acoustic Scenes 2018 Mobile Development dataset
   provider: TUT
-  abbreviation: TUT-ASC2018-DEV
+  abbreviation: TUT-ASC2018-MOBILE-DEV
   year: 2018
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
   related_datasets:
+    - TUT-ASC2018-DEV
     - TUT-ASC2018-EVAL
-    - TUT-ASC2018-MOBILE-DEV
     - TUT-ASC2018-MOBILE-EVAL
 
 # === DATASET SOURCE ===
 source:
-  data_url: https://zenodo.org/record/1228142
+  data_url: https://zenodo.org/record/1228235
   license: Free
   cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
   title: "A multi-device dataset for urban acoustic scene classification"
-  size: 21.1GB
+  size: 11.3GB
 
 # === AUDIO ===
 audio:
@@ -30,12 +30,12 @@ audio:
       sampling_rate_khz: 48
 
     channels:
-      setup: Binaural
-      number: 2
+      setup: Mono
+      number: 1
 
   files:
-    total_count: 8640
-    total_duration_minutes: 1440
+    total_count: 10080
+    total_duration_minutes: 1680
     file_length: Constant
     file_length_seconds: 10
 
@@ -49,6 +49,7 @@ audio:
     - City
     - Location
     - Position
+    - Device
 
 # === META ===
 meta:
@@ -93,5 +94,5 @@ baseline:
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2018 task1A
+  evaluation_campaign: DCASE2018 task1B
 

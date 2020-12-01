@@ -1,10 +1,15 @@
 # === DATASET ===
 dataset:
-  name: TUT Acoustic scenes 2017 Evaluation dataset
+  name: TUT Acoustic Scenes 2017 Evaluation dataset
   provider: TUT
   abbreviation: TUT-ASC2017-EVAL
   year: 2017
   modalities: Audio
+  collection_name: TUT Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2016-DEV
+    - TUT-ASC2016-EVAL
+    - TUT-ASC2017-DEV
 
 # === DATASET SOURCE ===
 source:
@@ -16,9 +21,17 @@ source:
 
 # === AUDIO ===
 audio:
-  channels:
-    setup: Binaural
-    number: 2
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bits: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Binaural
+      number: 2
 
   files:
     total_count: 1620

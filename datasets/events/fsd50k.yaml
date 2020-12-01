@@ -40,11 +40,12 @@ meta:
       hierarchical: Yes
       ontology_name: AudioSet
 
+# === CROSS-VALIDATION SETUP ===
 split:
   provided: Yes
   folds: 1
   sets: Dev, Eval
 
-
+# === INFO ===
 info:
   evaluation_campaign: DCASE2020 task4

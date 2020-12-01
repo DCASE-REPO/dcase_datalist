@@ -5,6 +5,8 @@ dataset:
   abbreviation: DCASE2013-ASC-EVAL
   year: 2013
   modalities: Audio
+  collection_name: DCASE 2013
+  related_datasets: DCASE2013-ASC-DEV
 
 # === DATASET SOURCE ===
 source:
@@ -17,9 +19,17 @@ source:
 
 # === AUDIO ===
 audio:
-  channels:
-    setup: Binaural
-    number: 2
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bits: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Binaural
+      number: 2
 
   files:
     total_count: 100

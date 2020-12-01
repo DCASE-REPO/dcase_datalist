@@ -1,10 +1,15 @@
 # === DATASET ===
 dataset:
-  name: TUT Acoustic scenes 2018 Evaluation dataset
+  name: TUT Urban Acoustic Scenes 2018 Evaluation dataset
   provider: TUT
   abbreviation: TUT-ASC2018-Eval
   year: 2018
   modalities: Audio
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-MOBILE-DEV
+    - TUT-ASC2018-MOBILE-EVAL
 
 # === DATASET SOURCE ===
 source:
@@ -16,13 +21,21 @@ source:
 
 # === AUDIO ===
 audio:
-  channels:
-    setup: Binaural
-    number: 2
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bits: 24
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Binaural
+      number: 2
 
   files:
-    total_count:
-    total_duration_minutes:
+    total_count: 3600
+    total_duration_minutes: 600
     file_length: Constant
     file_length_seconds: 10
 
@@ -61,7 +74,7 @@ meta:
       hierarchical: No
 
     instance:
-      count:
+      count: 3600
       average_instaces_per_class:
 
 # === CROSS-VALIDATION SETUP ===
