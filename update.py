@@ -59,12 +59,16 @@ def main(argv):
         for dataset_meta_file in dataset_meta_files:
             with open(dataset_meta_file, 'r') as file:
                 data = yaml.load(file, Loader=yaml.FullLoader)
-                print('   ', data['dataset']['name'])
-                item = process_dataset_meta(data, template)
-                list_data.append(item)
+                if 'skip' not in data or data['skip'] == False:
+                    print('   ', data['dataset']['name'])
+                    item = process_dataset_meta(data, template)
+                    list_data.append(item)
+
+                else:
+                    print('    [SKIPPED]', data['dataset']['name'])
 
         # Target
-        list_filename = os.path.join('lists', category_label + '_datasets.json')
+        list_filename = os.path.join('lists', 'datasets_' + category_label + '.json')
 
         with open(list_filename, 'w') as outfile:
             json.dump(list_data, outfile)
