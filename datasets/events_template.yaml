@@ -44,6 +44,7 @@ audio:
 
   recording:
     setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
     spot_type:                          # [string], possible values: Fixed | Moving | Unknown
 
   files:
