@@ -1,29 +1,36 @@
 # === DATASET ===
 dataset:
-  name: TUT Urban Acoustic Scenes 2018 Mobile Evaluation dataset
-  provider: TUT
-  abbreviation: TUT-ASC2018-MOBILE-EVAL
-  year: 2018
+  name: TAU Urban Acoustic Scenes 2019, Evaluation dataset
+  provider: TAU
+  abbreviation: TAU-ASC2019-EVAL
+  year: 2019
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
   related_datasets:
-    - TUT-ASC2018-DEV
+    - TUT-ASC2019-DEV
     - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
     - TUT-ASC2018-MOBILE-DEV
+    - TUT-ASC2018-MOBILE-EVAL
+    - TAU-ASC2019-DEV
+    - TAU-ASC2019-LB
+    - TAU-ASC2019-MOBILE-DEV
+    - TAU-ASC2019-MOBILE-EVAL
+    - TAU-ASC2019-MOBILE-LB
+    - TAU-ASC2020-MOBILE-DEV
+    - TAU-ASC2020-MOBILE-EVAL
+    - TAU-ASC2020-3CLASS-DEV
+    - TAU-ASC2020-3CLASS-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/1293901
-    size: 16.0GB
+    url: https://zenodo.org/record/3063822
+    size: 17.9GB
 
-# === DATASET SOURCE ===
-source:
-  data_url: https://zenodo.org/record/1293901
-  license: Free
-  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
-  title: "A multi-device dataset for urban acoustic scene classification"
-  size: 16.0GB
+  citation:
+    ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
+    title: "A multi-device dataset for urban acoustic scene classification"
 
 # === AUDIO ===
 audio:
@@ -36,8 +43,8 @@ audio:
       sampling_rate_khz: 48
 
     channels:
-      setup: Mono
-      number: 1
+      setup: Binaural
+      number: 2
 
     material:
       source: Original
@@ -46,7 +53,6 @@ audio:
         - City
         - Location
         - Position
-        - Device
 
   content:
     type: Freefield
@@ -54,11 +60,12 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Fixed
 
   files:
-    total_count: 15120
-    total_duration_minutes: 2520
+    total_count: 7200
+    total_duration_minutes: 1200
     file_length: Constant
     file_length_seconds: 10
 
@@ -66,7 +73,6 @@ audio:
 meta:
   scene:
     classes: 10
-    class_balance: Yes
     list:
       - airport
       - bus
@@ -80,17 +86,14 @@ meta:
       - tram
 
     annotation:
-      type: Weak
-      source: Location
-      annotations_per_item: 1
-      labelled_amount_percentage: 100
+      type: None
+      labelled_amount_percentage: 0
 
     labeling:
       hierarchical: No
 
     instance:
-      count: 15120
-      average_instaces_per_class:
+      count: 7200
 
 # === CROSS-VALIDATION SETUP ===
 split:
@@ -98,10 +101,9 @@ split:
 
 # === BASELINE SYSTEM ===
 baseline:
-  url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
-  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+  url: https://github.com/toni-heittola/dcase2019_task1_baseline
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2018 task1B
+  evaluation_campaign: DCASE2019 task1A
 

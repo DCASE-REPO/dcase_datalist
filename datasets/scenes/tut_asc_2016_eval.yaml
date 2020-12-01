@@ -1,0 +1,106 @@
+# === DATASET ===
+dataset:
+  name: TUT Acoustic Scenes 2016, Evaluation dataset
+  provider: TUT
+  abbreviation: TUT-ASC2016-EVAL
+  year: 2016
+  modalities: Audio
+  collection_name: TUT Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2016-DEV
+    - TUT-ASC2017-DEV
+    - TUT-ASC2017-EVAL
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/165995
+    size: 2.5GB
+
+  citation:
+    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+    title: TUT Database for Acoustic Scene Classificationand Sound Event Detection
+
+# === AUDIO ===
+audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 390
+    total_duration_minutes: 195
+    file_length: Constant
+    file_length_seconds: 30
+
+# === META ===
+meta:
+  scene:
+    classes: 15
+    list:
+      - beach
+      - bus
+      - cafe/restaurant
+      - car
+      - city center
+      - forest path
+      - grocery store
+      - home
+      - library
+      - metro station
+      - office
+      - park
+      - residential area
+      - train
+      - tram
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 390
+      average_instaces_per_class: 26
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/TUT-ARG/DCASE2016-baseline-system-python
+  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2016 task1
+

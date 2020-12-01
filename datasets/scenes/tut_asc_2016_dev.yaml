@@ -1,21 +1,21 @@
 # === DATASET ===
 dataset:
-  name: TUT Acoustic Scenes 2016 Evaluation dataset
+  name: TUT Acoustic Scenes 2016, Development dataset
   provider: TUT
-  abbreviation: TUT-ASC2016-EVAL
+  abbreviation: TUT-ASC2016-DEV
   year: 2016
   modalities: Audio
   collection_name: TUT Acoustic Scenes
   related_datasets:
-    - TUT-ASC2016-DEV
+    - TUT-ASC2016-EVAL
     - TUT-ASC2017-DEV
     - TUT-ASC2017-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/165995
-    size: 2.5GB
+    url: https://zenodo.org/record/45739
+    size: 7.5GB
 
   citation:
     ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
@@ -48,11 +48,12 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Fixed
 
   files:
-    total_count: 390
-    total_duration_minutes: 195
+    total_count: 1170
+    total_duration_minutes: 585
     file_length: Constant
     file_length_seconds: 30
 
@@ -60,6 +61,7 @@ audio:
 meta:
   scene:
     classes: 15
+    class_balance: Yes
     list:
       - beach
       - bus
@@ -87,12 +89,14 @@ meta:
       hierarchical: No
 
     instance:
-      count: 390
-      average_instaces_per_class: 26
+      count: 1170
+      average_instaces_per_class: 78
 
 # === CROSS-VALIDATION SETUP ===
 split:
-  provided: No
+  provided: Yes
+  folds: 4
+  sets: Train,Test
 
 # === BASELINE SYSTEM ===
 baseline:

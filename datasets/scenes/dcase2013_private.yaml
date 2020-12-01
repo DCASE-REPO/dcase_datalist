@@ -45,6 +45,7 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Unknown
 
   files:

@@ -1,0 +1,100 @@
+# === DATASET ===
+dataset:
+  name: TUT Urban Acoustic Scenes 2018, Evaluation dataset
+  provider: TUT
+  abbreviation: TUT-ASC2018-EVAL
+  year: 2018
+  modalities: Audio
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-LB
+    - TUT-ASC2018-MOBILE-DEV
+    - TUT-ASC2018-MOBILE-EVAL
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/1293883
+    size: 8.3GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
+    title: "A multi-device dataset for urban acoustic scene classification"
+
+# === AUDIO ===
+audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 3600
+    total_duration_minutes: 600
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 3600
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
+  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2018 task1A
+

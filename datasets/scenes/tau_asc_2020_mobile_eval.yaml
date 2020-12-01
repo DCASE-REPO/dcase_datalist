@@ -1,0 +1,108 @@
+# === DATASET ===
+dataset:
+  name: TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset
+  provider: TAU
+  abbreviation: TAU-ASC2020-MOBILE-DEV
+  year: 2020
+  modalities: Audio
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
+    - TUT-ASC2018-MOBILE-EVAL
+    - TAU-ASC2019-DEV
+    - TAU-ASC2019-EVAL
+    - TAU-ASC2019-LB
+    - TAU-ASC2019-MOBILE-EVAL
+    - TAU-ASC2019-MOBILE-LB
+    - TAU-ASC2020-MOBILE-DEV
+    - TAU-ASC2020-3CLASS-DEV
+    - TAU-ASC2020-3CLASS-EVAL
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/3685828
+    size: 12.8GB
+
+  citation:
+    ref: https://arxiv.org/pdf/2005.14623;Heittola2020
+    title: "Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions"
+
+# === AUDIO ===
+audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+        - Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 11
+    spot_type: Fixed
+
+  files:
+    total_count: 11880
+    total_duration_minutes: 1980
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 11880
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/toni-heittola/dcase2020_task1_baseline
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2020 task1A
+

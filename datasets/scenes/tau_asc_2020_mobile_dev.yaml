@@ -1,0 +1,114 @@
+# === DATASET ===
+dataset:
+  name: TAU Urban Acoustic Scenes 2020 Mobile, Development dataset
+  provider: TAU
+  abbreviation: TAU-ASC2020-MOBILE-DEV
+  year: 2020
+  modalities: Audio
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
+    - TUT-ASC2018-MOBILE-EVAL
+    - TAU-ASC2019-DEV
+    - TAU-ASC2019-EVAL
+    - TAU-ASC2019-LB
+    - TAU-ASC2019-MOBILE-EVAL
+    - TAU-ASC2019-MOBILE-LB
+    - TAU-ASC2020-MOBILE-EVAL
+    - TAU-ASC2020-3CLASS-DEV
+    - TAU-ASC2020-3CLASS-EVAL
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/3819968
+    size: 30.5GB
+
+  citation:
+    ref: https://arxiv.org/pdf/2005.14623;Heittola2020
+    title: "Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions"
+
+# === AUDIO ===
+audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+        - Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 9
+    spot_type: Fixed
+
+  files:
+    total_count: 23035
+    total_duration_minutes: 3839
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    class_balance: Yes
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 23035
+      average_instaces_per_class: 2304
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train,Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/toni-heittola/dcase2020_task1_baseline
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2020 task1A
+

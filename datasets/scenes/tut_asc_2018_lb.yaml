@@ -1,21 +1,21 @@
 # === DATASET ===
 dataset:
-  name: TUT Urban Acoustic Scenes 2018 Development dataset
+  name: TUT Urban Acoustic Scenes 2018, Leaderboard dataset
   provider: TUT
-  abbreviation: TUT-ASC2018-DEV
+  abbreviation: TUT-ASC2018-LB
   year: 2018
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
   related_datasets:
-    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-DEV
     - TUT-ASC2018-MOBILE-DEV
     - TUT-ASC2018-MOBILE-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/1228142
-    size: 21.1GB
+    url: https://zenodo.org/record/1245181
+    size: 2.8GB
 
   citation:
     ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
@@ -49,11 +49,12 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Fixed
 
   files:
-    total_count: 8640
-    total_duration_minutes: 1440
+    total_count: 1200
+    total_duration_minutes: 200
     file_length: Constant
     file_length_seconds: 10
 
@@ -61,7 +62,6 @@ audio:
 meta:
   scene:
     classes: 10
-    class_balance: Yes
     list:
       - airport
       - bus
@@ -75,23 +75,19 @@ meta:
       - tram
 
     annotation:
-      type: Weak
-      source: Location
-      annotations_per_item: 1
-      labelled_amount_percentage: 100
+      type: None
+      labelled_amount_percentage: 0
 
     labeling:
       hierarchical: No
 
     instance:
-      count: 8640
-      average_instaces_per_class: 864
+      count: 1200
+      average_instaces_per_class:
 
 # === CROSS-VALIDATION SETUP ===
 split:
-  provided: Yes
-  folds: 1
-  sets: Train,Test
+  provided: No
 
 # === BASELINE SYSTEM ===
 baseline:

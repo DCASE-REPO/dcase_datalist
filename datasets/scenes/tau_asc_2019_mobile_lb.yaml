@@ -1,21 +1,31 @@
 # === DATASET ===
 dataset:
-  name: TUT Urban Acoustic Scenes 2018 Evaluation dataset
-  provider: TUT
-  abbreviation: TUT-ASC2018-Eval
-  year: 2018
+  name: TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset
+  provider: TAU
+  abbreviation: TAU-ASC2019-MOBILE-LB
+  year: 2019
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
   related_datasets:
     - TUT-ASC2018-DEV
-    - TUT-ASC2018-MOBILE-DEV
+    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
     - TUT-ASC2018-MOBILE-EVAL
+    - TAU-ASC2019-DEV
+    - TAU-ASC2019-EVAL
+    - TAU-ASC2019-LB
+    - TAU-ASC2019-MOBILE-DEV
+    - TAU-ASC2019-MOBILE-EVAL
+    - TAU-ASC2020-MOBILE-DEV
+    - TAU-ASC2020-MOBILE-EVAL
+    - TAU-ASC2020-3CLASS-DEV
+    - TAU-ASC2020-3CLASS-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/1293883
-    size: 8.3GB
+    url: https://zenodo.org/record/2673004
+    size: 1.4GB
 
   citation:
     ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
@@ -29,11 +39,11 @@ audio:
       format: wav
       lossy_compression: No
       bit_rate: 24
-      sampling_rate_khz: 48
+      sampling_rate_khz: 44.1
 
     channels:
-      setup: Binaural
-      number: 2
+      setup: Mono
+      number: 1
 
     material:
       source: Original
@@ -42,6 +52,7 @@ audio:
         - City
         - Location
         - Position
+        - Device
 
   content:
     type: Freefield
@@ -49,11 +60,12 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 4
     spot_type: Fixed
 
   files:
-    total_count: 3600
-    total_duration_minutes: 600
+    total_count: 1200
+    total_duration_minutes: 200
     file_length: Constant
     file_length_seconds: 10
 
@@ -81,8 +93,7 @@ meta:
       hierarchical: No
 
     instance:
-      count: 3600
-      average_instaces_per_class:
+      count: 1200
 
 # === CROSS-VALIDATION SETUP ===
 split:
@@ -90,10 +101,9 @@ split:
 
 # === BASELINE SYSTEM ===
 baseline:
-  url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
-  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+  url: https://github.com/toni-heittola/dcase2019_task1_baseline
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2018 task1A
+  evaluation_campaign: DCASE2019 task1B
 

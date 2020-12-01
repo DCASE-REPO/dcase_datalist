@@ -1,6 +1,6 @@
 # === DATASET ===
 dataset:
-  name: TUT Urban Acoustic Scenes 2018 Mobile Development dataset
+  name: TUT Urban Acoustic Scenes 2018 Mobile, Development dataset
   provider: TUT
   abbreviation: TUT-ASC2018-MOBILE-DEV
   year: 2018
@@ -9,6 +9,7 @@ dataset:
   related_datasets:
     - TUT-ASC2018-DEV
     - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
     - TUT-ASC2018-MOBILE-EVAL
 
   license: Free
@@ -29,7 +30,7 @@ audio:
       format: wav
       lossy_compression: No
       bit_rate: 24
-      sampling_rate_khz: 48
+      sampling_rate_khz: 44.1
 
     channels:
       setup: Mono
@@ -50,6 +51,7 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 3
     spot_type: Fixed
 
   files:

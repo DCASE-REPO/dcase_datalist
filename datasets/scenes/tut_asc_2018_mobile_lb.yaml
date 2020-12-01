@@ -1,0 +1,105 @@
+# === DATASET ===
+dataset:
+  name: TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset
+  provider: TUT
+  abbreviation: TUT-ASC2018-MOBILE-LB
+  year: 2018
+  modalities: Audio
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
+    - TUT-ASC2018-MOBILE-DEV
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/1245184
+    size: 2.3GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
+    title: "A multi-device dataset for urban acoustic scene classification"
+
+# === AUDIO ===
+audio:
+  data:
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+        - Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 4
+    spot_type: Fixed
+
+  files:
+    total_count: 2400
+    total_duration_minutes: 400
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    class_balance: Yes
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 15120
+      average_instaces_per_class:
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
+  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2018 task1B
+

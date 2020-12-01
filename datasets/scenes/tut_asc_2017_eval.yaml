@@ -1,6 +1,6 @@
 # === DATASET ===
 dataset:
-  name: TUT Acoustic Scenes 2017 Evaluation dataset
+  name: TUT Acoustic Scenes 2017, Evaluation dataset
   provider: TUT
   abbreviation: TUT-ASC2017-EVAL
   year: 2017
@@ -47,6 +47,7 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Fixed
 
   files:

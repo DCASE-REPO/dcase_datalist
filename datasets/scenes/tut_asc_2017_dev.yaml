@@ -1,25 +1,25 @@
 # === DATASET ===
 dataset:
-  name: TUT Acoustic Scenes 2016 Development dataset
+  name: TUT Acoustic Scenes 2017, Development dataset
   provider: TUT
-  abbreviation: TUT-ASC2016-DEV
-  year: 2016
+  abbreviation: TUT-ASC2017-DEV
+  year: 2017
   modalities: Audio
   collection_name: TUT Acoustic Scenes
   related_datasets:
+    - TUT-ASC2016-DEV
     - TUT-ASC2016-EVAL
-    - TUT-ASC2017-DEV
     - TUT-ASC2017-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/45739
-    size: 7.5GB
+    url: https://zenodo.org/record/400515
+    size: 10.7GB
 
   citation:
-    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
-    title: TUT Database for Acoustic Scene Classificationand Sound Event Detection
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+    title: "DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System"
 
 # === AUDIO ===
 audio:
@@ -48,13 +48,14 @@ audio:
 
   recording:
     setup: Uncontrolled
+    setup_count: 1
     spot_type: Fixed
 
   files:
-    total_count: 1170
-    total_duration_minutes: 585
+    total_count: 4680
+    total_duration_minutes: 780
     file_length: Constant
-    file_length_seconds: 30
+    file_length_seconds: 10
 
 # === META ===
 meta:
@@ -88,8 +89,8 @@ meta:
       hierarchical: No
 
     instance:
-      count: 1170
-      average_instaces_per_class: 78
+      count: 4680
+      average_instaces_per_class: 312
 
 # === CROSS-VALIDATION SETUP ===
 split:
@@ -99,10 +100,10 @@ split:
 
 # === BASELINE SYSTEM ===
 baseline:
-  url: https://github.com/TUT-ARG/DCASE2016-baseline-system-python
-  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+  url: https://github.com/TUT-ARG/DCASE2017-baseline-system
+  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2016 task1
+  evaluation_campaign: DCASE2017 task1
 
