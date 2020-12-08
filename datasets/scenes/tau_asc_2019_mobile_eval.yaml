@@ -34,6 +34,7 @@ dataset:
 # === AUDIO ===
 audio:
   data:
+    type: Audio
     file_format:
       type: Constant
       format: wav

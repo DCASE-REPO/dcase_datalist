@@ -1,0 +1,89 @@
+# === DATASET ===
+dataset:
+  name: ExtraSensory Dataset
+  provider: UCSD
+  abbreviation: ExtraSensory
+  year: 2017
+  modalities:
+    - Audio
+    - Accelerometer
+    - Gyroscope
+    - Magnetometer
+    - Location
+    - Phone state
+    - Air pressure
+    - Proximity
+    - Temperature
+    - Humidity
+    - Light
+
+  collection_name: ExtraSensory
+
+  license: Free
+
+  download:
+    url: http://extrasensory.ucsd.edu/~datasets/extrasensory/data/primary_data_files/ExtraSensory.per_uuid_features_labels.zip
+    size: 215MB
+
+  companion_site: http://extrasensory.ucsd.edu/~datasets/extrasensory/
+
+  citation:
+    ref: http://extrasensory.ucsd.edu/~datasets/extrasensory/papers/vaizman2017a_pervasiveAcceptedVersion.pdf;Vaizman2017
+    title: "Recognizing Detailed Human Context In-the-Wild from Smartphones and Smartwatches"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Features
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz: 22.05
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Moving
+
+  files:
+    total_count: 302177
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  scene:
+    classes: 51
+    class_balance: No
+    list:                               # [list], list of scene classes
+
+    annotation:
+      type: Weak
+      source: Crowdsourced
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 302177
+
+
+# === INFO ===
+info:
+  comments: Behavioral context recognition in-the-wild from mobile sensors

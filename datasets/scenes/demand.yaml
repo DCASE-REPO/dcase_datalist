@@ -1,0 +1,81 @@
+# === DATASET ===
+dataset:
+  name: Diverse Environments Multichannel Acoustic Noise Database
+  provider: Inria
+  abbreviation: DEMAND
+  year: 2013
+  modalities: Audio
+  collection_name: DEMAND
+
+  license: Creative commons
+
+  download:
+    url: https://zenodo.org/record/1227121
+    size: 7.4GB
+
+  citation:
+    ref: https://hal.inria.fr/hal-00796707/en;Thiemann2013
+    title: "The Diverse Environments Multi-channel Acoustic Noise Database (DEMAND): A database of multichannel environmental noise recordings"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Array
+      number: 16
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 18
+    total_duration_minutes: 90
+    file_length: Constant
+    file_length_seconds: 300
+
+# === META ===
+meta:
+  scene:
+    classes: 6
+    class_balance: Yes
+    list:
+      - Domestic
+      - Nature
+      - Office
+      - Public
+      - Street
+      - Transportation
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 18
+      average_instaces_per_class: 3
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

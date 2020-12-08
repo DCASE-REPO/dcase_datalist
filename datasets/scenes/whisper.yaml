@@ -1,0 +1,77 @@
+# === DATASET ===
+dataset:
+  name: WSJ0 Hipster Ambient Mixtures noise dataset
+  provider: Whisper/MERL
+  abbreviation: WHAM
+  year: 2019
+  modalities: Audio
+  collection_name: WHAM
+
+  license: Creative commons
+
+  download:
+    url: https://storage.googleapis.com/whisper-public/wham_noise.zip
+    size: 17.6GB
+
+  companion_site: http://wham.whisper.ai/
+
+  citation:
+    ref: https://arxiv.org/pdf/1907.01160.pdf;Wichern2019
+    title: "WHAM!: Extending Speech Separation to Noisy Environments"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 32
+      sampling_rate_khz: 16
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:              # [list], possible values: Country | City | Location | Position | Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 28000
+    total_duration_minutes: 4900.8
+    file_length: Variable                       # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds: 3.5-47.7
+
+# === META ===
+meta:
+  scene:
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 28000
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+
+# === INFO ===
+info:
+  comments: Originally for speech separation

@@ -1,0 +1,87 @@
+# === DATASET ===
+dataset:
+  name: Noise DB / Series 2
+  provider: UEA
+  abbreviation: NOISEDB-S2
+  year: 2006
+  modalities: Audio
+  collection_name: UEA Noise DB
+  related_datasets:
+    - NOISEDB-S1
+
+  license: Free
+
+  companion_site: http://lemur.cmp.uea.ac.uk/Research/noise_db/
+
+  citation:
+    ref: http://link.springer.com/article/10.1007%2Fs00779-005-0045-4;Smith2006
+    title: "Acoustic environment as an indicator of social and physical context"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 8
+      sampling_rate_khz: 8
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Moving
+
+  files:
+    total_count: 35
+    total_duration_minutes: 175
+    file_length: Constant
+    file_length_seconds: 300
+
+# === META ===
+meta:
+  scene:
+    classes: 10
+    class_balance: Yes
+    list:
+      - Building site
+      - Bus
+      - Car (city)
+      - Car (highway)
+      - Laundrette
+      - Office
+      - Presentation
+      - Shopping mall
+      - Street (people)
+      - Street (traffic)
+      - Supermarket
+      - Train
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 35
+      average_instaces_per_class: 3.5
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No                            # [bool], Is data splits provided, possible values: Yes | No

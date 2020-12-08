@@ -1,0 +1,82 @@
+# === DATASET ===
+dataset:
+  name: AucoDefr07
+  provider: AucoDefr07
+  abbreviation: AucoDefr07
+  year: 2015
+  modalities: Audio
+  collection_name: AucoDefr07
+
+  license: Free
+
+  download:
+    url: https://archive.org/details/defreville-Aucouturier_urbanDb
+    size: 1.9GB
+
+  citation:
+    ref: https://hal.archives-ouvertes.fr/hal-01082501v2;Lagrange2015
+    title: "The bag-of-frames approach: a not so sufficient model for urban soundscapes"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Unknown
+
+  files:
+    total_count:  16
+    total_duration_minutes: 252
+    file_length: Variable
+
+# === META ===
+meta:
+  scene:
+    classes: 4
+    class_balance: No
+    list:
+      - Avenue
+      - Street
+      - Market
+      - Park
+
+    annotation:
+      type: Weak
+      source: Location
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 16
+      average_instaces_per_class: 4
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  cite: https://hal.archives-ouvertes.fr/hal-01082501v2;Lagrange2015
