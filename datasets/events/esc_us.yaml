@@ -1,0 +1,65 @@
+# === DATASET ===
+dataset:
+  name: Dataset for Environmental Sound Classification, unlabeled dataset
+  provider: ESC
+  abbreviation: ESC-US
+  year: 2015
+  modalities: Audio
+  collection_name: ESC dataset
+  related_datasets:
+    - ESC-10
+    - ESC-50
+
+  license: Free
+
+  download:
+    url: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YDEPUT
+
+  citation:
+    ref: http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf;Piczak2015
+    title: "ESC: Dataset for Environmental Sound Classification"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: ogg
+      lossy_compression: Yes
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 250000
+    total_duration_minutes: 20833.3
+    file_length: Constant
+    file_length_seconds: 5
+
+# === META ===
+meta:
+  event:
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    instance:
+      count: 250000
+
+# === INFO ===
+info:
+  comments: unlabeled dataset, suitable for unsupervised pre-training

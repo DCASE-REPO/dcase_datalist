@@ -1,0 +1,82 @@
+# === DATASET ===
+dataset:
+  name: Dataset for Environmental Sound Classification, 50 classes
+  provider: ESC
+  abbreviation: ESC-50
+  year: 2015
+  modalities: Audio
+  collection_name: ESC dataset
+  related_datasets:
+    - ESC-10
+    - ESC-US
+
+  license: Free
+
+  download:
+    url: https://github.com/karoldvl/ESC-50
+
+  citation:
+    ref: http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf;Piczak2015
+    title: "ESC: Dataset for Environmental Sound Classification"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 2000
+    total_duration_minutes: 166.67
+    file_length: Constant
+    file_length_seconds: 5
+
+# === META ===
+meta:
+  event:
+    classes: 50
+    class_balance: Yes
+
+    annotation:
+      type: Weak
+      source: Metadata
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: ESC-50
+
+    instance:
+      count: 2000
+      average_instaces_per_class: 40
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 5
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://www.karolpiczak.com/papers/Piczak2015-ESC-ConvNet.pdf
+  cite: https://www.karolpiczak.com/papers/Piczak2015-ESC-ConvNet.pdf;Piczak2015

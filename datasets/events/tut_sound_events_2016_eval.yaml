@@ -1,21 +1,21 @@
 # === DATASET ===
 dataset:
-  name: TUT Sound events 2016, Development dataset
+  name: TUT Sound events 2016, Evaluation dataset
   provider: TUT
-  abbreviation: TUT-SED2016-DEV
+  abbreviation: TUT-SED2016-EVAL
   year: 2016
   modalities: Audio
   collection_name: TUT Sound events
   related_datasets:
-    - TUT-SED2016-EVAL
+    - TUT-SED2016-DEV
     - TUT-SED2017-DEV
     - TUT-SED2017-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/45759
-    size: 0.9GB
+    url: https://zenodo.org/record/996424
+    size: 0.4GB
 
   citation:
     ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
@@ -48,10 +48,10 @@ audio:
     spot_type: Fixed
 
   files:
-    total_count: 22
-    total_duration_minutes: 78
+    total_count: 10
+    total_duration_minutes: 35.63
     file_length: Variable
-    file_length_seconds: 180-300
+    file_length_seconds: 180-344
 
 # === META ===
 meta:
@@ -70,14 +70,12 @@ meta:
       hierarchical: No
 
     instance:
-      count: 954
-      average_instaces_per_class: 53.0
+      count: 511
+      average_instaces_per_class: 28.4
 
 # === CROSS-VALIDATION SETUP ===
 split:
-  provided: Yes
-  folds: 4
-  sets: Train, Test
+  provided: No
 
 # === INFO ===
 info:

@@ -1,25 +1,25 @@
 # === DATASET ===
 dataset:
-  name: TUT Sound events 2016, Development dataset
+  name: TUT Sound events 2017, Development dataset
   provider: TUT
-  abbreviation: TUT-SED2016-DEV
-  year: 2016
+  abbreviation: TUT-SED2017-DEV
+  year: 2017
   modalities: Audio
   collection_name: TUT Sound events
   related_datasets:
+    - TUT-SED2016-DEV
     - TUT-SED2016-EVAL
-    - TUT-SED2017-DEV
     - TUT-SED2017-EVAL
 
   license: Free
 
   download:
-    url: https://zenodo.org/record/45759
-    size: 0.9GB
+    url: https://zenodo.org/record/400516
+    size: 1.3GB
 
   citation:
-    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
-    title: "TUT Database for Acoustic Scene Classification and Sound Event Detection"
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+    title: "DCASE 2017 challenge setup: tasks, datasets and baseline system"
 
 # === AUDIO ===
 audio:
@@ -48,20 +48,20 @@ audio:
     spot_type: Fixed
 
   files:
-    total_count: 22
-    total_duration_minutes: 78
+    total_count: 24
+    total_duration_minutes: 92
     file_length: Variable
     file_length_seconds: 180-300
 
 # === META ===
 meta:
   scene:
-    classes: 2
+    classes: 1
     class_balance:
-    list: residential area, home
+    list: street
 
   event:
-    classes: 18
+    classes: 6
 
     annotation:
       type: Strong
@@ -70,8 +70,8 @@ meta:
       hierarchical: No
 
     instance:
-      count: 954
-      average_instaces_per_class: 53.0
+      count: 729
+      average_instaces_per_class: 121.5
 
 # === CROSS-VALIDATION SETUP ===
 split:
@@ -81,4 +81,4 @@ split:
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2016 task3
+  evaluation_campaign: DCASE2017 task3
