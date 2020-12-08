@@ -68,17 +68,6 @@
             <div class="jumbotron text-center">
               <h1>DCASE Datasets</h1>
               <p class="text-center">A curated list of open datasets</p>
-                <div class="btn-group">
-                    <a href="index.html" class="btn btn-default active">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                    </a>
-                    <a href="datasets_scenes.html" class="btn btn-primary">
-                        <i class="fa fa-picture-o" aria-hidden="true"></i> Acoustic scenes
-                    </a>
-                    <a href="datasets_events.html" class="btn btn-warning">
-                        <i class="fa fa-th" aria-hidden="true"></i> Sound events
-                    </a>
-                </div>
             </div>
         </div>
     </div>
@@ -88,10 +77,12 @@
         <div class="row-height">
             <div class="col-md-6 col-sm-height col-sm-top">
                 <div class="text-center">
-                    <span class="fa-stack fa-lg fa-4x text-primary">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <a href="datasets_scenes.html">
+                        <span class="fa-stack fa-lg fa-4x text-primary">
+                          <i class="fa fa-circle fa-stack-2x"></i>
+                          <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
                     <h2>Acoustic scenes</h2>
                 </div>
 
@@ -108,15 +99,17 @@
             </div>
             <div class="col-md-6 col-sm-height col-sm-top">
                 <div class="text-center">
-                    <span class="fa-stack fa-lg fa-4x text-warning">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <a href="datasets_events.html">
+                        <span class="fa-stack fa-lg fa-4x text-warning">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
                     <h2>Sound events</h2>
                 </div>
 
                 <p>
-                    A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”.
+                    A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”. The detection problem has been addressed in various forms throughout the years in the DCASE Challenges.
                 </p>
                 <br>
                 <br>
