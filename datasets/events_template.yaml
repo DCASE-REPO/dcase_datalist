@@ -23,12 +23,13 @@ dataset:
 # === AUDIO ===
 audio:
   data:
+    type:                               # [string], data type, possible values: Audio | Features
     file_format:
       type:                             # [string], possible values: Constant | Variable
       format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
       lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
       bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
-      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 32 | 44.1 | 48
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
       setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
@@ -66,7 +67,7 @@ meta:
 
     annotation:
       type:                             # [string], possible values: Strong | Weak | Location | None
-      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Automatic
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
       annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
       labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
       validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human

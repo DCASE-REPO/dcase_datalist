@@ -23,12 +23,13 @@ dataset:
 # === AUDIO ===
 audio:
   data:
+    type:                               # [string], data type, possible values: Audio | Features
     file_format:
       type:                             # [string], possible values: Constant | Variable
       format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
       lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
       bit_rate:                         # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
-      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 32 | 44.1 | 48
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
       setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
@@ -39,7 +40,7 @@ audio:
       variability_sources:              # [list], possible values: Country | City | Location | Position | Device
 
   content:
-    type:                               # [string], possible values: Freefield | Synthetic | Isolated
+    type:                               # [list], possible values: Freefield | Synthetic | Isolated
     scene:                              # [string], possible values: Constant | Variable
 
   recording:
