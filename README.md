@@ -1,10 +1,10 @@
 DCASE Data list
----------------
+===============
 
 This repository is a community effort of collecting meta-information about all DCASE related datasets into one place. Based on the metadata in this repository, tables in the [DCASE Community website](http://dcase.community/) are generated. 
 
 Instructions to add a new dataset to this list
-==============================================
+----------------------------------------------
 
 1. Fork this repository
 2. Identify a category for the dataset: scenes, events, captions
@@ -15,7 +15,7 @@ Instructions to add a new dataset to this list
 Optionally, you can raise an [issue](https://github.com/DCASE-REPO/dcase_datalist/issues) to this repository. 
 
 Instructions to preview the dataset information
-===============================================
+-----------------------------------------------
 
 1. Run `update.py` to update `.json` files
 2. Start local server with `start_local_server.py`
