@@ -68,7 +68,7 @@ def main(argv):
                     print('    [SKIPPED]', data['dataset']['name'])
 
         # Target
-        list_filename = os.path.join('lists', 'datasets_' + category_label + '.json')
+        list_filename = os.path.join('docs', 'datasets_' + category_label + '.json')
 
         with open(list_filename, 'w') as outfile:
             json.dump(list_data, outfile)

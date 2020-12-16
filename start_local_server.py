@@ -4,7 +4,7 @@ import os, sys, signal
 import http.server
 import socketserver
 
-os.chdir('lists')
+os.chdir('docs')
 port = 8000
 
 server = socketserver.ThreadingTCPServer(('', port), http.server.SimpleHTTPRequestHandler)
