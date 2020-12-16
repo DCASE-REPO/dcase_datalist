@@ -1,7 +1,9 @@
-DCASE Data list
+DCASE Data List
 ===============
 
 This repository is a community effort of collecting meta-information about all DCASE related datasets into one place. Based on the metadata in this repository, tables in the [DCASE Community website](http://dcase.community/) are generated. 
+
+This repository focuses specifically on pre-packaged **datasets** rather than online data repositories. A dataset should be well documented, packaged for easy usage, and have a free or open license. 
 
 Instructions to add a new dataset to this list
 ----------------------------------------------
@@ -20,6 +22,3 @@ Instructions to preview the dataset information
 1. Run `update.py` to update `.json` files
 2. Start local server with `start_local_server.py`
 3. Open url http://localhost:8000/ 
-
-
-
