@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'dcaseicons';
+  src: url('../font/dcaseicons.eot?36062344');
+  src: url('../font/dcaseicons.eot?36062344#iefix') format('embedded-opentype'),
+       url('../font/dcaseicons.woff2?36062344') format('woff2'),
+       url('../font/dcaseicons.woff?36062344') format('woff'),
+       url('../font/dcaseicons.ttf?36062344') format('truetype'),
+       url('../font/dcaseicons.svg?36062344#dcaseicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'dcaseicons';
+    src: url('../font/dcaseicons.svg?36062344#dcaseicons') format('svg');
+  }
+}
+*/
+ 
+ [class^="dc-"]:before, [class*=" dc-"]:before {
+  font-family: "dcaseicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  /*display: inline-block;*/
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.dc-captioning:before { content: '\e800'; } /* '' */
+.dc-scene:before { content: '\e801'; } /* '' */
+.dc-tags:before { content: '\e802'; } /* '' */
+.dc-localization:before { content: '\e803'; } /* '' */
+.dc-domestic:before { content: '\e804'; } /* '' */
+.dc-events:before { content: '\e805'; } /* '' */
+.dc-large-scale:before { content: '\e806'; } /* '' */
+.dc-urban:before { content: '\e807'; } /* '' */
+.dc-bird:before { content: '\e808'; font-size: 0.8em;} /* '' */
+.dc-alarm:before { content: '\f0f3'; } /* '' */
+.dc-synthetic:before { content: '\f1de'; } /* '' */

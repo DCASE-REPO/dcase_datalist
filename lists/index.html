@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://gitcdn.link/repo/toni-heittola/js-datatable/master/css.min/datatable.bundle.min.css">
+    <link rel="stylesheet" href="assets/dcaseicons/css/dcaseicons.css">
 
     <style>
         p {text-align: justify;}
@@ -57,6 +58,16 @@
         .col-sm-top {
             vertical-align: top;
         }
+        .icon-color {
+            color: #d9d9d9;
+        }
+        .top-center {
+            text-align: center;
+        }
+        .middle-center {
+            padding: 70px 0;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -74,73 +85,131 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="row-height">
-            <div class="col-md-6 col-sm-height col-sm-top">
-                <div class="text-center">
-                    <a href="datasets_scenes.html">
-                        <span class="fa-stack fa-lg fa-4x text-primary">
-                          <i class="fa fa-circle fa-stack-2x"></i>
-                          <i class="fa fa-picture-o fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                    <h2>Acoustic scenes</h2>
-                </div>
-
-                <p>
-                    An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded. This task has been addressed in many DCASE Challenge tasks throughout the years.
-                </p>
-
-                <p class="text-center bottom-button">
-                    <a href="datasets_scenes.html" class="btn btn-primary">
-                        <i class="fa fa-database" aria-hidden="true"></i> Datasets
-                        <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
-                    </a>
-                </p>
-            </div>
-            <div class="col-md-6 col-sm-height col-sm-top">
-                <div class="text-center">
-                    <a href="datasets_events.html">
-                        <span class="fa-stack fa-lg fa-4x text-warning">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-th fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                    <h2>Sound events</h2>
-                </div>
-
-                <p>
-                    A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”. The detection problem has been addressed in various forms throughout the years in the DCASE Challenges.
-                </p>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <p class="text-center bottom-button">
-                    <a href="datasets_events.html" class="btn btn-warning">
-                        <i class="fa fa-database" aria-hidden="true"></i> Datasets
-                        <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
-                    </a>
-                </p>
-            </div>
+        <div class="col-md-offset-2 col-md-8">
+            <h2>Acoustic scenes</h2>
         </div>
     </div>
-    <br><br>
     <div class="row">
-        <div class="col-md-12">
-            <div class="well well-sm">
-                <h4><i class="fa fa-share-square" aria-hidden="true"></i> Contributing</h4>
-                <p></p>
-            </div>
+        <div class="col-md-2 top-center">
+            <a href="datasets_scenes.html">
+                <span class="fa-stack fa-lg fa-4x icon-color">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa dc-scene fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+        <div class="col-md-8">
+            <p>
+                An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded. This task has been addressed in many DCASE Challenge tasks throughout the years.
+            </p>
+
+            <p><span class="label label-default">Datasets: <span id="dataset_count_scenes"></span></span></p>
+            <p>
+                <a href="datasets_scenes.html" class="btn btn-default">
+                    <i class="fa fa-database" aria-hidden="true"></i> Datasets
+                    <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                </a>
+            </p>
+        </div>
+        <div class="col-md-2 top-center">
+            <a href="datasets_scenes.html">
+                <i class="fa fa-arrow-circle-o-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <h2>Sound events</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <a href="datasets_events.html">
+                <span class="fa-stack fa-lg fa-4x icon-color">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa dc-events fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+        <div class="col-md-8">
+            <p>
+                A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”. The detection problem has been addressed in various forms throughout the years in the DCASE Challenges.
+            </p>
+            <p><span class="label label-default">Datasets: <span id="dataset_count_events"></span></span></p>
+            <p>
+                <a href="datasets_events.html" class="btn btn-default">
+                    <i class="fa fa-database" aria-hidden="true"></i> Datasets
+                    <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
+                </a>
+            </p>
+        </div>
+        <div class="col-md-2 top-center">
+            <a href="datasets_events.html">
+                <i class="fa fa-arrow-circle-o-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <span class="fa-stack fa-lg fa-4x icon-color">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <h2>Audio Captioning</h2>
+            <p>To be added. Please contribute!</p>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <span class="fa-stack fa-lg fa-4x icon-color">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa dc-bird fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <h2>Bioacoustics</h2>
+            <p>To be added. Please contribute!</p>
+        </div>
+    </div><br>
+
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <span class="fa-stack fa-lg fa-4x icon-color">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa dc-large-scale fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <h2>Machines</h2>
+            <p>To be added. Please contribute!</p>
         </div>
     </div>
 </div>
-
+<br>
+<br>
+<br>
+<br>
     <!-- JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://gitcdn.link/repo/toni-heittola/js-datatable/master/js.min/datatable.bundle.min.js"></script>
+    <script>
+         $(document).ready(function() {
+           $.getJSON('datasets_scenes.json', function(jd) {
+               $('#dataset_count_scenes').text(jd.length);
+           });
+          $.getJSON('datasets_events.json', function(jd) {
+               $('#dataset_count_events').text(jd.length);
+           });
+         });
+      </script>
+
 </body>
 
 </html>

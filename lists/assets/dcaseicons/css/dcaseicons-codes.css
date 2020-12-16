@@ -1,0 +1,12 @@
+
+.dc-captioning:before { content: '\e800'; } /* '' */
+.dc-scene:before { content: '\e801'; } /* '' */
+.dc-tags:before { content: '\e802'; } /* '' */
+.dc-localization:before { content: '\e803'; } /* '' */
+.dc-domestic:before { content: '\e804'; } /* '' */
+.dc-events:before { content: '\e805'; } /* '' */
+.dc-large-scale:before { content: '\e806'; } /* '' */
+.dc-urban:before { content: '\e807'; } /* '' */
+.dc-bird:before { content: '\e808'; } /* '' */
+.dc-alarm:before { content: '\f0f3'; } /* '' */
+.dc-synthetic:before { content: '\f1de'; } /* '' */
