@@ -10,7 +10,7 @@ dataset:
     - ESC-10
     - ESC-50
 
-  license: Free
+  license: Creative commons, CC BY-NC 3.0
 
   download:
     url: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YDEPUT

@@ -9,6 +9,7 @@ dataset:
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative commons | Free | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative commons, CC BY-SA 3.0"
 
   download:
     url:                                # [url], Link to download the dataset

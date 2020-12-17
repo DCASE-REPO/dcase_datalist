@@ -8,7 +8,7 @@ dataset:
   collection_name: DCASE 2013
   related_datasets: DCASE2013-ASC-DEV
 
-  license: Free
+  license: Creative commons, CC BY 2.0 UK
 
   download:
     url: https://archive.org/details/dcase2013_scene_classification_testset
@@ -18,7 +18,7 @@ dataset:
 
   citation:
     ref: https://hal.archives-ouvertes.fr/hal-01253912/document;Stowell2015
-    title: Detection and classification of acoustic scenes and events
+    title: Detection and Classification of Acoustic Scenes and Events
 
 # === AUDIO ===
 audio:
