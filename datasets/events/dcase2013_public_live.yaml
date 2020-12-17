@@ -7,8 +7,10 @@ dataset:
   modalities: Audio
   collection_name: DCASE 2013
   related_datasets:
-    - DCASE2013-SED-ISOLATED
-    - DCASE2013-SED-SYNTH
+    - DCASE2013-SED-DEV-ISOLATED
+    - DCASE2013-SED-DEV-SYNTH
+    - DCASE2013-SED-EVAL-LIVE
+    - DCASE2013-SED-EVAL-SYNTH
 
   license: Creative commons, CC BY 4.0
 

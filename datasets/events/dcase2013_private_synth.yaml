@@ -1,22 +1,22 @@
 # === DATASET ===
 dataset:
-  name: IEEE AASP CASA Challenge - Training Dataset for Event Detection Task (subtasks OL, OS)
+  name: IEEE AASP CASA Challenge - Testing Dataset for Event Detection Task (subtask OS)
   provider: IEEE AASP Challenge 2013
-  abbreviation: DCASE2013-SED-DEV-ISOLATED
-  year: 2012
+  abbreviation: DCASE2013-SED-EVAL-SYNTH
+  year: 2015
   modalities: Audio
   collection_name: DCASE 2013
   related_datasets:
+    - DCASE2013-SED-DEV-ISOLATED
     - DCASE2013-SED-DEV-LIVE
     - DCASE2013-SED-DEV-SYNTH
     - DCASE2013-SED-EVAL-LIVE
-    - DCASE2013-SED-EVAL-SYNTH
 
   license: Creative commons, CC BY 4.0
 
   download:
-    url: https://archive.org/details/dcase2013_event_detection_training
-    size: 678MB
+    url: https://archive.org/details/dcase2013_event_detection_testset_OS
+    size: 83.6MB
 
   companion_site: http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html
 
@@ -36,26 +36,25 @@ audio:
       sampling_rate_khz: 44.1
 
     channels:
-      setup: Array
-      number: 4
+      setup: Mono
+      number: 1
 
     material:
       source: Original
 
   content:
-    type: Isolated
+    type: Synthetic
     scene: Constant
 
   recording:
-    setup: Mixed
-    setup_count: 1
-    spot_type: Fixed
+    setup: Unknown
+    spot_type: Unknown
 
   files:
-    total_count: 320
-    total_duration_minutes: 19
-    file_length: Variable
-    file_length_seconds: 0.06-29.4
+    total_count: 12
+    total_duration_minutes: 24
+    file_length: Constant
+    file_length_seconds: 120
 
 # === META ===
 meta:
@@ -67,12 +66,11 @@ meta:
 
   event:
     classes: 16
-    class_balance: Yes
 
     annotation:
       type: Strong
-      source: Experts
-      annotations_per_item: 2
+      source: Synthetic
+      annotations_per_item: 1
       labelled_amount_percentage: 100
       strong_amount_percentage: 100
 
@@ -80,9 +78,9 @@ meta:
       hierarchical: No
 
     instance:
-      count: 639
-      average_instaces_per_class: 39.9375
+      count: 622
+      average_instaces_per_class: 38.875
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2013 task 2 (subtasks OS and OL)
+  evaluation_campaign: DCASE2013 task 2 (subtask OS)

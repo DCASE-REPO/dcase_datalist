@@ -9,6 +9,8 @@ dataset:
   related_datasets:
     - DCASE2013-SED-DEV-ISOLATED
     - DCASE2013-SED-DEV-LIVE
+    - DCASE2013-SED-DEV-SYNTH
+    - DCASE2013-SED-EVAL-SYNTH
 
   license: Creative commons, CC BY 4.0
 
