@@ -1,21 +1,21 @@
 # === DATASET ===
 dataset:
-  name: UrbanSound8K
+  name: UrbanSound
   provider: NYU
-  abbreviation: UrbanSound8K
+  abbreviation: UrbanSound
   year: 2014
   modalities: Audio
   collection_name: UrbanSound
   related_datasets:
     - URBAN-SED
-    - UrbanSound
+    - UrbanSound8K
 
   license: Creative Commons
 
   download:
-    url: https://urbansounddataset.weebly.com/download-urbansound8k.html
+    url: http://urbansounddataset.weebly.com/urbansound.html
 
-  companion_site: http://urbansounddataset.weebly.com/urbansound8k.html
+  companion_site: http://urbansounddataset.weebly.com/urbansound.html
 
   citation:
     ref: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
@@ -44,10 +44,10 @@ audio:
     spot_type: Unknown
 
   files:
-    total_count: 8732
-    total_duration_minutes: 525
-    file_length: Constant
-    file_length_seconds: 4
+    total_count: 1302
+    total_duration_minutes: 1620
+    file_length: Variable
+    file_length_seconds: 1-30
 
 meta:
   scene:
@@ -66,12 +66,5 @@ meta:
       ontology_name: Urban Sound Taxonomy
 
     instance:
-      count: 8732
-      average_instaces_per_class: 873.2
-
-# === CROSS-VALIDATION SETUP ===
-split:
-  provided: Yes
-  folds: 10
-  sets: Train, Test
-
+      count: 3075
+      average_instaces_per_class: 307.5
