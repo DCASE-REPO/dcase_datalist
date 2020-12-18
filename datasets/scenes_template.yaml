@@ -37,7 +37,7 @@ audio:
       number:                           # [int], Number of channels
 
     material:
-      source:                           # [string], possible values: Original | Youtube | Freesound | Online | Crowdsourced
+      source:                           # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
       variability_sources:              # [list], possible values: Country | City | Location | Position | Device
 
   content:
