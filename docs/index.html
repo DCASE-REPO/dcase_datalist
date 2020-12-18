@@ -59,7 +59,10 @@
             vertical-align: top;
         }
         .icon-color {
-            color: #d9d9d9;
+            color: #b4b4b4;
+        }
+        .icon-color2 {
+            color: #878787;
         }
         .top-center {
             text-align: center;
@@ -67,6 +70,10 @@
         .middle-center {
             padding: 70px 0;
             text-align: center;
+        }
+        .info{
+            padding: 7px;
+            background-color: #d0d0d0;
         }
     </style>
 </head>
@@ -78,18 +85,34 @@
         <div class="col-md-12">
             <div class="jumbotron text-center">
               <h1>DCASE Datasets</h1>
-              <p class="text-center">A curated list of open datasets</p>
+              <p class="text-center">Curated List of Open Datasets</p>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+            <p>This data listing is a community effort to collect curated meta-information about DCASE related datasets into a uniform structure. The list focuses specifically on pre-packaged <strong>datasets</strong> rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. </p>
+            <p>
+                Datasets are places into collections at the high-level based on the type of data they are focusing on.
+            </p>
+
+            <h4>Contributing</h4>
+            <p>The data listing is maintained from <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you want to contribute to the listing, you can raise issues in the repository or fork it and make a pull request with your edits.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Collections</h2>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-offset-2 col-md-8">
             <h2>Acoustic scenes</h2>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-bottom:25px;">
         <div class="col-md-2 top-center">
             <a href="datasets_scenes.html">
                 <span class="fa-stack fa-lg fa-4x icon-color">
@@ -97,23 +120,18 @@
                 <i class="fa dc-scene fa-stack-1x fa-inverse"></i>
                 </span>
             </a>
+            <br>
+            <em class="text-muted small"><span id="dataset_count_scenes"></span> datasets</em>
         </div>
         <div class="col-md-8">
             <p>
-                An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded. This task has been addressed in many DCASE Challenge tasks throughout the years.
-            </p>
-
-            <p><span class="label label-default">Datasets: <span id="dataset_count_scenes"></span></span></p>
-            <p>
-                <a href="datasets_scenes.html" class="btn btn-default">
-                    <i class="fa fa-database" aria-hidden="true"></i> Datasets
-                    <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
-                </a>
+                An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
+                This task has been addressed in many DCASE Challenge tasks throughout the years.
             </p>
         </div>
-        <div class="col-md-2 top-center">
+        <div class="col-md-2 top-center" style="padding-top:20px;">
             <a href="datasets_scenes.html">
-                <i class="fa fa-arrow-circle-o-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -123,7 +141,7 @@
             <h2>Sound events</h2>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-bottom:25px;">
         <div class="col-md-2 top-center">
             <a href="datasets_events.html">
                 <span class="fa-stack fa-lg fa-4x icon-color">
@@ -131,22 +149,17 @@
                     <i class="fa dc-events fa-stack-1x fa-inverse"></i>
                 </span>
             </a>
+            <br>
+            <em class="text-muted small"><span id="dataset_count_events"></span> datasets</em>
         </div>
         <div class="col-md-8">
             <p>
                 A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”. The detection problem has been addressed in various forms throughout the years in the DCASE Challenges.
             </p>
-            <p><span class="label label-default">Datasets: <span id="dataset_count_events"></span></span></p>
-            <p>
-                <a href="datasets_events.html" class="btn btn-default">
-                    <i class="fa fa-database" aria-hidden="true"></i> Datasets
-                    <i class="fa fa-arrow-right fa-1x" aria-hidden="true"></i>
-                </a>
-            </p>
         </div>
-        <div class="col-md-2 top-center">
+        <div class="col-md-2 top-center" style="padding-top:20px;">
             <a href="datasets_events.html">
-                <i class="fa fa-arrow-circle-o-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -187,6 +200,12 @@
         <div class="col-md-8">
             <h2>Machines</h2>
             <p>To be added. Please contribute!</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+
         </div>
     </div>
 </div>
