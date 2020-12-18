@@ -41,6 +41,8 @@ audio:
 
     material:
       source: Original
+      variability_sources:
+        - SNR
 
   content:
     type: Synthetic
