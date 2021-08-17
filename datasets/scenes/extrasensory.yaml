@@ -4,18 +4,8 @@ dataset:
   provider: UCSD
   abbreviation: ExtraSensory
   year: 2017
-  modalities:
-    - Audio
-    - Accelerometer
-    - Gyroscope
-    - Magnetometer
-    - Location
-    - Phone state
-    - Air pressure
-    - Proximity
-    - Temperature
-    - Humidity
-    - Light
+  modalities: Audio
+
 
   collection_name: ExtraSensory
 
@@ -66,6 +56,19 @@ audio:
 
 # === META ===
 meta:
+  types:
+    - Scene
+    - Accelerometer
+    - Gyroscope
+    - Magnetometer
+    - Location
+    - Phone state
+    - Air pressure
+    - Proximity
+    - Temperature
+    - Humidity
+    - Light
+
   scene:
     classes: 51
     class_balance: No

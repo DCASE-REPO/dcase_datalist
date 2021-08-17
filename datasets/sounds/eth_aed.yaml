@@ -1,0 +1,98 @@
+# === DATASET ===
+dataset:
+  name: ETH Acoustic Event Dataset
+  provider: ETH
+  abbreviation: ETH-AED
+  year: 2016
+  modalities: Audio
+  collection_name: ETH
+  related_datasets:
+
+  license: Creative Commons
+
+  download:
+    url: https://data.vision.ee.ethz.ch/cvl/ae_dataset/ae_dataset.zip
+    size: 1.2GB
+
+  companion_site: https://data.vision.ee.ethz.ch/cvl/ae_dataset/
+
+  citation:
+    ref: https://tik-old.ee.ethz.ch/file//bb2f1ebc2da22c3d0afba72241a57ab6/Takahashi_16a.pdf;Takahashi2016
+    title: "Deep Convolutional Neural Networks and Data Augmentation for Acoustic Event Recognition"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 16
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Freesound
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 5223
+    total_duration_minutes: 768.4
+    file_length:
+    file_length_seconds:
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 28
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 5223
+      average_instaces_per_class: 186.5
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://bitbucket.org/naoya1/aenet_release/src
+  cite: https://tik-old.ee.ethz.ch/file//bb2f1ebc2da22c3d0afba72241a57ab6/Takahashi_16a.pdf;Takahashi2016

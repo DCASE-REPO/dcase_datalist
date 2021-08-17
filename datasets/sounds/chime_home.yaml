@@ -1,0 +1,105 @@
+# === DATASET ===
+dataset:
+  name: CHiME-Home, development & evaluation dataset
+  provider: QMUL
+  abbreviation: CHiME-Home
+  year: 2015
+  modalities: Audio
+  collection_name: CHiME
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://archive.org/download/chime-home/chime_home.tar.gz
+    size: 3.9GB
+
+  companion_site: https://archive.org/details/chime-home
+
+  citation:
+    ref: https://ieeexplore.ieee.org/document/7336899;Foster2015
+    title: "CHiME-Home: A Dataset for Sound Source Recognition in a Domestic Environment"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 48, 16
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Original
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene: Constant
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 6138
+    total_duration_minutes: 409.2
+    file_length: Constant
+    file_length_seconds: 4
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+      - Domestic
+
+  event:
+    classes: 7
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 5
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/pafoster/dcase2016_task4/tree/master/baseline
+  cite: https://ieeexplore.ieee.org/document/7336899;Foster2015
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2016 task4

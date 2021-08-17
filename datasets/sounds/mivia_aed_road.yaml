@@ -1,0 +1,78 @@
+# === DATASET ===
+dataset:
+  name: Audio Events Data Set for Road Surveillance Applications
+  provider: MIVIA
+  abbreviation: MIVIA-AED-ROAD
+  year: 2014
+  modalities: Audio
+  collection_name: MIVIA
+
+  license: Free
+
+  download:
+    url: https://mivia.unisa.it/datasets-request/
+
+  companion_site: https://mivia.unisa.it/datasets/audio-analysis/mivia-road-audio-events-data-set/
+
+  citation:
+    ref: http://ieeexplore.ieee.org/document/6918643;Foggia2014
+    title: "Cascade Classifiers Trained on Gammatonegrams for Reliably Detecting Audio Events"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 32
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+
+  content:
+    type: Synthetic
+    scene: Constant
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 57
+    total_duration_minutes: 60
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 2
+    class_balance: Yes
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 400
+      average_instaces_per_class: 200
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 4
+  sets: Train, Test

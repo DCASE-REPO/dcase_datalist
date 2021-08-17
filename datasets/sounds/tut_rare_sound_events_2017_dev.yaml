@@ -1,0 +1,99 @@
+# === DATASET ===
+dataset:
+  name: TUT Rare sound events 2017, Development dataset
+  provider: TUT
+  abbreviation: TUT-RARE-SED-DEV
+  year: 2017
+  modalities: Audio
+  collection_name: TUT Rare SED
+  related_datasets:
+    - TUT-ASC2016-DEV
+    - TUT-RARE-SED-EVAL
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/401395#.X9yFSdaxUXU
+    size: 17.9GB
+
+  citation:
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+    title: "DCASE 2017 challenge setup: tasks, datasets and baseline system"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source:
+        - Freesound
+        - TUT Acoustic scenes 2016
+
+      variability_sources:
+        - SNR
+
+  content:
+    type: Synthetic
+    scene: Variable
+
+  recording:
+    setup: Unknown
+    spot_type: Fixed
+
+  files:
+    total_count: 1281
+    total_duration_minutes: 625
+    file_length: Constant
+    file_length_seconds: 30
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 15
+    class_balance: Yes
+
+  event:
+    classes: 3
+    class_balance: Yes
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1500
+      average_instaces_per_class: 500
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/TUT-ARG/DCASE2017-baseline-system
+  ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2017 task2

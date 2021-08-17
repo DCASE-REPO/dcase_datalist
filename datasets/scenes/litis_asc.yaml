@@ -20,6 +20,7 @@ dataset:
 
 # === AUDIO ===
 audio:
+  types: Scene
   data:
     type: Audio
     file_format:

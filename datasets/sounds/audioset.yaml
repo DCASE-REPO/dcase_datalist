@@ -1,0 +1,90 @@
+# === DATASET ===
+dataset:
+  name: AudioSet
+  provider: Google
+  abbreviation: AudioSet
+  year: 2017
+  modalities: Audio, Video
+  collection_name: AudioSet
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://research.google.com/audioset/
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://research.google.com/audioset/
+
+  citation:
+    ref: https://research.google.com/pubs/pub45857.html;Gemmeke2017
+    title: "Audio Set: An ontology and human-labeled dataset for audio events"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: Yes
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Youtube
+      variability_sources:              # [list]
+        - Recording device
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+  recording:
+    setup: Uncontrolled
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 2084320
+    total_duration_minutes: 347386.666
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event                          # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Scene, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    class_balance: No
+
+  event:
+    classes: 632
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Crowdsourced
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: AudioSet
+
+    instance:
+      count: 2084320
+      average_instaces_per_class: 3297.9
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test

@@ -1,0 +1,80 @@
+# === DATASET ===
+dataset:
+  name: NIGENS general sound events database
+  provider: NIGENS
+  abbreviation: NIGENS-SE
+  year: 2019
+  modalities: Audio
+  collection_name: NIGENS-SE
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+    - GRID
+    - TIMIT
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/2535878
+    size: 2.2GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1902.08314.pdf;Trowitzsch2019
+    title: "The NIGENS General Sound Events Database"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Variable
+      format: wav
+      lossy_compression: No
+      bit_rate: 32
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound, Online, StockMusic, GRID, TIMIT
+
+  content:
+    type: Isolated
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 1017
+    total_duration_minutes: 105
+    file_length: Variable
+    file_length_seconds: 1-5
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 14
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 1
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1017
+      average_instaces_per_class:  72.6
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 8
+  sets: Train, Test

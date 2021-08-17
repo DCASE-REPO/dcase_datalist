@@ -1,0 +1,98 @@
+# === DATASET ===
+dataset:
+  name: "IEEE DCASE 2016 Challenge - Task 2 - Train/Development Datasets"
+  provider: IRCCYN
+  abbreviation: DCASE2016-SED-SYNTH-DEV
+  year: 2016
+  modalities: Audio
+  collection_name: DCASE2016-SED-SYNTH
+  related_datasets:
+    - DCASE2016-SED-SYNTH-EVAL
+
+  license: Creative Commons, CC BY 3.0
+
+  download:
+    url: https://archive.org/details/dcase2016_task2_train_dev
+    size: 120MB
+
+  citation:
+    ref: https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/25293/Benetos%20Sound%20Event%20Detection%202017%20Accepted.pdf?sequence=1&isAllowed=y;Lafay2017
+    title: "Sound event detection in synthetic audio: analysis of the DCASE 2016 task results"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+        - SNR
+        - presence of overlapping events
+        - event density
+
+  content:
+    type: Synthetic
+    scene: Constant
+    synthetic:
+      event_instance_count: 220
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 18
+    total_duration_minutes: 36
+    file_length: Constant
+    file_length_seconds: 120
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance: Yes
+
+  event:
+    classes: 11
+    class_balance: Yes
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 594
+      average_instaces_per_class: 54
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://code.soundsoftware.ac.uk/projects/dcase-2016-challenge-task-2-baseline-system
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2016 task2
+

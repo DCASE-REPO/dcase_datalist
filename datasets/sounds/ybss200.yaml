@@ -1,0 +1,101 @@
+# === DATASET ===
+dataset:
+  name: YBSS-200
+  provider: YBSS
+  abbreviation: YBSS-200                        # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year: 2019
+  modalities: Audio
+  collection_name: YBSS
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://github.com/project-noise-2019/ybss-200
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://ieeexplore.ieee.org/document/8906597;Singh2019
+    title: "Background Sound Classification in Speech Audio Segments"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 22.05
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Youtube
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 2000
+    total_duration_minutes: 133.3
+    file_length: Constant
+    file_length_seconds: 4
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 10
+    class_balance: Yes
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 2000
+      average_instaces_per_class: 200
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url:                                  # [url], Link to baseline system source code
+  cite: https://ieeexplore.ieee.org/document/8906597;Singh2019

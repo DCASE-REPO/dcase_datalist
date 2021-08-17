@@ -20,6 +20,7 @@ dataset:
     - TAU-ASC2020-MOBILE-EVAL
     - TAU-ASC2020-3CLASS-DEV
     - TAU-ASC2020-3CLASS-EVAL
+    - TAU-ASC2021-MOBILE-EVAL
 
   license: Free
 
@@ -72,6 +73,7 @@ audio:
 
 # === META ===
 meta:
+  types: Scene
   scene:
     classes: 10
     class_balance: Yes

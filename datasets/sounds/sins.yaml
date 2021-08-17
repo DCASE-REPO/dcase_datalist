@@ -1,0 +1,95 @@
+# === DATASET ===
+dataset:
+  name: SINS database
+  provider: KU Leuven
+  abbreviation: SINS
+  year: 2017
+  modalities: Audio
+  collection_name: SINS
+  related_datasets:
+    - DCASE2018-SINS-DEV
+    - DCASE2018-SINS-EVAL
+    - DESED-EVAL-SYNTHETIC
+    - DESED-DEV-SYNTH
+
+  license: Free
+
+  download:
+    url: https://github.com/KULeuvenADVISE/SINS_database
+    size: 563GB
+
+  citation:
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Dekkers_141.pdf;Dekkers2017
+    title: "The SINS Database for Detection of Daily Activities in a Home Environment Using an Acoustic Sensor Network"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 12
+      sampling_rate_khz: 16
+
+    channels:
+      setup: Array
+      number: 4
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+    event:
+      spatial_location: Moving
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 120960
+    total_duration_minutes: 120960
+    file_length: Constant
+    file_length_seconds: 60
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 5
+    class_balance:  No
+    list:
+      - Living room
+      - Bathroom
+      - Hall
+      - Toilet
+      - Bedroom
+
+  event:
+    classes: 28
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1186
+      average_instaces_per_class: 42.36
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

@@ -1,0 +1,83 @@
+# === DATASET ===
+dataset:
+  name: RWCP Sound Scene Database
+  provider: NII-SRC
+  abbreviation: RWCP
+  year: 2000
+  modalities: Audio
+  collection_name: RWSP
+  related_datasets:
+  license: R&D only
+
+  download:
+    url: https://www.openslr.org/resources/13/RWCP.tar.gz
+    size: 1.4GB
+
+  companion_site: http://www.openslr.org/13/
+
+  citation:
+    ref: https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.463.357&rep=rep1&type=pdf;Nakamura2000
+    title: "Acoustical Sound Database in Real Environments for Sound Scene Understanding and Hands-Free Speech Recognition"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: raw
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Array
+      number: 16
+
+    material:
+      source: Original
+      variability_sources:
+
+  content:
+    type: Isolated
+    scene: Constant
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Near-field
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 9722
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 14
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 9722
+      average_instaces_per_class: 694.428571429
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

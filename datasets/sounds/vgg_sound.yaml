@@ -1,0 +1,100 @@
+# === DATASET ===
+dataset:
+  name: VGGSound
+  provider: VGG
+  abbreviation: VGGSound
+  year: 2020
+  modalities: Audio, Video
+  collection_name: VGG
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, Youtube
+
+  download:
+    url: https://www.robots.ox.ac.uk/~vgg/data/vggsound/vggsound.csv
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://www.robots.ox.ac.uk/~vgg/data/vggsound/
+
+  citation:
+    ref: https://arxiv.org/abs/2004.14368;Chen2020
+    title: "VGGSound: A Large-scale Audio-Visual Dataset"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Youtube
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 199176
+    total_duration_minutes: 33196
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 310                           # [int], Number of event classes
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage:       # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 199176
+      average_instaces_per_class: 642.503225806
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/hche11/VGGSound
+  cite: https://arxiv.org/abs/2004.14368;Chen2020
+

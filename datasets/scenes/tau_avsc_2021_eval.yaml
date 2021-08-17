@@ -1,0 +1,113 @@
+# === DATASET ===
+dataset:
+  name: TAU Urban Audio-Visual Scenes 2021, Evaluation dataset
+  provider: TAU
+  abbreviation: TAU-UAVS2021-EVAL
+  year: 2021
+  modalities: Audio, Video
+  collection_name: TAU Urban Acoustic Scenes
+  related_datasets:
+    - TUT-ASC2018-DEV
+    - TUT-ASC2018-EVAL
+    - TUT-ASC2018-LB
+    - TUT-ASC2018-MOBILE-EVAL
+    - TAU-ASC2019-DEV
+    - TAU-ASC2019-EVAL
+    - TAU-ASC2019-LB
+    - TAU-ASC2019-MOBILE-EVAL
+    - TAU-ASC2019-MOBILE-LB
+    - TAU-ASC2020-MOBILE-DEV
+    - TAU-ASC2020-MOBILE-EVAL
+    - TAU-ASC2020-3CLASS-DEV
+    - TAU-ASC2020-3CLASS-EVAL
+    - TAU-ASC2021-MOBILE-EVAL
+    - TAU-UAVS2021-DEV
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/4767109
+    size: 61.3GB
+
+  citation:
+    ref: https://arxiv.org/pdf/2011.00030;Wang2021
+    title: "A curated dataset of urban scenes for audio-visual scene analysis"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+        - Device
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 11
+    spot_type: Fixed
+
+  files:
+    total_count: 7920
+    total_duration_minutes: 1320
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Scene
+  scene:
+    classes: 10
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+    annotation:
+      type: None
+      labelled_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 7920
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/shanwangshan/TAU-urban-audio-visual-scenes
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2021 task1B
+

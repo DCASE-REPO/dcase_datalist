@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DCASE Datasets</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/css.min/datatable.bundle.min.css">
+    <link rel="stylesheet" href="assets/dcaseicons/css/dcaseicons.css">
+
+    <style>
+        p {
+            text-align: justify;
+        }
+
+        nav[data-toggle='toc'] {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            nav.affix[data-toggle='toc'] {
+                position: static;
+            }
+
+            nav[data-toggle='toc'] .nav .nav {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h1>Everyday sound datasets <small>DCASE Datasets</small>
+                    <div class="pull-right">
+                        <div class="btn-group">
+                            <a href="index.html" class="btn btn-default">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                            </a>
+                            <a href="datasets_scenes.html" class="btn btn-default">
+                                <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
+                            </a>
+                            <a href="datasets_sounds.html" class="btn btn-default active">
+                                <i class="fa fa-th" aria-hidden="true"></i> Sounds
+                            </a>
+                        </div>
+                    </div>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <table class="table datatable"
+                       data-json="datasets_sounds.json"
+                       data-id-field="dataset-name"
+                       data-sort-name="dataset-year"
+                       data-sort-order="desc"
+                       data-pagination="true"
+                       data-show-pagination-switch="true"
+                       data-show-toggle="false"
+                       data-show-columns="true"
+                       data-tag-mode="column"
+                       data-page-size="10"
+                       data-page-list="5,10,20,50,100,all"
+                       data-filter-control="true"
+                       data-filter-show-clear="true"
+                       data-show-chart="true"
+                       data-chart-modes="bar"
+                       data-chart-default-mode="off"
+                       data-bar-show-xaxis="false"
+                       data-chart-tooltip-fields="dataset-provider,dataset-name"
+                >
+                    <thead>
+                    <tr>
+                        <!-- DATASET -->
+                        <th data-field="dataset-name"
+                            data-sortable="true">
+                            <span data-toggle="tooltip" title="Dataset name">Name</span>
+                        </th>
+                        <th data-field="dataset-collection_name"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Collection <br>name
+                        </th>
+                        <th data-field="dataset-related_datasets"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Related <br>datasets
+                        </th>
+
+                        <th data-field="dataset-provider"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Provider
+                        </th>
+                        <th class="small"
+                            data-field="dataset-abbreviation"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Abbreviation
+                        </th>
+                        <th data-field="dataset-download-url"
+                            data-sortable="false"
+                            data-visible="true"
+                            data-value-type="url"
+                            data-switchable="true">
+                            <span data-toggle="tooltip" title="Download link">D</span>
+                        </th>
+                        <th data-field="dataset-companion_site"
+                            data-sortable="false"
+                            data-visible="true"
+                            data-value-type="url"
+                            data-switchable="true">
+                            <span data-toggle="tooltip" title="Companion site link">S</span>
+                        </th>
+                        <th data-field="dataset-license"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            License
+                        </th>
+                        <th data-field="dataset-download-size"
+                            data-sortable="false"
+                            data-visible="false"
+                            data-switchable="true">
+                            Size
+                        </th>
+
+                        <th data-field="dataset-year"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Year
+                        </th>
+
+                        <th class="small"
+                            data-field="dataset-citation-ref"
+                            data-sortable="false"
+                            data-visible="false"
+                            data-value-type="ref"
+                            data-switchable="true">
+                            Cite
+                        </th>
+                        <th class="small"
+                            data-field="dataset-citation-title"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Paper title
+                        </th>
+
+                        <th data-field="dataset-modalities"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Data <br>modalities
+                        </th>
+
+                        <!-- AUDIO -->
+                        <th class="sep-left-cell"
+                            data-field="audio-files-total_duration_minutes"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-chartable="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Total <br>duration <br>(min)
+                        </th>
+                        <th data-field="audio-files-total_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Files
+                        </th>
+                        <th data-field="audio-files-file_length"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Length <br>consistency
+                        </th>
+                        <th data-field="audio-files-file_length_seconds"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            File <br>length (sec)
+                        </th>
+
+                        <th data-field="audio-content-type"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Content <br>type
+                        </th>
+                        <th data-field="audio-content-scene"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Scene <br>content
+                        </th>
+                        <th data-field="audio-content-synthetic-event_instance_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Unique <br> event <br>instances <br>in synthetic <br> mixtures
+                        </th>
+
+
+                        <th data-field="audio-recording-setup"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Recording <br>setup type
+                        </th>
+                        <th data-field="audio-recording-setup_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Recording <br>setups
+                        </th>
+                        <th data-field="audio-recording-spot_type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Recording <br>spot type
+                        </th>
+                        <th data-field="audio-data-type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Data <br>type
+                        </th>
+                        <th data-field="audio-data-material-source"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Material <br>source
+                        </th>
+                        <th data-field="audio-data-material-variability_sources"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Variability <br>source
+                        </th>
+
+                        <th data-field="audio-data-file_format-type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Audio <br>type
+                        </th>
+                        <th data-field="audio-data-file_format-format"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Format
+                        </th>
+                        <th data-field="audio-data-file_format-lossy_compression"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Lossy <br>compression
+                        </th>
+                        <th data-field="audio-data-file_format-bit_rate"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Bit <br>rate
+                        </th>
+                        <th data-field="audio-data-file_format-sampling_rate_khz"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Sampling <br>rate
+                        </th>
+
+                        <th data-field="audio-data-channels-setup"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Channel <br>setup
+                        </th>
+                        <th data-field="audio-data-channels-number"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Channels
+                        </th>
+
+                        <!-- META -->
+                        <th data-field="meta-types"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Meta <br>types
+                        </th>
+
+                        <th data-field="meta-scene-classes"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Scene <br>classes
+                        </th>
+                        <th data-field="meta-scene-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Class <br>balance
+                        </th>
+                        <th data-field="meta-scene-list"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Class <br>list
+                        </th>
+
+                        <th data-field="meta-event-classes"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Event <br>classes
+                        </th>
+                        <th data-field="meta-event-instance-count"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Event <br>instance<br> count
+                        </th>
+                        <th data-field="meta-event-instance-average_instaces_per_class"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="float1"
+                            data-switchable="true">
+                            Event <br>instance<br> per class
+                        </th>
+                        <th data-field="meta-event-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>class <br>balance
+                        </th>
+                        <th data-field="meta-event-annotation-type"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>annotation<br> type
+                        </th>
+                        <th data-field="meta-event-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>annotation<br> source
+                        </th>
+                        <th data-field="meta-event-annotation-labelled_amount_percentage"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="float1-percentage"
+                            data-switchable="true">
+                            Event <br>annotations<br> labelled (%)
+                        </th>
+                        <th data-field="meta-event-annotation-validated_amount_percentage"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="float1-percentage"
+                            data-switchable="true">
+                            Event <br>annotations<br> validated (%)
+                        </th>
+                        <th data-field="meta-event-annotation-strong_amount_percentage"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="float1-percentage"
+                            data-switchable="true">
+                            Event <br>annotations<br> strong (%)
+                        </th>
+
+                        <th data-field="meta-event-labeling-hierarchical"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>labeling / <br>hierarchical
+                        </th>
+
+                        <th data-field="meta-event-labeling-ontology_name"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>labeling / <br>ontology
+                        </th>
+
+                        <!-- CROSS-VALIDATION SETUP -->
+                        <th class="sep-left-cell"
+                            data-field="split-provided"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">Data <br>split
+                        </th>
+                        <th data-field="split-sets"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Split <br>sets
+                        </th>
+                        <th data-field="split-folds"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Split <br>folds
+                        </th>
+
+                        <!-- BASELINE SYSTEM -->
+                        <th data-field="baseline-url"
+                            class="sep-left-cell"
+                            data-sortable="false"
+                            data-visible="false"
+                            data-value-type="url"
+                            data-switchable="true">
+                            Baseline
+                        </th>
+                        <th class="small"
+                            data-field="baseline-cite"
+                            data-sortable="false"
+                            data-visible="false"
+                            data-value-type="ref"
+                            data-switchable="true">
+                            Baseline <br>cite
+                        </th>
+
+                        <!-- INFO -->
+                        <th data-field="info-evaluation_campaign"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Evaluation campaigns
+                        </th>
+                        <th data-field="info-comments"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Comments
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-6">
+                <h3>Everyday sounds</h3>
+            <p>
+                This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
+                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source.
+                Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
+            </p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#instructions" data-parent="#accordion">
+                                    <i class="fa fa-question-circle" aria-hidden="true"></i> Usage instructions
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="instructions" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p>
+                                    Sort the table by clicking headers.
+                                    Select more fields to be shown from <i class="glyphicon glyphicon-th icon-th"></i>-menu.
+                                    The table can be filtered by selection condition from the select boxes. Filtering can be
+                                    cleared
+                                    with <i class="glyphicon glyphicon-trash icon-clear"></i>-button.
+                                    Numerical data is also shown in bar-chart.
+                                    Pagination can be disabled and enabled with <i
+                                        class="glyphicon glyphicon-collapse-down icon-chevron-down"></i>-button.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#notation" data-parent="#accordion">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i> Metadata information and notation
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="notation" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p>Audio content type:</p>
+                                        <ul>
+                                            <li><strong>Freefield</strong>, audio captured in real uncontrolled environment
+                                            </li>
+                                            <li><strong>Synthetic</strong>, audio created synthetic means by mixing audio
+                                                from various sources
+                                            </li>
+                                            <li><strong>Isolated</strong>, audio recorded in controlled environment where
+                                                only single sound source is active at time
+                                            </li>
+                                        </ul>
+                                        <p>Scene content:</p>
+                                        <ul>
+                                            <li><strong>Constant</strong></li>
+                                            <li><strong>Variable</strong></li>
+                                        </ul>
+
+                                        <p>Recording setup:</p>
+                                        <ul>
+                                            <li><strong>Near-field</strong></li>
+                                            <li><strong>Far-field</strong></li>
+                                            <li><strong>Mixed</strong></li>
+                                            <li><strong>Uncontrolled</strong></li>
+                                            <li><strong>Unknown</strong></li>
+                                        </ul>
+                                        <p>Recording spot type:</p>
+                                        <ul>
+                                            <li><strong>Fixed</strong>, microphone spot is fixed during the recording</li>
+                                            <li><strong>Moving</strong>, microphone is moving during the recording</li>
+                                            <li><strong>Unknown</strong></li>
+                                        </ul>
+                                        <p>Material source:</p>
+                                        <ul>
+                                            <li><strong>Original</strong>, audio captured originally for the dataset by the
+                                                data collectors
+                                            </li>
+                                            <li><strong>Online</strong>, audio collected from online sources (other than
+                                                Youtube or Freesound)
+                                            </li>
+                                            <li><strong>Youtube</strong>, audio collected from youtube.com</li>
+                                            <li><strong>Freesound</strong>, audio collected from freesound.org</li>
+                                            <li><strong>Crowdsourced</strong>, audio collected crowsourced manner, data
+                                                collected e.g. by contributing users
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Annotation type:</p>
+                                        <ul>
+                                            <li><strong>Weak</strong>, sound event class annotation done per audio recording</li>
+                                            <li><strong>Strong</strong>, sound event class annotation done with exact onsets and
+                                                offsets
+                                            </li>
+                                            <li><strong>None</strong>, no annotation provided</li>
+                                        </ul>
+                                        <p>Annotation source:</p>
+                                        <ul>
+                                            <li><strong>Experts</strong></li>
+                                            <li><strong>Crowdsourced</strong></li>
+                                            <li><strong>Synthetic</strong></li>
+                                            <li><strong>Location</strong></li>
+                                        </ul>
+                                        <p>License type:</p>
+                                        <ul>
+                                            <li><strong>Free</strong>, free for academic usage (non-commercial), usually
+                                                released under university specific EULA
+                                            </li>
+                                            <li><strong>Creative Commons</strong>, released under <a
+                                                    href="https://creativecommons.org/">creative commons licence</a></li>
+                                            <li><strong>Commercial</strong>, commercial license</li>
+                                            <li><strong>Proprietary</strong>, dataset has not been published, but there is
+                                                publications reporting results using it
+                                            </li>
+                                            <li><strong>R&D only</strong>, dataset is allowed only for research and
+                                                development use
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+            src="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/js.min/datatable.bundle.min.js"></script>
+</body>
+
+</html>

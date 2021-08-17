@@ -1,0 +1,95 @@
+# === DATASET ===
+dataset:
+  name: DESED development dataset (real recordings)
+  provider:                             # [string]
+  abbreviation: DESED-DEV-REAL
+  year: 2019
+  modalities: Audio, Video
+  collection_name: DESED
+  related_datasets:
+    - AudioSet
+    - DCASE2018-SED
+
+  license:
+
+  download:
+    url: https://github.com/turpaultn/DCASE2019_task4/
+    size: 23.4GB
+
+  companion_site: https://project.inria.fr/desed/
+
+  citation:
+    ref: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+    title: "Sound event detection in domestic environments with weakly labeled data and soundscape synthesis"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression:
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Youtube
+
+  content:
+    type: Freefield
+    scene: Variable
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 19203
+    total_duration_minutes: 2859.6
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 10
+    class_balance: No
+
+    annotation:
+      type: Strong, Weak, None
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 25.2
+      strong_amount_percentage: 16.0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 6337
+      average_instaces_per_class: 633.7
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/turpaultn/DCASE2019_task4/tree/public/baseline
+  cite: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task4

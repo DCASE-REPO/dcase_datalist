@@ -1,0 +1,72 @@
+# === DATASET ===
+dataset:
+  name: UrbanSound
+  provider: NYU
+  abbreviation: UrbanSound
+  year: 2014
+  modalities: Audio
+  collection_name: UrbanSound
+  related_datasets:
+    - URBAN-SED
+    - UrbanSound8K
+
+  license: Creative Commons
+
+  download:
+    url: http://urbansounddataset.weebly.com/urbansound.html
+
+  companion_site: http://urbansounddataset.weebly.com/urbansound.html
+
+  citation:
+    ref: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf;Salamon2014
+    title: "A Dataset and Taxonomy for Urban Sound Research"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Variable
+      format: wav
+      lossy_compression: No
+
+    channels:
+      setup: Variable
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 1302
+    total_duration_minutes: 1620
+    file_length: Variable
+    file_length_seconds: 1-30
+
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    list: street
+
+  event:
+    classes: 10
+    class_balance: Almost
+
+    annotation:
+      type: Weak
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Urban Sound Taxonomy
+
+    instance:
+      count: 3075
+      average_instaces_per_class: 307.5

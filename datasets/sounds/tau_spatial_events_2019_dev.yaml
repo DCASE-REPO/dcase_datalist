@@ -1,0 +1,107 @@
+# === DATASET ===
+dataset:
+  name: TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array, Development Datasets
+  provider: TAU
+  abbreviation: TAU-SELD2019-DEV
+  year: 2019
+  modalities: Audio
+  collection_name: TAU Spatial Sound Events
+  related_datasets:
+    - DCASE2016-SED-SYNTH-DEV
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/2599196
+    size: 7.9GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1905.08546;Adavanne2019
+    title: "A multi-room reverberant dataset for sound event localization and detection"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate:
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Ambisonic, Array
+      number: 4
+
+    material:
+      source: Original
+      variability_sources:
+        - Room impulse response
+        - Spatial location
+
+  content:
+    type: Synthetic
+    scene: Constant
+    event:
+      spatial_location: Constant
+
+    synthetic:
+      event_instance_count: 220
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 400
+    total_duration_minutes: 400
+    file_length: Constant
+    file_length_seconds: 60
+
+# === META ===
+meta:
+  types: Event, Spatial location
+
+  scene:
+    classes: 5
+    class_balance: Yes
+    list:
+      - indoor corridor
+      - indoor cafeteria
+      - indoor common area
+
+  event:
+    classes: 11
+    class_balance: Yes
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 4
+  sets:
+    - Train
+    - Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/sharathadavanne/seld-dcase2019
+  cite: https://arxiv.org/pdf/1807.00129.pdf;Adavanne2018
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task3

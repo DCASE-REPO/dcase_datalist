@@ -61,6 +61,7 @@ audio:
 
 # === META ===
 meta:
+  types: Scene
   scene:
     classes: 10
     list:

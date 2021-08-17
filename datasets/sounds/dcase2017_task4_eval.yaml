@@ -1,0 +1,90 @@
+# === DATASET ===
+dataset:
+  name: DCASE2017 task 4 evaluation dataset
+  provider: DCASE
+  abbreviation: DCASE2017-WSED-EVAL
+  year: 2017                                 # [int], Release year
+  modalities: Audio
+  collection_name: DCASE2017-WSED
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Youtube
+
+  download:
+    url: https://dl.dropboxusercontent.com/s/bbgqfd47cudwe9y/DCASE_2017_evaluation_set_audio_files.zip
+    size: 823MB
+
+  citation:
+    ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+    title: "DCASE 2017 challenge setup: tasks, datasets and baseline system"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: Yes
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Youtube
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+
+  files:
+    total_count: 1103
+    total_duration_minutes: 183.8
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance: No
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 17
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1350
+      average_instaces_per_class: 79.4
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/ankitshah009/Task-4-Large-scale-weakly-supervised-sound-event-detection-for-smart-cars
+  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2017 task4

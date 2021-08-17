@@ -1,0 +1,103 @@
+# === DATASET ===
+dataset:
+  name: "AVE: The Audio-Visual Event Dataset"
+  provider: UR
+  abbreviation: AVE
+  year: 2018
+  modalities: Audio, Video
+  collection_name: AVE
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+    - AudioSet
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK
+    size:
+
+  companion_site: https://github.com/YapengTian/AVE-ECCV18
+
+  citation:
+    ref: https://arxiv.org/abs/1803.08842;Tian2018
+    title: "Audio-Visual Event Localization in Unconstrained Videos"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio, Features
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: Yes
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Youtube
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 4143
+    total_duration_minutes: 690.5
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 28
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type: Strong
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: AudioSet
+
+    instance:
+      count: 4143
+      average_instaces_per_class: 147.964285714
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/YapengTian/AVE-ECCV18
+  cite: https://arxiv.org/abs/1803.08842;Tian2018

@@ -1,0 +1,105 @@
+# === DATASET ===
+dataset:
+  name: FSDKaggle2019
+  provider: UPF
+  abbreviation: FSDKaggle2019
+  year: 2019
+  modalities: Audio
+  collection_name: FSD
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons
+
+  download:
+    url: https://zenodo.org/record/3612637
+    size: 26.7GB
+
+  companion_site: https://www.kaggle.com/c/freesound-audio-tagging-2019
+
+  citation:
+    ref: https://arxiv.org/abs/1906.02975;Fonseca2019
+    title: "Audio tagging with noisy labels and minimal supervision"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 29266
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 80                           # [int], Number of event classes
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Crowdsourced
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 67.70655368
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: AudioSet
+
+    instance:
+      count: 29266
+      average_instaces_per_class: 365.825
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/DCASE-REPO/dcase2019_task2_baseline
+  cite: https://arxiv.org/pdf/1906.02975.pdf;Fonseca2019
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task2, Freesound Audio Tagging 2019

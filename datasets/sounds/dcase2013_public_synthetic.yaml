@@ -1,0 +1,90 @@
+# === DATASET ===
+dataset:
+  name: IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OS)
+  provider: IEEE AASP Challenge 2013
+  abbreviation: DCASE2013-SED-DEV-SYNTH
+  year: 2015
+  modalities: Audio
+  collection_name: DCASE2013
+  related_datasets:
+    - DCASE2013-SED-DEV-ISOLATED
+    - DCASE2013-SED-DEV-LIVE
+    - DCASE2013-SED-EVAL-LIVE
+    - DCASE2013-SED-EVAL-SYNTH
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://archive.org/details/dcase2013_event_detection_development_OS
+    size: 54.5MB
+
+  companion_site: http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html
+
+  citation:
+    ref: https://hal.archives-ouvertes.fr/hal-01253912/document;Stowell2015
+    title: Detection and Classification of Acoustic Scenes and Events
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+        - SNR
+
+  content:
+    type: Synthetic
+    scene: Constant
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 9
+    total_duration_minutes: 13.5
+    file_length: Constant
+    file_length_seconds: 90
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance: Yes
+    list:
+      - office
+
+  event:
+    classes: 16
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 310
+      average_instaces_per_class: 19.375
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2013 task2 (subtask OS)

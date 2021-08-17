@@ -1,0 +1,79 @@
+# === DATASET ===
+dataset:
+  provider: NYU
+  name: URBAN-SED
+  abbreviation: URBAN-SED
+  year: 2017
+  modalities: Audio
+  collection_name: URBAN-SED
+  related_datasets:
+    - UrbanSound8K
+
+  license: Free
+
+  download:
+    url: http://urbansed.weebly.com/download.html
+
+  companion_site: http://urbansed.weebly.com/
+
+  citation:
+    ref: http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_scaper_waspaa_2017.pdf;Salamon2017
+    title: "Scaper: A library for soundscape synthesis and augmentation"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Synthetic
+
+  files:
+    total_count: 10000
+    total_duration_minutes: 1800
+    file_length_seconds: 10
+    file_length: Constant
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:
+    class_balance:
+    list:
+
+  event:
+    classes: 10
+    class_balance: Almost
+
+    annotation:
+      type: Strong
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Urban Sound Taxonomy
+
+    instance:
+      count: 50000
+      average_instaces_per_class: 5000
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+

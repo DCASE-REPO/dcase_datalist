@@ -1,0 +1,91 @@
+# === DATASET ===
+dataset:
+  name: Evaluation set DCASE 2020 task 4
+  provider:
+  abbreviation: DCASE2020-TASK4-SED-EVAL
+  year: 2020
+  modalities: Audio
+  collection_name: DESED
+  related_datasets:
+    - DESED-EVAL-REAL
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/3866455
+    size: 9.1GB
+
+  companion_site: https://project.inria.fr/desed/
+
+  citation:
+    ref: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+    title: "Sound event detection in domestic environments with weakly labeled data and soundscape synthesis"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression:
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Youtube, Vimeo
+
+  content:
+    type: Freefield, Synthetic
+    scene: Variable
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count:
+    total_duration_minutes:
+    file_length: Quasi-constant
+    file_length_seconds: 10, 300
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 10
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:
+      average_instaces_per_class:
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/turpaultn/dcase20_task4/tree/master/baseline
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2020 task4

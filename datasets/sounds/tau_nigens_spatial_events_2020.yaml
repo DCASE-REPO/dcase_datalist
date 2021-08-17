@@ -1,0 +1,103 @@
+# === DATASET ===
+dataset:
+  name: TAU-NIGENS Spatial Sound Events 2020
+  provider: TAU
+  abbreviation: TAU-NIGENS-SELD2020
+  year: 2020
+  modalities: Audio
+  collection_name: TAU Spatial Sound Events
+  related_datasets:
+    - NIGENS-SE
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/4064792
+    size: 14GB
+
+  citation:
+    ref: https://arxiv.org/pdf/2006.01919.pdf;Politis2020
+    title: "A dataset of reverberant spatial sound scenes with moving sources for sound event localization and detection"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate:
+      sampling_rate_khz: 24
+
+    channels:
+      setup: Ambisonic, Array
+      number: 4
+
+    material:
+      source: Original
+      variability_sources:
+        - SNR
+        - Room impulse response
+        - Spatial location
+
+  content:
+    type: Synthetic
+    scene: Constant
+    synthetic:
+      event_instance_count: 700
+    event:
+      spatial_location: Moving
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 800
+    total_duration_minutes: 800
+    file_length: Constant
+    file_length_seconds: 60
+
+# === META ===
+meta:
+  types: Event, Spatial location
+
+  scene:
+    classes: 1
+    class_balance: Yes
+
+  event:
+    classes: 14
+    class_balance: Yes
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets:
+    - Train
+    - Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/sharathadavanne/seld-dcase2020
+  cite: https://arxiv.org/pdf/1807.00129.pdf;Adavanne2018
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2020 task3

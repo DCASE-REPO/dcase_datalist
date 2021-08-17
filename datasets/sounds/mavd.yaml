@@ -1,0 +1,95 @@
+# === DATASET ===
+dataset:
+  name: MAVD-traffic dataset
+  provider: MAVD
+  abbreviation: MAVD
+  year: 2019
+  modalities: Audio, Video
+  collection_name: MAVD
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/4741232
+    size: 1.3GB
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Zinemanas_70.pdf;Zinemanas2019
+    title: "MAVD: A Dataset for Sound Event Detection in Urban Environments"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: flac
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 47
+    total_duration_minutes: 235
+    file_length: Constant
+    file_length_seconds: 300
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance: Yes
+    list:
+     - Traffic
+
+  event:
+    classes: 21
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: MAVD
+
+    instance:
+      count: 3427
+      average_instaces_per_class: 163.19047619
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/pzinemanas/MAVD-traffic
+  cite: http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Zinemanas_70.pdf;Zinemanas2019

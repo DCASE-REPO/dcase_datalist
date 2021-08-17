@@ -1,0 +1,92 @@
+# === DATASET ===
+dataset:
+  name: DESED public evaluation dataset
+  provider:
+  abbreviation: DESED-EVAL-REAL
+  year: 2019
+  modalities: Audio
+  collection_name: DESED
+  related_datasets:
+    - AudioSet
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/4560759
+    size: 889.7MB
+
+  companion_site: https://project.inria.fr/desed/
+
+  citation:
+    ref: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+    title: "Sound event detection in domestic environments with weakly labeled data and soundscape synthesis"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression:
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Youtube
+
+  content:
+    type: Freefield
+    scene: Variable
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 637
+    total_duration_minutes: 114
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 10
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 2765
+      average_instaces_per_class: 276.5
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/turpaultn/DCASE2019_task4/tree/public/baseline
+  cite: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task4

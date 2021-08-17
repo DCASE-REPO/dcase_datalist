@@ -8,8 +8,8 @@ dataset:
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
-  license:                              # [string], possible values: Creative commons | Free | Commercial | Proprietary | R&D only
-                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative commons, CC BY-SA 3.0"
+  license:                              # [string], possible values: Creative Commons | Free | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
 
   download:
     url:                                # [url], Link to download the dataset
@@ -57,6 +57,9 @@ audio:
 
 # === META ===
 meta:
+  types:                                # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Scene, Geolocation, Spatial location, etc.
+
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost
@@ -80,7 +83,7 @@ meta:
 split:
   provided:                             # [bool], Is data splits provided, possible values: Yes | No
   folds:                                # [int], how many folds provided
-  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Eval
 
 # === BASELINE SYSTEM ===
 baseline:

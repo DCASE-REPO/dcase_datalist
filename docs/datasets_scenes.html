@@ -46,11 +46,11 @@
                             <a href="index.html" class="btn btn-default">
                                 <i class="fa fa-home" aria-hidden="true"></i>
                             </a>
-                            <a href="datasets_scenes.html" class="btn btn-primary active">
+                            <a href="datasets_scenes.html" class="btn btn-default active">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
                             </a>
-                            <a href="datasets_events.html" class="btn btn-warning">
-                                <i class="fa fa-th" aria-hidden="true"></i> Events
+                            <a href="datasets_sounds.html" class="btn btn-default">
+                                <i class="fa fa-th" aria-hidden="true"></i> Sounds
                             </a>
                         </div>
                     </div>
@@ -66,16 +66,15 @@
                        data-id-field="dataset-name"
                        data-sort-name="dataset-year"
                        data-sort-order="desc"
-                       data-pagination="false"
+                       data-pagination="true"
                        data-show-pagination-switch="true"
                        data-show-toggle="false"
                        data-show-columns="true"
                        data-tag-mode="column"
-                       data-page-size="5"
+                       data-page-size="10"
                        data-page-list="5,10,20,50,100,all"
                        data-filter-control="true"
                        data-filter-show-clear="true"
-
                        data-show-chart="true"
                        data-chart-modes="bar"
                        data-chart-default-mode="off"
@@ -158,7 +157,7 @@
                         <th class="small"
                             data-field="dataset-citation-ref"
                             data-sortable="false"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="ref"
                             data-switchable="true">
                             Cite
@@ -173,7 +172,7 @@
 
                         <th data-field="dataset-modalities"
                             data-sortable="true"
-                            data-visible="false"
+                            data-visible="true"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -330,6 +329,16 @@
                         </th>
 
                         <!-- META -->
+                        <th data-field="meta-types"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Meta <br>types
+                        </th>
+
                         <th data-field="meta-scene-classes"
                             class="sep-left-cell"
                             data-sortable="true"
@@ -381,17 +390,17 @@
                         </th>
                         <th data-field="meta-scene-annotation-labelled_amount_percentage"
                             data-sortable="true"
-                            data-visible="false"
+                            data-visible="true"
                             data-value-type="int-percentage"
                             data-switchable="true">
-                            Labelled amount
+                            Labelled <br>amount
                         </th>
                         <th data-field="meta-scene-annotation-validated_amount_percentage"
                             data-sortable="true"
                             data-visible="false"
                             data-value-type="int-percentage"
                             data-switchable="true">
-                            Validated amount
+                            Validated <br>amount
                         </th>
 
                         <th data-field="meta-scene-labeling-hierarchical"
@@ -469,7 +478,7 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Evaluation campaigns
+                            Evaluation <br>campaigns
                         </th>
                         <th data-field="info-comments"
                             class="sep-left-cell"
@@ -488,7 +497,14 @@
     <br>
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <h3>Acoustic scenes</h3>
+                <p>
+                    An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
+                This task has been addressed in many <a href="http://dcase.community">DCASE Challenge</a> tasks throughout the years.
+                </p>
+            </div>
+            <div class="col-md-6">
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -498,7 +514,7 @@
                                 </a>
                             </h4>
                         </div>
-                        <div id="instructions" class="panel-collapse collapse">
+                        <div id="instructions" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <p>
                                     Sort the table by clicking headers.
@@ -618,11 +634,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-
-            </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

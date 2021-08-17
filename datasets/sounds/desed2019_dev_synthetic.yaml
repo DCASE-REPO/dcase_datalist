@@ -1,0 +1,93 @@
+# === DATASET ===
+dataset:
+  name: DESED development dataset (synthetic clips)
+  provider:
+  abbreviation: DESED-DEV-SYNTH
+  year: 2019
+  modalities: Audio
+  collection_name: DESED
+  related_datasets:
+    - FSD50K
+    - SINS
+
+  license: Creative Commons, CC BY-NC 4.0
+
+  download:
+    url: https://zenodo.org/record/2583796
+    size: 1.2GB
+
+  companion_site: https://project.inria.fr/desed/
+
+  citation:
+    ref: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+    title: "Sound event detection in domestic environments with weakly labeled data and soundscape synthesis"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound, SINS
+
+  content:
+    type: Synthetic
+    scene: Variable
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 2045
+    total_duration_minutes: 340
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 10
+    class_balance: No
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 6032
+      average_instaces_per_class: 603.2
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/turpaultn/DCASE2019_task4/tree/public/baseline
+  cite: https://hal.inria.fr/hal-02160855v2/document;Turpault2019
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task4

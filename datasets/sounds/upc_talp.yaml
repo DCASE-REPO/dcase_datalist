@@ -1,0 +1,87 @@
+# === DATASET ===
+dataset:
+  name: UPC-TALP database of isolated meeting-room acoustic events
+  provider: CHIL
+  abbreviation: UPC-TALP
+  year: 2008
+  modalities: Audio
+  collection_name: CHIL
+  related_datasets:
+
+  license: Non-commercial
+
+  download:
+    url: http://catalog.elra.info/en-us/repository/browse/ELRA-S0268/
+    size:
+
+  citation:
+    ref:
+    title:                              # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Array
+      number: 23
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+    scene: Constant
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+  recording:
+    setup: Near-field
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 3
+    total_duration_minutes:
+    file_length:
+    file_length_seconds:
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance:
+    list:
+      - Meting room
+
+  event:
+    classes: 14
+    class_balance: Almost
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1026
+      average_instaces_per_class: 73.2857142857
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

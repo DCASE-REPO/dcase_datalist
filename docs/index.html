@@ -58,6 +58,9 @@
         .col-sm-top {
             vertical-align: top;
         }
+        .icon-color-active {
+            color: #e99002;
+        }
         .icon-color {
             color: #b4b4b4;
         }
@@ -84,22 +87,31 @@
     <div class="row">
         <div class="col-md-12">
             <div class="jumbotron text-center">
-              <h1>DCASE Datasets</h1>
-              <p class="text-center">Curated List of Open Datasets</p>
+                <img src="assets/dcase_datalist_logo.png" alt="DCASE Datalist">
+                <div class="text-center"><h4>Curated List of Open Datasets for DCASE Related Research</h4></div>
             </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <p>This data listing is a community effort to collect curated meta-information about DCASE related datasets into a uniform structure. The list focuses specifically on pre-packaged <strong>datasets</strong> rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. </p>
+        <div class="col-md-8">
             <p>
-                Datasets are places into collections at the high-level based on the type of data they are focusing on.
+                This data listing is a community effort to collect curated meta-information about DCASE related datasets into a uniform structure. The list focuses specifically on pre-packaged <strong>datasets</strong> rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. Many of the listed datasets have been used in <a href="http://dcase.community">DCASE Challenges</a>.
+            </p>
+            <p>
+                Datasets are placed into couple of collections at the high-level based on the audio content analysis type they are mainly focusing on.
             </p>
 
-            <h4>Contributing</h4>
-            <p>The data listing is maintained from <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you want to contribute to the listing, you can raise issues in the repository or fork it and make a pull request with your edits.</p>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading">Contributing</div>
+                <div class="panel-body">
+                The data listing is maintained through a <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you notice datasets missing, errors or you want to contribute otherwise to the data listings, you can raise issues in the repository or fork it and make a pull request with your edits.
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="row">
@@ -115,7 +127,7 @@
     <div class="row" style="padding-bottom:25px;">
         <div class="col-md-2 top-center">
             <a href="datasets_scenes.html">
-                <span class="fa-stack fa-lg fa-4x icon-color">
+                <span class="fa-stack fa-lg fa-4x icon-color-active">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa dc-scene fa-stack-1x fa-inverse"></i>
                 </span>
@@ -126,40 +138,43 @@
         <div class="col-md-8">
             <p>
                 An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
-                This task has been addressed in many DCASE Challenge tasks throughout the years.
+                This task has been addressed in many <a href="http://dcase.community">DCASE Challenge</a> tasks throughout the years.
             </p>
         </div>
         <div class="col-md-2 top-center" style="padding-top:20px;">
             <a href="datasets_scenes.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
             </a>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-            <h2>Sound events</h2>
+            <h2>Everyday sounds</h2>
         </div>
     </div>
     <div class="row" style="padding-bottom:25px;">
         <div class="col-md-2 top-center">
-            <a href="datasets_events.html">
-                <span class="fa-stack fa-lg fa-4x icon-color">
+            <a href="datasets_sounds.html">
+                <span class="fa-stack fa-lg fa-4x icon-color-active">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa dc-events fa-stack-1x fa-inverse"></i>
                 </span>
             </a>
             <br>
-            <em class="text-muted small"><span id="dataset_count_events"></span> datasets</em>
+            <em class="text-muted small"><span id="dataset_count_sounds"></span> datasets</em>
         </div>
         <div class="col-md-8">
             <p>
-                A <em>sound event</em> corresponds to audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start timestamp (onset) and end timestamp (offset) along with textual label that is related to the sound source. Label can be, for example, “dog barking” or “car passing by”. The detection problem has been addressed in various forms throughout the years in the DCASE Challenges.
+                This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
+                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source.
+                Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
             </p>
+
         </div>
         <div class="col-md-2 top-center" style="padding-top:20px;">
-            <a href="datasets_events.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color" aria-hidden="true"></i>
+            <a href="datasets_sounds.html">
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -168,12 +183,24 @@
     <div class="row">
         <div class="col-md-2 top-center">
             <span class="fa-stack fa-lg fa-4x icon-color">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa dc-large-scale fa-stack-1x fa-inverse"></i>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <h2>Anomalous sounds</h2>
+            <p>To be added. Please contribute!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <span class="fa-stack fa-lg fa-4x icon-color">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
             </span>
         </div>
         <div class="col-md-8">
-            <h2>Audio Captioning</h2>
+            <h2>Audio captions</h2>
             <p>To be added. Please contribute!</p>
         </div>
     </div><br>
@@ -190,18 +217,6 @@
         </div>
     </div><br>
 
-    <div class="row">
-        <div class="col-md-2 top-center">
-            <span class="fa-stack fa-lg fa-4x icon-color">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa dc-large-scale fa-stack-1x fa-inverse"></i>
-            </span>
-        </div>
-        <div class="col-md-8">
-            <h2>Machines</h2>
-            <p>To be added. Please contribute!</p>
-        </div>
-    </div>
 
     <div class="row">
         <div class="col-md-12">
@@ -223,8 +238,8 @@
            $.getJSON('datasets_scenes.json', function(jd) {
                $('#dataset_count_scenes').text(jd.length);
            });
-          $.getJSON('datasets_events.json', function(jd) {
-               $('#dataset_count_events').text(jd.length);
+          $.getJSON('datasets_sounds.json', function(jd) {
+               $('#dataset_count_sounds').text(jd.length);
            });
          });
       </script>

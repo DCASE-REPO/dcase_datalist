@@ -1,0 +1,87 @@
+# === DATASET ===
+dataset:
+  name: FBK-Irst database of isolated meeting-room acoustic events
+  provider: CHIL
+  abbreviation: FBK-Irst
+  year: 2009
+  modalities: Audio
+  collection_name: CHIL
+  related_datasets:
+
+  license: Non-commercial
+
+  download:
+    url: http://catalog.elra.info/product_info.php?products_id=1093
+    size:
+
+  citation:
+    ref:
+    title:                              # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Original
+
+  content:
+    type: Isolated
+    scene: Constant
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+  recording:
+    setup: Near-field
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 288
+    total_duration_minutes: 63
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance:
+    list:
+      - Meting room
+
+  event:
+    classes: 16
+    class_balance:
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 576
+      average_instaces_per_class: 36.0
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

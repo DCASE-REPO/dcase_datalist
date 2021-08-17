@@ -55,6 +55,7 @@ audio:
 
 # === META ===
 meta:
+  types: Scene
   scene:
     annotation:
       type: None

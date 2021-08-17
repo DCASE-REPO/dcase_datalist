@@ -1,0 +1,105 @@
+# === DATASET ===
+dataset:
+  name: Making Sense of Sounds
+  provider:  CVSSP
+  abbreviation: MSoS
+  year: 2018
+  modalities: Audio
+  collection_name: CVSSP
+  related_datasets:
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://salford.figshare.com/articles/dataset/Making_Sense_Of_Sounds_Data_for_the_machine_learning_challenge_2018/6901475/4
+    size: 604MB
+
+  companion_site: https://cvssp.org/projects/making_sense_of_sounds/site/challenge/
+
+  citation:
+    ref: https://ieeexplore.ieee.org/document/8683292;Kroos2019
+    title: "Generalisation in Environmental Sound Classification: The ‘Making Sense of Sounds’ Data Set and Challenge"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound, ESC-50, Mixing Secrets
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 2000
+    total_duration_minutes: 166
+    file_length: Constant
+    file_length_seconds: 5
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 5
+    class_balance: Yes
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Making Sense of Sounds
+
+    instance:
+      count: 2000
+      average_instaces_per_class: 400
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Dev, Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url:                                  # [url], Link to baseline system source code
+  cite: https://ieeexplore.ieee.org/document/8683292;Kroos2019
+
+# === INFO ===
+info:
+  evaluation_campaign: Making Sense of Sounds Data Challenge 2018

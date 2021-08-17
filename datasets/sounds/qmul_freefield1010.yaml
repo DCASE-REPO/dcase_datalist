@@ -1,0 +1,74 @@
+# === DATASET ===
+dataset:
+  name: Freefield1010
+  provider: QMUL
+  abbreviation: Ff1010
+  year: 2013
+  modalities: Audio
+
+  collection_name: Freefield1010
+
+  license: Creative Commons, CC BY 3.0
+
+  download:
+    url: https://archive.org/details/freefield1010
+    size: 5.5GB
+
+  citation:
+    ref: https://arxiv.org/pdf/1309.5275;Stowell2013
+    title: "An open dataset for research on audio field recording archives: freefield1010"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 7690
+    total_duration_minutes: 1282
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event, Geolocation
+
+  event:
+    annotation:
+      type: None
+      annotations_per_item: 0
+      labelled_amount_percentage: 0
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 7690
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 10
+  sets: Train, Test

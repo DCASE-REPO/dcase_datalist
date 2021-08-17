@@ -1,0 +1,93 @@
+# === DATASET ===
+dataset:
+  name: SONYC Urban Sound Tagging
+  provider: NYU
+  abbreviation: SONYC-UST
+  year: 2020                                # [int], Release year
+  modalities: Audio
+  collection_name: SONYC
+  related_datasets:
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/3966543
+    size: 4.45GB
+
+  citation:
+    ref:  https://cacm.acm.org/magazines/2019/2/234354-sonyc/pdf;Bello2019
+    title: "Sonyc: a system for monitoring, analyzing, and mitigating urban noise pollution."
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:
+
+  content:
+    type: Freefield
+    scene: Constant
+
+    event:
+      spatial_location: Unknown
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 18510
+    total_duration_minutes: 3085
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event, Annotator, Timestamp, Geolocation, Presence, Proximity
+
+  event:
+    classes: 23
+    class_balance:
+
+    annotation:
+      type: Weak
+      source: Experts, Crowdsourced
+      annotations_per_item: 3
+      labelled_amount_percentage: 100
+      strong_amount_percentage:  0
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Urban Sound Taxonomy
+
+    instance:
+      count: 18510
+      average_instaces_per_class: 804.78
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 3
+  sets: Train, Test, Val
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/sonyc-project/urban-sound-tagging-baseline
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2019 task5, DCASE2020 task5

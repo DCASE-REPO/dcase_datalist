@@ -1,0 +1,90 @@
+# === DATASET ===
+dataset:
+  name: Multi-channel acoustic event dataset
+  provider: TU Dortmund
+  abbreviation: TU-AED
+  year: 2016
+  modalities: Audio
+  collection_name: TU Dortmund
+  related_datasets:
+
+  license: Free
+
+  download:
+    url: http://patrec.cs.tu-dortmund.de/files/datasets/dcase2016_multichannel-aed_dortmund.7z
+    size: 12.1GB
+
+  citation:
+    ref: http://dcase.community/documents/workshop2016/proceedings/Kuerby-DCASE2016workshop.pdf;Kuerby2016                               # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title: "Bag-of-Features Acoustic Event Detection for Sensor Networks"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Multi-channel
+      number: 32
+
+    material:
+      source: Original
+      variability_sources:              # [list]
+
+  content:
+    type: Isolated
+    scene: Constant
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Near-field
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 23
+    total_duration_minutes: 34
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance: Yes
+    list: Meeting room
+
+  event:
+    classes: 19
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type: Strong
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 235
+      average_instaces_per_class: 19.583333333333
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

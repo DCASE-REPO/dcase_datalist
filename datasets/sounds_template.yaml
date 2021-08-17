@@ -1,0 +1,110 @@
+# === DATASET ===
+dataset:
+  name:                                 # [string], Full dataset name
+  provider:                             # [string]
+  abbreviation:                         # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year:                                 # [int], Release year
+  modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
+  collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url:                                # [url], Link to download the dataset
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref:                                # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title:                              # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data:
+    type:                               # [string], data type, possible values: Audio | Features
+    file_format:
+      type:                             # [string], possible values: Constant | Variable
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source:                           # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count:                        # [int], Total number of files
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types:                                # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Scene, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes:                            # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type:                             # [string], possible values: Strong | Weak | Location | None
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+
+    labeling:
+      hierarchical:                     # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided:                             # [bool], Is data splits provided, possible values: Yes | No
+  folds:                                # [int], how many folds provided
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url:                                  # [url], Link to baseline system source code
+  cite:                                 # [url];[key], Paper to cite for the baseline
+
+# === INFO ===
+info:
+  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  comments:                             # [string], comments
+
+# === DEBUG ===
+skip:                                   # [bool], extra field to temporally omit dataset from listings, can be used while collecting meta information for the dataset, possible values: Yes | No

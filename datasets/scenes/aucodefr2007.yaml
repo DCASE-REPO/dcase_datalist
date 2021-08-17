@@ -51,6 +51,7 @@ audio:
 
 # === META ===
 meta:
+  types: Scene
   scene:
     classes: 4
     class_balance: No

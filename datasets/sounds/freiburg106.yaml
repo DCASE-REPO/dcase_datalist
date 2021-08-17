@@ -1,0 +1,83 @@
+# === DATASET ===
+dataset:
+  name: Freiburg-106, Audio Data Set for Human Activity Recognition
+  provider: Freiburg
+  abbreviation: Freiburg-106
+  year: 2012
+  modalities: Audio
+  collection_name: Freiburg-106
+
+  license: Free
+
+  download:
+    url: http://www.csc.kth.se/~jastork/downloads/building_106_kitchen.zip
+    size: 375MB
+
+  companion_site: http://www.csc.kth.se/~jastork/pages/datasets.html
+
+  citation:
+    ref: http://ieeexplore.ieee.org/document/6343802;Stork2012
+    title: "Audio-based human activity recognition using Non-Markovian Ensemble Voting"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 22.05
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+
+  content:
+    type: Isolated
+    scene: Constant
+
+  recording:
+    setup: Unknown
+    setup_count: 1
+    spot_type: Unknown
+
+  files:
+    total_count: 1524
+    total_duration_minutes: 54
+    file_length: Variable
+
+# === META ===
+meta:
+  types: Event
+
+  scene:
+    classes: 1
+    class_balance: Yes
+    list:
+      - kitchen
+
+  event:
+    classes: 24
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 1524
+      average_instaces_per_class: 63.5
+
+# === INFO ===
+info:
+  comments: Three test sequences provided
