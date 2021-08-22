@@ -6,6 +6,7 @@ dataset:
   year: 2017
   modalities: Audio, Video
   collection_name: AudioSet
+  domain: Tagging, General
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
@@ -58,7 +59,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event                          # [list], list of meta data types provided for the data,
+  types: Tag                          # [list], list of meta data types provided for the data,
                                         # possible values: Event, Scene, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
   scene:
     class_balance: No

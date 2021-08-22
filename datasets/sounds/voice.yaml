@@ -6,6 +6,7 @@ dataset:
   year: 2020
   modalities: Audio
   collection_name: VOICe
+  domain: SED, Strong annotation, Domain adaptation
   related_datasets:
    - TUT-RARE-SED-DEV
    - TAU-ASC2019-DEV

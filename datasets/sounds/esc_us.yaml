@@ -6,6 +6,7 @@ dataset:
   year: 2015
   modalities: Audio
   collection_name: ESC dataset
+  domain: Unlabelled
   related_datasets:
     - ESC-10
     - ESC-50

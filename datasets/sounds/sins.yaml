@@ -6,6 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: SINS
+  domain: SED, Strong annotation, Human activity, Domestic, Multi-channel
   related_datasets:
     - DCASE2018-SINS-DEV
     - DCASE2018-SINS-EVAL
@@ -66,7 +67,7 @@ meta:
     classes: 5
     class_balance:  No
     list:
-      - Living room
+      - Living room and kitchen
       - Bathroom
       - Hall
       - Toilet

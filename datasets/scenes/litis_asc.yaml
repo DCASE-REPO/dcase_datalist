@@ -6,7 +6,7 @@ dataset:
   year: 2015
   modalities: Audio
   collection_name: LITIS-Rouen
-
+  domain: General
   license: Free
 
   download:

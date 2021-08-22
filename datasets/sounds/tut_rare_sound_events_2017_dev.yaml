@@ -6,6 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: TUT Rare SED
+  domain: SED, Strong annotation, Synthetic
   related_datasets:
     - TUT-ASC2016-DEV
     - TUT-RARE-SED-EVAL
@@ -38,7 +39,7 @@ audio:
     material:
       source:
         - Freesound
-        - TUT Acoustic scenes 2016
+        - TUT-ASC2016-DEV
 
       variability_sources:
         - SNR

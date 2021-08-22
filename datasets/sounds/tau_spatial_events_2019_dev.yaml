@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: TAU Spatial Sound Events
+  domain: SED, SELD, Synthetic, Strong annotation, Multi-channel
   related_datasets:
     - DCASE2016-SED-SYNTH-DEV
   license: Free
@@ -67,9 +68,9 @@ meta:
     classes: 5
     class_balance: Yes
     list:
-      - indoor corridor
-      - indoor cafeteria
-      - indoor common area
+      - Indoor corridor
+      - Indoor cafeteria
+      - Indoor common area
 
   event:
     classes: 11

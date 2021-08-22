@@ -6,6 +6,7 @@ dataset:
   year: 2018
   modalities: Audio
   collection_name: CVSSP
+  domain: Tagging, Weak annotation
   related_datasets:
 
   license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
@@ -63,7 +64,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes:                            # [int], Number of scene classes

@@ -6,6 +6,7 @@ dataset:
   year: 2020
   modalities: Audio
   collection_name: DESED
+  domain: SED, Synthetic, Domestic, Strong annotation
   related_datasets:
     - DESED-EVAL-REAL
 

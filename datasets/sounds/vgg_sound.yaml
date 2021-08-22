@@ -5,6 +5,7 @@ dataset:
   abbreviation: VGGSound
   year: 2020
   modalities: Audio, Video
+  domain: Tagging, Weak annotation, Audio-visual
   collection_name: VGG
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
@@ -61,7 +62,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes:                            # [int], Number of scene classes

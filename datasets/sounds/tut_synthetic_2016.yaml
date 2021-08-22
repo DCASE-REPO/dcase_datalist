@@ -6,7 +6,7 @@ dataset:
   year: 2016
   modalities: Audio
   collection_name: TUT SED Synthetic 2016
-
+  domain: SED, Strong annotation, Synthetic
   license: Free
 
   companion_site: https://webpages.tuni.fi/arg/paper/taslp2017-crnn-sed/tut-sed-synthetic-2016

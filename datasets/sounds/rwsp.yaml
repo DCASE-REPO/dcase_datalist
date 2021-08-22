@@ -6,6 +6,7 @@ dataset:
   year: 2000
   modalities: Audio
   collection_name: RWSP
+  domain: Tagging, Weak annotation
   related_datasets:
   license: R&D only
 
@@ -58,7 +59,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   event:
     classes: 14

@@ -6,6 +6,7 @@ dataset:
   year: 2018
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
+  domain: General
   related_datasets:
     - TUT-ASC2018-EVAL
     - TUT-ASC2018-LB

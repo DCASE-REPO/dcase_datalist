@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio, Video
   collection_name: DESED
+  domain: SED, Domestic, Strong annotation, Weak annotation, Unlabelled
   related_datasets:
     - AudioSet
     - DCASE2018-SED
@@ -59,7 +60,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Event, Tag
 
   event:
     classes: 10

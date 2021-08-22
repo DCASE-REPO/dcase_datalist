@@ -6,6 +6,7 @@ dataset:
   year: 2015
   modalities: Audio
   collection_name: ESC dataset
+  domain: Tagging, Weak annotation
   related_datasets:
     - ESC-50
     - ESC-US
@@ -52,7 +53,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   event:
     classes: 10

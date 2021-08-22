@@ -6,6 +6,7 @@ dataset:
   year: 2012
   modalities: Audio
   collection_name: DCASE2013
+  domain: SED, Office, Strong annotation
   related_datasets:
     - DCASE2013-SED-DEV-ISOLATED
     - DCASE2013-SED-DEV-LIVE
@@ -65,7 +66,7 @@ meta:
     classes: 1
     class_balance: Yes
     list:
-      - office
+      - Office
 
   event:
     classes: 16

@@ -6,6 +6,7 @@ dataset:
   year: 2016
   modalities: Audio
   collection_name: TUT Sound events
+  domain: SED, Strong annotation
   related_datasets:
     - TUT-SED2016-EVAL
     - TUT-SED2017-DEV
@@ -60,7 +61,9 @@ meta:
   scene:
     classes: 2
     class_balance:
-    list: residential area, home
+    list:
+      - Home
+      - Residential area
 
   event:
     classes: 18

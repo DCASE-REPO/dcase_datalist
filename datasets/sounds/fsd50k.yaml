@@ -6,6 +6,7 @@ dataset:
   year: 2020
   modalities: Audio
   collection_name: FSD
+  domain: Tagging, Weak annotation
 
   license: Creative Commons
 
@@ -52,7 +53,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   event:
     classes: 200

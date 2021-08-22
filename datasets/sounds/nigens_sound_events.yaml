@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: NIGENS-SE
+  domain: SED, Isolated sounds
   related_datasets:                     # [list], related datasets (name or abbreviation)
     - GRID
     - TIMIT

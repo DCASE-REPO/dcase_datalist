@@ -1,0 +1,94 @@
+# === DATASET ===
+dataset:
+  name: MATS - Multi-Annotator Tagged Soundscapes
+  provider: TAU
+  abbreviation: MATS
+  year: 2021
+  modalities: Audio
+  collection_name: MATS
+  domain: Tagging, Weak annotation, Multi-annotator
+  related_datasets:
+    - TAU-ASC2019-DEV
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/4774960#.YSKywltRW7A
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  citation:
+    ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/martinmorato_eusipco2021.pdf;MartinMorato2021
+    title: "What is the ground truth? reliability of multi-annotator data for audio tagging"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 3930
+    total_duration_minutes: 655
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Tag, Scene, Annotator
+
+  scene:
+    classes: 3
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - Airport
+      - Public square
+      - Park
+
+  event:
+    classes: 10
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type: Weak
+      source: Crowdsourced
+      annotations_per_item: 5
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No

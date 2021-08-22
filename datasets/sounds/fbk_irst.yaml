@@ -6,6 +6,7 @@ dataset:
   year: 2009
   modalities: Audio
   collection_name: CHIL
+  domain: Tagging, Weak annotation, Meeting room
   related_datasets:
 
   license: Non-commercial
@@ -56,13 +57,13 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes: 1
     class_balance:
     list:
-      - Meting room
+      - Meeting room
 
   event:
     classes: 16

@@ -6,6 +6,7 @@ dataset:
   year: 2014
   modalities: Audio
   collection_name: UrbanSound
+  domain: Tagging, Weak annotation, Urban
   related_datasets:
     - URBAN-SED
     - UrbanSound
@@ -50,11 +51,11 @@ audio:
     file_length_seconds: 4
 
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes: 1
-    list: street
+    list: Street
 
   event:
     classes: 10

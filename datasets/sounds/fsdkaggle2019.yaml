@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: FSD
+  domain: Tagging, Weak annotation, Noisy labels
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license: Creative Commons
@@ -62,7 +63,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes:                            # [int], Number of scene classes

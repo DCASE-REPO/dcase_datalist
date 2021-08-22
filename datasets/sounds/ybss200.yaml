@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: YBSS
+  domain: Tagging, Weak annotation
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
@@ -63,7 +64,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes:                            # [int], Number of scene classes

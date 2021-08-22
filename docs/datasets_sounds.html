@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DCASE Datasets</title>
+    <title>DCASE Datalist / Everyday sound datasets</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -41,7 +41,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                <h1>Everyday sound datasets <small>DCASE Datasets</small>
+                <h1>Everyday sound datasets <small>DCASE Datalist</small>
                     <div class="pull-right">
                         <div class="btn-group">
                             <a href="index.html" class="btn btn-default">
@@ -49,6 +49,9 @@
                             </a>
                             <a href="datasets_scenes.html" class="btn btn-default">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
+                            </a>
+                            <a href="datasets_captions.html" class="btn btn-default">
+                                <i class="fa dc-captioning" aria-hidden="true"></i> Captions
                             </a>
                             <a href="datasets_sounds.html" class="btn btn-default active">
                                 <i class="fa fa-th" aria-hidden="true"></i> Sounds
@@ -76,7 +79,7 @@
                        data-page-list="5,10,20,50,100,all"
                        data-filter-control="true"
                        data-filter-show-clear="true"
-                       data-show-chart="true"
+                       data-show-chart="false"
                        data-chart-modes="bar"
                        data-chart-default-mode="off"
                        data-bar-show-xaxis="false"
@@ -89,7 +92,7 @@
                             data-sortable="true">
                             <span data-toggle="tooltip" title="Dataset name">Name</span>
                         </th>
-                        <th data-field="dataset-collection_name"
+                        <th class="small" data-field="dataset-collection_name"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -173,7 +176,14 @@
                             data-switchable="true">
                             Paper title
                         </th>
-
+                        <th class="small" data-field="dataset-domain"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            General <br>domains
+                        </th>
                         <th data-field="dataset-modalities"
                             data-sortable="true"
                             data-visible="false"
@@ -269,7 +279,7 @@
                             data-switchable="true">
                             Data <br>type
                         </th>
-                        <th data-field="audio-data-material-source"
+                        <th class="small" data-field="audio-data-material-source"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -342,7 +352,7 @@
 
                         <!-- META -->
                         <th data-field="meta-types"
-                            class="sep-left-cell"
+                            class="small sep-left-cell"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -365,7 +375,7 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Class <br>balance
+                            Scene <br>class <br>balance
                         </th>
                         <th data-field="meta-scene-list"
                             data-sortable="true"
@@ -373,7 +383,7 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Class <br>list
+                            Scene <br>class <br>list
                         </th>
 
                         <th data-field="meta-event-classes"
@@ -427,21 +437,21 @@
                             data-visible="true"
                             data-value-type="float1-percentage"
                             data-switchable="true">
-                            Event <br>annotations<br> labelled (%)
+                            Event <br>ann.<br> labelled
                         </th>
                         <th data-field="meta-event-annotation-validated_amount_percentage"
                             data-sortable="true"
                             data-visible="true"
                             data-value-type="float1-percentage"
                             data-switchable="true">
-                            Event <br>annotations<br> validated (%)
+                            Event <br>ann.<br> validated
                         </th>
                         <th data-field="meta-event-annotation-strong_amount_percentage"
                             data-sortable="true"
                             data-visible="true"
                             data-value-type="float1-percentage"
                             data-switchable="true">
-                            Event <br>annotations<br> strong (%)
+                            Event <br>ann.<br> strong
                         </th>
 
                         <th data-field="meta-event-labeling-hierarchical"

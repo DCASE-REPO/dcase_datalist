@@ -6,7 +6,7 @@ dataset:
   year: 2012
   modalities: Audio
   collection_name: Freiburg-106
-
+  domain: Tagging, Weak annotation, Isolated sounds, Human activity, Kitchen
   license: Free
 
   download:
@@ -53,7 +53,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes: 1

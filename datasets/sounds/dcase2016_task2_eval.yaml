@@ -6,6 +6,7 @@ dataset:
   year: 2016
   modalities: Audio
   collection_name: DCASE2016-SED-SYNTH
+  domain: SED, Synthetic, Strong annotation
   related_datasets:
     - DCASE2016-SED-SYNTH-DEV
 

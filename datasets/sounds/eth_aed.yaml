@@ -7,7 +7,7 @@ dataset:
   modalities: Audio
   collection_name: ETH
   related_datasets:
-
+  domain: Tagging, Weak annotation
   license: Creative Commons
 
   download:
@@ -61,7 +61,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes:                            # [int], Number of scene classes

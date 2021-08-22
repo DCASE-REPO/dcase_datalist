@@ -6,6 +6,7 @@ dataset:
   year:                                 # [int], Release year
   modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
+  domain:                               # [list], related domains, e.g., SED, SELD, Tagging, Strong annotation, Weak annotation, Unlabelled
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
@@ -64,7 +65,7 @@ audio:
 # === META ===
 meta:
   types:                                # [list], list of meta data types provided for the data,
-                                        # possible values: Event, Scene, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+                                        # possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost

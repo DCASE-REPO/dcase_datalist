@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: WHAM
+  domain: Ambient noise, Unlabelled
 
   license: Creative commons, CC BY-NC 4.0
 

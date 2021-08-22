@@ -6,6 +6,7 @@ dataset:
   year: 2016
   modalities: Audio
   collection_name: TU Dortmund
+  domain: SED, Strong annotation, Meeting room, Multi-channel
   related_datasets:
 
   license: Free

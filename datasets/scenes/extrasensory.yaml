@@ -5,10 +5,8 @@ dataset:
   abbreviation: ExtraSensory
   year: 2017
   modalities: Audio
-
-
   collection_name: ExtraSensory
-
+  domain: General, Mobile devices, Multiple sensors
   license: Free
 
   download:

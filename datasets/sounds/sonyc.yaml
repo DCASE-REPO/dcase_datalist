@@ -6,6 +6,7 @@ dataset:
   year: 2020                                # [int], Release year
   modalities: Audio
   collection_name: SONYC
+  domain: Tagging, Weak annotation, Urban
   related_datasets:
 
   license: Creative Commons, CC BY 4.0
@@ -57,7 +58,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event, Annotator, Timestamp, Geolocation, Presence, Proximity
+  types: Tag, Annotator, Timestamp, Geolocation, Presence, Proximity
 
   event:
     classes: 23

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DCASE Datasets</title>
+    <title>DCASE Datalist</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -138,7 +138,6 @@
         <div class="col-md-8">
             <p>
                 An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
-                This task has been addressed in many <a href="http://dcase.community">DCASE Challenge</a> tasks throughout the years.
             </p>
         </div>
         <div class="col-md-2 top-center" style="padding-top:20px;">
@@ -147,6 +146,33 @@
             </a>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <h2>Audio captions</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 top-center">
+            <a href="datasets_captions.html">
+                <span class="fa-stack fa-lg fa-4x icon-color-active">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <br>
+            <em class="text-muted small"><span id="dataset_count_captions"></span> datasets</em>
+        </div>
+        <div class="col-md-8">
+            <p>To be added. Please contribute!</p>
+        </div>
+        <div class="col-md-2 top-center" style="padding-top:20px;">
+            <a href="datasets_captions.html">
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
@@ -167,8 +193,7 @@
         <div class="col-md-8">
             <p>
                 This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
-                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source.
-                Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
+                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source. Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
             </p>
 
         </div>
@@ -192,18 +217,7 @@
             <p>To be added. Please contribute!</p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-2 top-center">
-            <span class="fa-stack fa-lg fa-4x icon-color">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
-            </span>
-        </div>
-        <div class="col-md-8">
-            <h2>Audio captions</h2>
-            <p>To be added. Please contribute!</p>
-        </div>
-    </div><br>
+    <br>
     <div class="row">
         <div class="col-md-2 top-center">
             <span class="fa-stack fa-lg fa-4x icon-color">
@@ -238,8 +252,11 @@
            $.getJSON('datasets_scenes.json', function(jd) {
                $('#dataset_count_scenes').text(jd.length);
            });
-          $.getJSON('datasets_sounds.json', function(jd) {
+           $.getJSON('datasets_sounds.json', function(jd) {
                $('#dataset_count_sounds').text(jd.length);
+           });
+           $.getJSON('datasets_captions.json', function(jd) {
+               $('#dataset_count_captions').text(jd.length);
            });
          });
       </script>

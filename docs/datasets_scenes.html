@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DCASE Datasets</title>
+    <title>DCASE Datalist / Acoustic scenes</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
           href="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/css.min/datatable.bundle.min.css">
+    <link rel="stylesheet" href="assets/dcaseicons/css/dcaseicons.css">
 
     <style>
         p {
@@ -40,7 +41,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                <h1>Acoustic scene datasets <small>DCASE Datasets</small>
+                <h1>Acoustic scene datasets <small>DCASE Datalist</small>
                     <div class="pull-right">
                         <div class="btn-group">
                             <a href="index.html" class="btn btn-default">
@@ -48,6 +49,9 @@
                             </a>
                             <a href="datasets_scenes.html" class="btn btn-default active">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
+                            </a>
+                            <a href="datasets_captions.html" class="btn btn-default">
+                                <i class="fa dc-captioning" aria-hidden="true"></i> Captions
                             </a>
                             <a href="datasets_sounds.html" class="btn btn-default">
                                 <i class="fa fa-th" aria-hidden="true"></i> Sounds
@@ -75,7 +79,7 @@
                        data-page-list="5,10,20,50,100,all"
                        data-filter-control="true"
                        data-filter-show-clear="true"
-                       data-show-chart="true"
+                       data-show-chart="false"
                        data-chart-modes="bar"
                        data-chart-default-mode="off"
                        data-bar-show-xaxis="false"
@@ -169,7 +173,14 @@
                             data-switchable="true">
                             Paper title
                         </th>
-
+                        <th data-field="dataset-domain"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            General <br>domains
+                        </th>
                         <th data-field="dataset-modalities"
                             data-sortable="true"
                             data-visible="true"
@@ -501,7 +512,6 @@
                 <h3>Acoustic scenes</h3>
                 <p>
                     An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
-                This task has been addressed in many <a href="http://dcase.community">DCASE Challenge</a> tasks throughout the years.
                 </p>
             </div>
             <div class="col-md-6">

@@ -6,9 +6,10 @@ dataset:
   year:                                 # [int], Release year
   modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
+  domain:                               # [list], related domains, e.g., Multi-annotator
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
-  license:                              # [string], possible values: Creative Commons | Free | Commercial | Proprietary | R&D only
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
                                         # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
 
   download:
@@ -33,7 +34,7 @@ audio:
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
-      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
       number:                           # [int], Number of channels
 
     material:
@@ -41,8 +42,11 @@ audio:
       variability_sources:              # [list]
 
   content:
-    type:                               # [string], possible values: Freefield | Synthetic | Isolated
-    scene:                              # [string], possible values: Constant | Variable
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
 
   recording:
     setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
@@ -54,6 +58,46 @@ audio:
     total_duration_minutes:             # [int], Total duration of the dataset in minutes
     file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
     file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types:                                # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes:                            # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type:                             # [string], possible values: Strong | Weak | Location | None
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+
+    labeling:
+      hierarchical:                     # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+  caption:
+    annotation:
+      languages:                        # [string or list], Languages used for annotation
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      captions_per_item:                # [int], How many annotations there are available per item (possible multi-annotator setup)
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      guidance:                         # [string or list], Type of guidance annotators were provided during the annotation, e.g. Video, Image, Tags
+
+    annotator_count:                    # [int], Count of annotators used in the dataset generation
+    count:                              # [int], Count of all captions in the dataset
 
 # === CROSS-VALIDATION SETUP ===
 split:

@@ -6,6 +6,7 @@ dataset:
   year: 2018
   modalities: Audio, Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
+  domain: SED, Tagging, Domestic, Weak annotation, Unlabelled
   related_datasets:
     - AudioSet
 
@@ -56,7 +57,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Event, Tag
 
   event:
     classes: 10

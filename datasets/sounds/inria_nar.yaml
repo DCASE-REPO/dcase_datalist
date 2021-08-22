@@ -6,6 +6,7 @@ dataset:
   year: 2014
   modalities: Audio
   collection_name: NAR
+  domain: Tagging, Weak annotation, Isolated sounds
 
   license: Free
 
@@ -53,14 +54,14 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes: 2
     class_balance: No
     list:
-      - kitchen
-      - office
+      - Kitchen
+      - Office
 
   event:
     classes: 42

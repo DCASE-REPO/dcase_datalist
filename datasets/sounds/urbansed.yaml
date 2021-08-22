@@ -6,6 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: URBAN-SED
+  domain: SED, Strong annotation, Synthetic
   related_datasets:
     - UrbanSound8K
 

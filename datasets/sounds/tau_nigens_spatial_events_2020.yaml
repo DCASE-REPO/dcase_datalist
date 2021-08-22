@@ -6,6 +6,7 @@ dataset:
   year: 2020
   modalities: Audio
   collection_name: TAU Spatial Sound Events
+  domain: SED, SELD, Synthetic, Strong annotation, Multi-channel
   related_datasets:
     - NIGENS-SE
   license: Free

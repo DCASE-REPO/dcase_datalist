@@ -5,8 +5,8 @@ dataset:
   abbreviation: Ff1010
   year: 2013
   modalities: Audio
-
   collection_name: Freefield1010
+  domain: Unlabelled
 
   license: Creative Commons, CC BY 3.0
 

@@ -6,6 +6,7 @@ dataset:
   year: 2017                                 # [int], Release year
   modalities: Audio
   collection_name: DCASE2017-WSED
+  domain: SED, Street, Strong annotation
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license: Youtube
@@ -54,9 +55,10 @@ meta:
   types: Event
 
   scene:
-    classes:                            # [int], Number of scene classes
-    class_balance: No
-    list:                               # [list], list of scene classes
+    classes: 1
+    class_balance: Yes
+    list:
+      - Street
 
   event:
     classes: 17

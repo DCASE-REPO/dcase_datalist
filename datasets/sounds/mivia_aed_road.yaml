@@ -6,7 +6,7 @@ dataset:
   year: 2014
   modalities: Audio
   collection_name: MIVIA
-
+  domain: SED, Strong annotation, Traffic
   license: Free
 
   download:

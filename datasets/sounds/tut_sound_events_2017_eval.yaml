@@ -6,6 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: TUT Sound events
+  domain: SED, Strong annotation, Street
   related_datasets:
     - TUT-SED2016-DEV
     - TUT-SED2016-EVAL
@@ -60,7 +61,7 @@ meta:
   scene:
     classes: 1
     class_balance:
-    list: street
+    list: Street
 
   event:
     classes: 6

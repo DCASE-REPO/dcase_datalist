@@ -6,6 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: DESED
+  domain: SED, Synthetic, Domestic, Strong annotation
   related_datasets:
     - FSD50K
     - SINS

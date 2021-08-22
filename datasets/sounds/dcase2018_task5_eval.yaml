@@ -6,6 +6,7 @@ dataset:
   year: 2018
   modalities: Audio
   collection_name: SINS
+  domain: SED, Tagging, Domestic, Weak annotation, Multi-channel
   related_datasets:
     - SINS
     - DCASE2018-SINS-EVAL
@@ -58,13 +59,13 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
 
   scene:
     classes: 1
     class_balance:  No
     list:
-      - Living room + kitchen
+      - Living room and kitchen
 
   event:
     classes: 9
