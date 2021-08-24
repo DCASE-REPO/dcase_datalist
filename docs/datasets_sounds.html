@@ -34,6 +34,10 @@
                 display: block;
             }
         }
+        .search input{
+            height:32px;
+            padding-left:5px;
+        }
     </style>
 </head>
 
@@ -75,7 +79,7 @@
                        data-show-toggle="false"
                        data-show-columns="true"
                        data-tag-mode="column"
-                       data-page-size="10"
+                       data-page-size="5"
                        data-page-list="5,10,20,50,100,all"
                        data-filter-control="true"
                        data-filter-show-clear="true"
@@ -84,6 +88,9 @@
                        data-chart-default-mode="off"
                        data-bar-show-xaxis="false"
                        data-chart-tooltip-fields="dataset-provider,dataset-name"
+                       data-search="true"
+                       data-search-align="left"
+                       data-search-highlight="true"
                 >
                     <thead>
                     <tr>
@@ -198,7 +205,7 @@
                             data-field="audio-files-total_duration_minutes"
                             data-sortable="true"
                             data-visible="true"
-                            data-chartable="true"
+                            data-chartable="false"
                             data-value-type="int"
                             data-switchable="true">
                             Total <br>duration <br>(min)
@@ -432,24 +439,34 @@
                             data-switchable="true">
                             Event <br>annotation<br> source
                         </th>
+                        <th data-field="meta-event-annotation-overlapping_event_instances"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>ann.<br> overlapping <br>instances
+                        </th>
+
+
                         <th data-field="meta-event-annotation-labelled_amount_percentage"
                             data-sortable="true"
                             data-visible="true"
-                            data-value-type="float1-percentage"
+                            data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> labelled
                         </th>
                         <th data-field="meta-event-annotation-validated_amount_percentage"
                             data-sortable="true"
                             data-visible="true"
-                            data-value-type="float1-percentage"
+                            data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> validated
                         </th>
                         <th data-field="meta-event-annotation-strong_amount_percentage"
                             data-sortable="true"
                             data-visible="true"
-                            data-value-type="float1-percentage"
+                            data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> strong
                         </th>

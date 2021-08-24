@@ -34,6 +34,10 @@
                 display: block;
             }
         }
+        .search input{
+            height:32px;
+            padding-left:5px;
+        }
     </style>
 </head>
 
@@ -75,7 +79,7 @@
                        data-show-toggle="false"
                        data-show-columns="true"
                        data-tag-mode="column"
-                       data-page-size="10"
+                       data-page-size="5"
                        data-page-list="5,10,20,50,100,all"
                        data-filter-control="true"
                        data-filter-show-clear="true"
@@ -84,6 +88,9 @@
                        data-chart-default-mode="off"
                        data-bar-show-xaxis="false"
                        data-chart-tooltip-fields="dataset-provider,dataset-name"
+                       data-search="true"
+                       data-search-align="left"
+                       data-search-highlight="true"
                 >
                     <thead>
                     <tr>
@@ -554,14 +561,9 @@
                                     <div class="col-md-6">
                                         <p>Audio content type:</p>
                                         <ul>
-                                            <li><strong>Freefield</strong>, audio captured in real uncontrolled environment
-                                            </li>
-                                            <li><strong>Synthetic</strong>, audio created synthetic means by mixing audio
-                                                from various sources
-                                            </li>
-                                            <li><strong>Isolated</strong>, audio recorded in controlled environment where
-                                                only single sound source is active at time
-                                            </li>
+                                            <li><strong>Freefield</strong>, audio captured in real uncontrolled environment</li>
+                                            <li><strong>Synthetic</strong>, audio created synthetic means by mixing audio from various sources</li>
+                                            <li><strong>Isolated</strong>, audio recorded in controlled environment where only single sound source is active at time</li>
                                         </ul>
                                         <p>Scene content:</p>
                                         <ul>
