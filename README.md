@@ -1,7 +1,7 @@
 DCASE Datalist
 ===============
 
-This repository is a community effort of collecting meta-information about all DCASE related datasets into one place. Based on the metadata in this repository, tables in the [DCASE Datalist website](http://dcase.community/) are generated. 
+This repository is a community effort of collecting meta-information about all DCASE related datasets into one place. Based on the metadata in this repository, tables in the [DCASE Datalist website](https://dcase-repo.github.io/dcase_datalist/index.html) are generated. 
 
 This repository focuses specifically on pre-packaged **datasets** rather than online data repositories. A dataset should be well documented, packaged for easy usage, and have a free or open license for academic research. 
 
