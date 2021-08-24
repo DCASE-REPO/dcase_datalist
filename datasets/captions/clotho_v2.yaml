@@ -1,0 +1,97 @@
+# === DATASET ===
+dataset:
+  name: Clotho dataset (v2)
+  provider: TAU
+  abbreviation: Clotho
+  year: 2019
+  modalities: Audio
+  collection_name: Clotho
+  domain: Captioning
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/4783391
+    size: 6.5GB
+
+  companion_site: https://github.com/audio-captioning/clotho-dataset
+
+  citation:
+    ref: https://arxiv.org/abs/1910.09387;Drossos2019
+    title: "Clotho: an Audio Captioning Dataset"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Freesound
+      variability_sources:              # [list]
+
+  content:
+    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 6974
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length: Quasi-constant
+    file_length_seconds: 15-30
+
+# === META ===
+meta:
+  types: Caption
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes:                            # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+  caption:
+    annotation:
+      languages: English
+      source: Crowdsourced
+      captions_per_item: 5
+      validated_amount_percentage: 100
+
+    annotator_count:                    # [int], Count of annotators used in the dataset generation
+    count: 34870
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds:                                # [int], how many folds provided
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/audio-captioning/dcase-2021-baseline
+  cite:                                 # [url];[key], Paper to cite for the baseline
+
+# === INFO ===
+info:
+  evaluation_campaign: DCASE2021 task6

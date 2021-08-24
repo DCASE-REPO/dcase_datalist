@@ -1,0 +1,112 @@
+# === DATASET ===
+dataset:
+  name: "AudioCaption: Listen and Tell"
+  provider: SJTU
+  abbreviation: AudioCaption
+  year: 2019
+  modalities: Audio
+  collection_name: AudioCaption
+  domain: Captioning
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/4671263#.YSK8E1tRW7A
+    size: 13.8GB
+
+  companion_site: https://github.com/richermans/AudioCaption
+
+  citation:
+    ref: https://arxiv.org/abs/1902.09254;Wu2019
+    title: "Audio Caption: Listen and Tell"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: Youku, Iqiyi, Tencent
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 7311
+    total_duration_minutes: 1218.5
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Caption
+
+  scene:
+    classes: 2
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - Hospital
+      - Car
+
+  event:
+    classes:                            # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+
+    annotation:
+      type:                             # [string], possible values: Strong | Weak | Location | None
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+
+    labeling:
+      hierarchical:                     # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+  caption:
+    annotation:
+      languages: Mandarin Chinese
+      source:  Crowdsourced
+      captions_per_item: 3
+      validated_amount_percentage: 100
+      guidance: Video
+
+    annotator_count:                    # [int], Count of annotators used in the dataset generation
+    count:                              # [int], Count of all captions in the dataset
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Dev, Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/RicherMans/AudioCaption
+  cite: https://arxiv.org/abs/1902.09254;Wu2019

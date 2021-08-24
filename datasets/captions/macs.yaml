@@ -1,0 +1,111 @@
+# === DATASET ===
+dataset:
+  name: "MACS: Multi-Annotator Captioned Soundscapes"
+  provider: TAU
+  abbreviation: MACS
+  year: 2021
+  modalities: Audio
+  collection_name: MACS
+  domain: Captioning, Scenes, Multi-annotator
+  related_datasets:
+    - TAU-ASC2019-DEV
+
+  license: Free
+
+  download:
+    url: https://zenodo.org/record/5114771
+    size: 2.8MB
+
+  citation:
+    ref:                                # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title: "Diversity and bias in audio captioning datasets"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 24
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Binaural
+      number: 2
+
+    material:
+      source: TAU-ASC2019-DEV
+      variability_sources:
+        - Country
+        - City
+        - Location
+        - Position
+
+  content:
+    type: Freefield
+    scene: Constant
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Fixed
+
+  files:
+    total_count: 3920
+    total_duration_minutes: 653.333333333
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event, Scene, Caption
+
+  scene:
+    classes: 10
+    class_balance: Yes
+    list:
+      - airport
+      - bus
+      - metro station
+      - metro
+      - park
+      - public square
+      - shopping mall
+      - street traffic
+      - street pedestrian
+      - tram
+
+  event:
+    classes: 10
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Crowdsourced
+      annotations_per_item: 5
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 0
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instaces_per_class:       # [float], average per class instance count
+
+  caption:
+    annotation:
+      languages: English
+      source: Crowdsourced
+      captions_per_item: 5
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+
+    annotator_count:                    # [int], Count of annotators used in the dataset generation
+    count:                              # [int], Count of all captions in the dataset
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
