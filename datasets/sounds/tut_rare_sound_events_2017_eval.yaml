@@ -6,7 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: TUT Rare SED
-  domain: SED, Strong annotation, Synthetic
+  domain: SED, Strong annotation, Synthetic, Alert
   related_datasets:
     - TUT-ASC2016-DEV
     - TUT-RARE-SED-DEV
@@ -76,6 +76,7 @@ meta:
       annotations_per_item: 1
       labelled_amount_percentage: 100
       strong_amount_percentage: 100
+      overlapping_event_instances: No
 
     labeling:
       hierarchical: No

@@ -57,8 +57,9 @@ meta:
 
   event:
     annotation:
-      type: None
+      type:
       labelled_amount_percentage: 0
+      overlapping_event_instances:
 
     instance:
       count: 250000

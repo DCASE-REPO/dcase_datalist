@@ -66,6 +66,7 @@ meta:
       labelled_amount_percentage:       # [float], Percentage of all data, amount of data which is labelled
       validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
       strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+      overlapping_event_instances: Yes
 
     labeling:
       hierarchical: Yes

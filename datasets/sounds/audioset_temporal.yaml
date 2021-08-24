@@ -1,27 +1,26 @@
 # === DATASET ===
 dataset:
-  name: AudioSet
+  name: AudioSet with Temporally-Strong Labels
   provider: Google
-  abbreviation: AudioSet
-  year: 2017
+  abbreviation: AudioSet-Strong
+  year: 2021
   modalities: Audio, Video
   collection_name: AudioSet
-  domain: Tagging, General
+  domain: SED, Tagging, General
   related_datasets:
-    - AudioSet-Strong
+    - AudioSet
 
-  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
-                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+  license: Creative Commons, CC BY 4.0
 
   download:
-    url: https://research.google.com/audioset/
+    url: https://research.google.com/audioset/download_strong.html
     size:                               # [string], Approximate package size (unit GB, MB)
 
-  companion_site: https://research.google.com/audioset/
+  companion_site: https://research.google.com/audioset/download_strong.html
 
   citation:
-    ref: https://research.google.com/pubs/pub45857.html;Gemmeke2017
-    title: "Audio Set: An ontology and human-labeled dataset for audio events"
+    ref: https://arxiv.org/abs/2105.07031;Hershey2021
+    title: "The Benefit Of Temporally-Strong Labels In Audio Event Classification"
 
 # === AUDIO ===
 audio:
@@ -52,29 +51,29 @@ audio:
     spot_type: Unknown
 
   files:
-    total_count: 2084320
-    total_duration_minutes: 347386.666
+    total_count: 120459
+    total_duration_minutes: 20076.5
     file_length: Constant
     file_length_seconds: 10
 
 # === META ===
 meta:
-  types: Tag                          # [list], list of meta data types provided for the data,
+  types: Event, Tag                     # [list], list of meta data types provided for the data,
                                         # possible values: Event, Scene, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
   scene:
     class_balance: No
 
   event:
-    classes: 632
+    classes: 527
     class_balance: No
 
     annotation:
-      type: Weak
-      source: Automatic
+      type: Strong
+      source: Experts
       annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
       labelled_amount_percentage: 100
-      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
-      strong_amount_percentage: 0
+      validated_amount_percentage: 100
+      strong_amount_percentage: 100
       overlapping_event_instances: Yes
 
     labeling:
@@ -82,11 +81,11 @@ meta:
       ontology_name: AudioSet
 
     instance:
-      count: 2084320
-      average_instaces_per_class: 3297.9
+      count: 1074359
+      average_instaces_per_class: 2038.631878558
 
 # === CROSS-VALIDATION SETUP ===
 split:
   provided: Yes
   folds: 1
-  sets: Train, Test
+  sets: Train, Eval

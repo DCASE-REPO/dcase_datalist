@@ -70,6 +70,7 @@ meta:
       source: Experts
       annotations_per_item: 1
       labelled_amount_percentage: 100
+      overlapping_event_instances: No
 
     labeling:
       hierarchical: No

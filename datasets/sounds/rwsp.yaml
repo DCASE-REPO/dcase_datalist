@@ -71,6 +71,7 @@ meta:
       annotations_per_item: 1
       labelled_amount_percentage: 100
       strong_amount_percentage: 0
+      overlapping_event_instances: No
 
     labeling:
       hierarchical: No

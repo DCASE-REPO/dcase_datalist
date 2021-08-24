@@ -78,12 +78,13 @@ meta:
       annotations_per_item: 2
       labelled_amount_percentage: 100
       strong_amount_percentage: 100
+      overlapping_event_instances: No
 
     labeling:
       hierarchical: No
 
     instance:
-      count: 205  # 95 + 110
+      count: 205
       average_instaces_per_class: 12.8125
 
 # === INFO ===

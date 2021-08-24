@@ -73,6 +73,7 @@ meta:
       annotations_per_item: 1
       labelled_amount_percentage: 100      # [float], Percentage of all data, amount of data which is labelled
       strong_amount_percentage: 0
+      overlapping_event_instances: No
 
     labeling:
       hierarchical: Yes
