@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DCASE Datalist / Everyday sound datasets</title>
+    <title>DCASE Datalist / All datasets</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                <h1>Everyday sound datasets <small>DCASE Datalist</small>
+                <h1>All datasets <small>DCASE Datalist</small>
                     <div class="pull-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#helpModal">
@@ -59,7 +59,7 @@
                             <a href="index.html" class="btn btn-default">
                                 <i class="fa fa-home" aria-hidden="true"></i>
                             </a>
-                            <a href="datasets.html" class="btn btn-default">
+                            <a href="datasets.html" class="btn btn-default active">
                                 <i class="fa fa-table" aria-hidden="true"></i> All
                             </a>
                             <a href="datasets_scenes.html" class="btn btn-default">
@@ -68,7 +68,7 @@
                             <a href="datasets_captions.html" class="btn btn-default">
                                 <i class="fa dc-captioning" aria-hidden="true"></i> Captions
                             </a>
-                            <a href="datasets_sounds.html" class="btn btn-default active">
+                            <a href="datasets_sounds.html" class="btn btn-default">
                                 <i class="fa fa-th" aria-hidden="true"></i> Sounds
                             </a>
                         </div>
@@ -81,7 +81,7 @@
         <div class="row-fluid">
             <div class="col-md-12">
                 <table class="table datatable"
-                       data-json="datasets_sounds.json"
+                       data-json="datasets.json"
                        data-id-field="dataset-name"
                        data-sort-name="dataset-year"
                        data-sort-order="desc"
@@ -388,7 +388,6 @@
                             Scene <br>classes
                         </th>
 
-
                         <th data-field="meta-scene-class_balance"
                             data-sortable="true"
                             data-visible="false"
@@ -406,6 +405,69 @@
                             Scene <br>class <br>list
                         </th>
 
+                        <th data-field="meta-scene-annotation-type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Scene <br>annotation <br>type
+                        </th>
+                        <th data-field="meta-scene-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Scene <br>annotation <br>source
+                        </th>
+                        <th data-field="meta-scene-annotation-annotations_per_item"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Scene <br>annotations <br>per item
+                        </th>
+                        <th data-field="meta-scene-annotation-labelled_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Scene <br>labelled <br>amount
+                        </th>
+                        <th data-field="meta-scene-annotation-validated_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Scene <br>validated <br>amount
+                        </th>
+
+                        <th data-field="meta-scene-labeling-hierarchical"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Scene <br>labeling / <br>hierarchical
+                        </th>
+
+                        <th data-field="meta-scene-instance-count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Scene <br>instance<br> count
+                        </th>
+                        <th data-field="meta-scene-instance-average_instaces_per_class"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="float1"
+                            data-switchable="true">
+                            Scene <br>instance<br> per class
+                        </th>
+
                         <th data-field="meta-event-classes"
                             class="sep-left-cell"
                             data-sortable="true"
@@ -416,7 +478,7 @@
                         </th>
                         <th data-field="meta-event-instance-count"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="int"
                             data-switchable="true">
                             Event <br>instance<br> count
@@ -438,7 +500,7 @@
                         </th>
                         <th data-field="meta-event-annotation-type"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -454,7 +516,7 @@
                         </th>
                         <th data-field="meta-event-annotation-overlapping_event_instances"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -464,21 +526,21 @@
 
                         <th data-field="meta-event-annotation-labelled_amount_percentage"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> labelled
                         </th>
                         <th data-field="meta-event-annotation-validated_amount_percentage"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> validated
                         </th>
                         <th data-field="meta-event-annotation-strong_amount_percentage"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="int-percentage"
                             data-switchable="true">
                             Event <br>ann.<br> strong
@@ -500,6 +562,46 @@
                             data-filter-control="select"
                             data-switchable="true">
                             Event <br>labeling / <br>ontology
+                        </th>
+
+                        <!-- META / CAPTION -->
+                        <th data-field="meta-caption-annotation-captions_per_item"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Captions <br>per item
+                        </th>
+                        <th data-field="meta-caption-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Caption <br>annotation<br> source
+                        </th>
+                        <th data-field="meta-caption-annotator_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Caption <br>annotator<br> count
+                        </th>
+                        <th data-field="meta-caption-count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Caption <br>instance<br> count
+                        </th>
+                        <th data-field="meta-caption-annotation-languages"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Caption <br>languages
                         </th>
 
                         <!-- CROSS-VALIDATION SETUP -->
@@ -573,12 +675,6 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-6">
-                <h3>Everyday sounds</h3>
-            <p>
-                This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
-                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source.
-                Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
-            </p>
             </div>
         </div>
     </div>
@@ -609,7 +705,6 @@
         </div>
       </div>
     </div>
-
     <div id="notationModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -706,7 +801,6 @@
         </div>
       </div>
     </div>
-
     <!-- JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"

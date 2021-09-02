@@ -121,7 +121,35 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <h2>Data collections</h2>
+            <h2>Datalist</h2>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom:25px;">
+        <div class="col-md-2 top-center">
+            <a href="datasets.html">
+                <span class="fa-stack fa-lg fa-4x icon-color-active">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-table fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+            <br>
+            <em class="text-muted"><span id="dataset_count"></span> datasets</em>
+        </div>
+        <div class="col-md-8">
+            <p>
+                This datalist pools together all task-specific collections to ease the data search across collections.
+            </p>
+        </div>
+        <div class="col-md-2 top-center" style="padding-top:20px;">
+            <a href="datasets.html">
+                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Task-specific data collections</h2>
         </div>
     </div>
     <div class="row">
@@ -208,7 +236,37 @@
             </a>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Other resources</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Bioacoustics</h4>
+            <ul>
+                <li><a href="https://bioacousticsdatasets.weebly.com/" target="_blank">Bioacoustics Datasets</a> list maintained by Justin Salamon</li>
+                <li><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Bioacoustics_Datasets" target="_blank">Bioacoustics Datasets entry in Wikidata</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Speech</h4>
+            <ul>
+                <li><a href="https://github.com/jim-schwoebel/voice_datasets" target="_blank">Voice datasets</a> list maintained by Jim Schwoebel</li>
+                <li><a href="https://wiki.inria.fr/rosp/Datasets" target="_blank">A categorization of robust speech processing datasets</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h4>Video</h4>
+            <ul>
+                <li><a href="https://github.com/xiaobai1217/Awesome-Video-Datasets" target="_blank">Awesome-Video-Datasets</a> list maintained by Yunhua Zhang</li>
+            </ul>
+            <h4>Computer vision</h4>
+            <ul>
+                <li><a href="https://visualdata.io/discovery">VisualData Discovery</a></li>
+            </ul>
+        </div>
+    </div>
     <br>
 </div>
 <br>
@@ -222,6 +280,9 @@
     <script type="text/javascript" src="https://gitcdn.link/repo/toni-heittola/js-datatable/master/js.min/datatable.bundle.min.js"></script>
     <script>
          $(document).ready(function() {
+           $.getJSON('datasets.json', function(jd) {
+               $('#dataset_count').text(jd.length);
+           });
            $.getJSON('datasets_scenes.json', function(jd) {
                $('#dataset_count_scenes').text(jd.length);
            });

@@ -43,6 +43,7 @@ def main(argv):
         if file.endswith('_template.yaml'):
             template_files.append(os.path.join('datasets', file))
 
+    global_list_data = {}
     for template_file in template_files:
         category_label = os.path.split(template_file)[-1].split('_')[0]
         print(' ', category_label)
@@ -63,7 +64,10 @@ def main(argv):
                     print('   ', data['dataset']['name'])
                     item = process_dataset_meta(data, template)
                     list_data.append(item)
-
+                    if item['dataset-name'] not in global_list_data:
+                        global_list_data[item['dataset-name']] = item
+                    else:
+                        global_list_data[item['dataset-name']].update(item)
                 else:
                     print('    [SKIPPED]', data['dataset']['name'])
 
@@ -77,6 +81,13 @@ def main(argv):
         print('    SAVED [', list_filename, ']')
         print(' ')
 
+    # Target
+    global_list_filename = os.path.join('docs', 'datasets.json')
+    with open(global_list_filename, 'w') as outfile:
+        json.dump(global_list_data, outfile)
+    print('  ====================================')
+    print('  SAVED [', global_list_filename, ']')
+    print(' ')
     print('  [DONE]')
 
 
