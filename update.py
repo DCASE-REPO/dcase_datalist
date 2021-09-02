@@ -84,7 +84,7 @@ def main(argv):
     # Target
     global_list_filename = os.path.join('docs', 'datasets.json')
     with open(global_list_filename, 'w') as outfile:
-        json.dump(global_list_data, outfile)
+        json.dump(list(global_list_data.values()), outfile)
     print('  ====================================')
     print('  SAVED [', global_list_filename, ']')
     print(' ')
