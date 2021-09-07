@@ -6,7 +6,7 @@ dataset:
   year: 2018
   modalities: Audio, Video
   collection_name: AVE
-  domain: SED, General, Audio-visual
+  domain: SED, Audio-visual
   related_datasets:                     # [list], related datasets (name or abbreviation)
     - AudioSet
 

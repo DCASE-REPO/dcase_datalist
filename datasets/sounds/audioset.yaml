@@ -6,7 +6,7 @@ dataset:
   year: 2017
   modalities: Audio, Video
   collection_name: AudioSet
-  domain: Tagging, General
+  domain: Tagging
   related_datasets:
     - AudioSet-Strong
 

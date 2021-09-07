@@ -81,6 +81,7 @@ meta:
       source: Experts
       annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
       labelled_amount_percentage: 100
+      validated_amount_percentage: 100
       strong_amount_percentage: 0
       overlapping_event_instances: Yes
 
