@@ -74,8 +74,8 @@ meta:
       ontology_name: AudioSet
 
     instance:
-      count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      count: 152867
+      average_instaces_per_class: 764.335
 
 # === CROSS-VALIDATION SETUP ===
 split:
