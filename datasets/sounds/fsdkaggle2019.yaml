@@ -7,7 +7,8 @@ dataset:
   modalities: Audio
   collection_name: FSD
   domain: Tagging, Weak annotation, Noisy labels
-  related_datasets:                     # [list], related datasets (name or abbreviation)
+  related_datasets:
+    - YFCC100M
 
   license: Creative Commons
 
@@ -37,11 +38,11 @@ audio:
       number: 1
 
     material:
-      source: Freesound
+      source: Freesound, Flickr
       variability_sources:              # [list]
 
   content:
-    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    type: Freefield
     scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
 
     event:
@@ -57,7 +58,7 @@ audio:
 
   files:
     total_count: 29266
-    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    total_duration_minutes: 6204
     file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
     file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
 

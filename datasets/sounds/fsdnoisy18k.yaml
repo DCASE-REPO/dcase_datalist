@@ -33,15 +33,15 @@ audio:
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
-      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
-      number:                           # [int], Number of channels
+      setup: Mono
+      number: 1
 
     material:
-      source:                           # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      source: Freesound
       variability_sources:              # [list]
 
   content:
-    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    type: Freefield
     scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
 
     event:
