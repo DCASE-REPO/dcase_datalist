@@ -72,7 +72,7 @@ meta:
 
     annotation:
       type: Weak
-      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      source: Experts
       annotations_per_item: 1
       labelled_amount_percentage: 100
       validated_amount_percentage: 100
@@ -81,7 +81,6 @@ meta:
 
     labeling:
       hierarchical: No
-      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
 
     instance:
       count: 1360
