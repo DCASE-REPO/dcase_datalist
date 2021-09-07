@@ -78,201 +78,239 @@
             padding: 7px;
             background-color: #d0d0d0;
         }
+        .page-top .page-heading {
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        header .page-heading .bold {
+            color: #D7D7D7;
+            font-family: Heebo,'PT Sans Caption','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-weight: 900;
+            text-shadow: 2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,3px 3px 5px #444;
+        }
+        .header-cc-logo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: rgba(255,255,255,.3);
+            padding: 3px;
+            font-size: 1.1em;
+        }
+        .bg-light-gray {
+            background-color: #f7f7f7;
+        }
+        .gradient1r {
+            background: #fff;
+            background: -moz-linear-gradient(top,#f7f7f7 0,#fff 100%);
+            background: -webkit-linear-gradient(top,#f7f7f7 0,#fff 100%);
+            background: linear-gradient(to bottom,#f7f7f7 0,#fff 100%);
+        }
+        ul {padding-left: 15px;}
     </style>
 </head>
 
 <body data-spy="scroll" data-target="#toc">
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="jumbotron text-center">
-                <img src="assets/dcase_datalist_logo.png" alt="DCASE Datalist">
-                <div class="text-center"><h4>Curated List of Open Datasets for DCASE Related Research</h4></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <p>
-                This data listing is a <strong>community effort</strong> to collect curated meta-information about DCASE related datasets into a uniform structure.
-                The DCASE is a community for research on Detection and Classification of Acoustic Scenes and Events, and the community offers a platform for discussion of the different perspectives and approaches, from algorithm development to practical applications and their commercial value.
-            </p>
-            <p>
-                The list focuses specifically on <strong>pre-packaged datasets</strong> rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. Many of the listed datasets have been used in <a href="http://dcase.community">DCASE Challenges</a> or peer-reviewed academic papers.
-            </p>
-            <p>
-                Datasets are placed into roughly a couple of <strong>data collections</strong> at the high level based on the audio content analysis type they are mainly focusing on. Some datasets can be used for multiple content analysis tasks, and in these cases, they are placed into multiple collections.
 
-            </p>
-
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-danger">
-                <div class="panel-heading">Contributing</div>
-                <div class="panel-body">
-                The data listing is maintained through a <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you notice datasets missing, errors, or you want to contribute otherwise to the data listings, you can raise issues in the repository or fork it and make a pull request with your edits. Proposals for a new data collections are welcomed as well.
+<header class="page-top" style="background-image: url(https://github.com/toni-heittola/everyday-patterns/raw/master/grid-toledo-01.jpg);box-shadow: 0px 1000px rgba(0, 0, 0, 0.85) inset;overflow:hidden;position:relative">
+    <div class="container" style="box-shadow: 0px 1000px rgba(255, 255, 255, 0.1) inset;height:100%;padding-bottom:20px;">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="page-heading text-right">
+                    <div class="pull-right2">
+                        <img src="assets/dcase_datalist_logo_white.png" alt="DCASE Datalist">
+                    </div>
+                    <h1 class="bold">Curated List of Open Datasets for DCASE Related Research</h1>
                 </div>
             </div>
+        </div>
+    </div>
+    <span class="header-cc-logo" data-toggle="tooltip" data-placement="top" title="Background photo by Toni Heittola / CC BY-NC 4.0" data-original-title="Background photo by Toni Heittola / CC BY-NC 4.0"><i class="fa fa-creative-commons" aria-hidden="true"></i></span>
+</header>
+<section id="main">
+    <div class="container bg-light-gray gradient1r" style="padding-top: 40px;">
+        <div class="row">
+            <div class="col-md-8">
+                <p>
+                    This data listing is a <strong>community effort</strong> to collect curated meta-information about DCASE related datasets into a uniform structure.
+                    The DCASE is a community for research on Detection and Classification of Acoustic Scenes and Events, and the community offers a platform for discussion of the different perspectives and approaches, from algorithm development to practical applications and their commercial value.
+                </p>
+                <p>
+                    The list focuses specifically on <strong>pre-packaged datasets</strong> rather than online data repositories. Datasets included in the list are well documented, packaged for easy usage, and have a free or open license. Many of the listed datasets have been used in <a href="http://dcase.community">DCASE Challenges</a> or peer-reviewed academic papers.
+                </p>
+                <p>
+                    Datasets are placed into roughly a couple of <strong>data collections</strong> at the high level based on the audio content analysis type they are mainly focusing on. Some datasets can be used for multiple content analysis tasks, and in these cases, they are placed into multiple collections.
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Datalist</h2>
-        </div>
-    </div>
-    <div class="row" style="padding-bottom:25px;">
-        <div class="col-md-2 top-center">
-            <a href="datasets.html">
-                <span class="fa-stack fa-lg fa-4x icon-color-active">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-table fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-            <br>
-            <em class="text-muted"><span id="dataset_count"></span> datasets</em>
-        </div>
-        <div class="col-md-8">
-            <p>
-                This datalist pools together all task-specific collections to ease the data search across collections.
-            </p>
-        </div>
-        <div class="col-md-2 top-center" style="padding-top:20px;">
-            <a href="datasets.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
+                </p>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Task-specific data collections</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <h2>Acoustic scenes</h2>
-        </div>
-    </div>
-    <div class="row" style="padding-bottom:25px;">
-        <div class="col-md-2 top-center">
-            <a href="datasets_scenes.html">
-                <span class="fa-stack fa-lg fa-4x icon-color-active">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa dc-scene fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-            <br>
-            <em class="text-muted"><span id="dataset_count_scenes"></span> datasets</em>
-        </div>
-        <div class="col-md-8">
-            <p>
-                An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
-            </p>
-        </div>
-        <div class="col-md-2 top-center" style="padding-top:20px;">
-            <a href="datasets_scenes.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Contributing</div>
+                    <div class="panel-body">
+                        <p>
+                    The data listing is maintained through a <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you notice datasets missing, errors, or you want to contribute otherwise to the data listings, you can raise issues in the repository or fork it and make a pull request with your edits. Proposals for a new data collections are welcomed as well.
+                        </p>
+                    </div>
+                </div>
 
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <h2>Audio captions</h2>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2 top-center">
-            <a href="datasets_captions.html">
-                <span class="fa-stack fa-lg fa-4x icon-color-active">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Datalist</h2>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:25px;">
+            <div class="col-md-2 top-center">
+                <a href="datasets.html">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-            <br>
-            <em class="text-muted"><span id="dataset_count_captions"></span> datasets</em>
+                    <i class="fa fa-table fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    This datalist pools together all task-specific collections to ease the data search across collections.
+                </p>
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets.html">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-        <div class="col-md-8">
-            <p><em>Audio captions</em> are free-text descriptions of the audio recordings' content using natural language.</p>
-        </div>
-        <div class="col-md-2 top-center" style="padding-top:20px;">
-            <a href="datasets_captions.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
 
-
-    <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-            <h2>Everyday sounds</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Task-specific data collections</h2>
+            </div>
         </div>
-    </div>
-    <div class="row" style="padding-bottom:25px;">
-        <div class="col-md-2 top-center">
-            <a href="datasets_sounds.html">
-                <span class="fa-stack fa-lg fa-4x icon-color-active">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h2>Acoustic scenes</h2>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:25px;">
+            <div class="col-md-2 top-center">
+                <a href="datasets_scenes.html">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active">
                     <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa dc-events fa-stack-1x fa-inverse"></i>
-                </span>
-            </a>
-            <br>
-            <em class="text-muted"><span id="dataset_count_sounds"></span> datasets</em>
+                    <i class="fa dc-scene fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count_scenes"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
+                </p>
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets_scenes.html">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-        <div class="col-md-8">
-            <p>
-                This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
-                A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source. Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
-            </p>
 
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h2>Audio captions</h2>
+            </div>
         </div>
-        <div class="col-md-2 top-center" style="padding-top:20px;">
-            <a href="datasets_sounds.html">
-                <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
-            </a>
+        <div class="row">
+            <div class="col-md-2 top-center">
+                <a href="datasets_captions.html">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa dc-captioning fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count_captions"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p><em>Audio captions</em> are free-text descriptions of the audio recordings' content using natural language.</p>
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets_captions.html">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
+
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                <h2>Everyday sounds</h2>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:25px;">
+            <div class="col-md-2 top-center">
+                <a href="datasets_sounds.html">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa dc-events fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count_sounds"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    This data list pulls together various type of datasets containing everyday sounds. These datasets are suitable for research focusing on sound event detection, sound event detection and localization, or audio tagging.
+                    A <em>sound event</em> corresponds to an audio segment that is attributed to a specific sound source and that is perceived as an entity. Sound event has start and end timestamps along with a textual label that is related to the sound source. Some datasets in this list contains either the strong annotations, annotations with start and end timestamps, or weak annotations, annotations with sound presence at clip/time-segment level.
+                </p>
+
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets_sounds.html">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Other resources</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Bioacoustics</h4>
+                <ul>
+                    <li><a href="https://bioacousticsdatasets.weebly.com/" target="_blank">Bioacoustics Datasets</a> list maintained by Justin Salamon</li>
+                    <li><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Bioacoustics_Datasets" target="_blank">Bioacoustics Datasets entry in Wikidata</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Speech</h4>
+                <ul>
+                    <li><a href="https://github.com/jim-schwoebel/voice_datasets" target="_blank">Voice datasets</a> list maintained by Jim Schwoebel</li>
+                    <li><a href="https://wiki.inria.fr/rosp/Datasets" target="_blank">A categorization of robust speech processing datasets</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Computer vision</h4>
+                <ul>
+                    <li><a href="https://visualdata.io/discovery">VisualData Discovery</a></li>
+                </ul>
+                <h4>Video</h4>
+                <ul>
+                    <li><a href="https://github.com/xiaobai1217/Awesome-Video-Datasets" target="_blank">Awesome-Video-Datasets</a> list maintained by Yunhua Zhang</li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Other resources</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <h4>Bioacoustics</h4>
-            <ul>
-                <li><a href="https://bioacousticsdatasets.weebly.com/" target="_blank">Bioacoustics Datasets</a> list maintained by Justin Salamon</li>
-                <li><a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_Bioacoustics_Datasets" target="_blank">Bioacoustics Datasets entry in Wikidata</a></li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <h4>Speech</h4>
-            <ul>
-                <li><a href="https://github.com/jim-schwoebel/voice_datasets" target="_blank">Voice datasets</a> list maintained by Jim Schwoebel</li>
-                <li><a href="https://wiki.inria.fr/rosp/Datasets" target="_blank">A categorization of robust speech processing datasets</a></li>
-            </ul>
-        </div>
-        <div class="col-md-4">
-            <h4>Video</h4>
-            <ul>
-                <li><a href="https://github.com/xiaobai1217/Awesome-Video-Datasets" target="_blank">Awesome-Video-Datasets</a> list maintained by Yunhua Zhang</li>
-            </ul>
-            <h4>Computer vision</h4>
-            <ul>
-                <li><a href="https://visualdata.io/discovery">VisualData Discovery</a></li>
-            </ul>
-        </div>
-    </div>
-    <br>
-</div>
-<br>
-<br>
-<br>
-<br>
+</section>
+
     <!-- JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
