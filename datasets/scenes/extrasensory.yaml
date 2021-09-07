@@ -6,7 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: ExtraSensory
-  domain: Scenes, Mobile devices, Multiple sensors
+  domain: ASC, Mobile devices, Multiple sensors
   license: Free
 
   download:

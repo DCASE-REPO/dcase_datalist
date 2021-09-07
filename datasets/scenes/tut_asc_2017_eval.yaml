@@ -6,7 +6,7 @@ dataset:
   year: 2017
   modalities: Audio
   collection_name: TUT Acoustic Scenes
-  domain: Scenes
+  domain: ASC
   related_datasets:
     - TUT-ASC2016-DEV
     - TUT-ASC2016-EVAL

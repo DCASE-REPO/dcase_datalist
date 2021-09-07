@@ -6,7 +6,7 @@ dataset:
   year: 2021
   modalities: Audio, Video
   collection_name: TAU Urban Acoustic Scenes
-  domain: Scenes, Audio-visual
+  domain: ASC, Audio-visual
   related_datasets:
     - TUT-ASC2018-DEV
     - TUT-ASC2018-EVAL
