@@ -6,7 +6,7 @@ dataset:
   year: 2012
   modalities: Audio
   collection_name: DCASE 2013
-  domain: General
+  domain: Scenes
   related_datasets: DCASE2013-ASC-EVAL
 
   license: Creative commons, CC BY 2.0 UK

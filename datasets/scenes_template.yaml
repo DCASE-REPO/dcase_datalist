@@ -6,7 +6,7 @@ dataset:
   year:                                 # [int], Release year
   modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
-  domain:                               # [list], related domains, e.g., General, Mobile devices, Audio-visual, Open set, Ambient noise, Unlabelled, Multiple sensors
+  domain:                               # [list], related domains, e.g., Scenes, Mobile devices, Audio-visual, Open set, Ambient noise, Unlabelled, Multiple sensors
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative Commons | Free | Commercial | Proprietary | R&D only

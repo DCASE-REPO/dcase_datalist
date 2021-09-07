@@ -6,7 +6,7 @@ dataset:
   year: 2006
   modalities: Audio
   collection_name: UEA Noise DB
-  domain: General
+  domain: Scenes
   related_datasets:
     - NOISEDB-S2
 

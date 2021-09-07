@@ -6,7 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes
-  domain: General, Mobile devices
+  domain: Scenes, Mobile devices
   related_datasets:
     - TUT-ASC2018-DEV
     - TUT-ASC2018-EVAL
