@@ -83,4 +83,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://www.karolpiczak.com/papers/Piczak2015-ESC-ConvNet.pdf
-  cite: https://www.karolpiczak.com/papers/Piczak2015-ESC-ConvNet.pdf;Piczak2015
+  ref: https://www.karolpiczak.com/papers/Piczak2015-ESC-ConvNet.pdf;Piczak2015

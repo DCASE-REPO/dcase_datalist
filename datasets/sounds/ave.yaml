@@ -102,4 +102,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/YapengTian/AVE-ECCV18
-  cite: https://arxiv.org/abs/1803.08842;Tian2018
+  ref: https://arxiv.org/abs/1803.08842;Tian2018

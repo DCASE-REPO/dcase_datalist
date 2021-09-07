@@ -94,4 +94,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/pzinemanas/MAVD-traffic
-  cite: http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Zinemanas_70.pdf;Zinemanas2019
+  ref: http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Zinemanas_70.pdf;Zinemanas2019

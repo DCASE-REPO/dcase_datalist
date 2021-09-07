@@ -90,7 +90,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/audio-captioning/dcase-2021-baseline
-  cite:                                 # [url];[key], Paper to cite for the baseline
+  ref:                                 # [url];[key], Paper to cite for the baseline
 
 # === INFO ===
 info:

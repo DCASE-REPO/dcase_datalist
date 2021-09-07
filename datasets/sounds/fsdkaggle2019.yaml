@@ -100,7 +100,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/DCASE-REPO/dcase2019_task2_baseline
-  cite: https://arxiv.org/pdf/1906.02975.pdf;Fonseca2019
+  ref: https://arxiv.org/pdf/1906.02975.pdf;Fonseca2019
 
 # === INFO ===
 info:

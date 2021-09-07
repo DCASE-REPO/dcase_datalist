@@ -100,7 +100,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/TUT-ARG/DCASE2017-baseline-system
-  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+  ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
 
 # === INFO ===
 info:

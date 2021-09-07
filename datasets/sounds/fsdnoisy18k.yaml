@@ -99,4 +99,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/edufonseca/icassp19
-  cite: https://arxiv.org/abs/1901.01189;Fonseca2019
+  ref: https://arxiv.org/abs/1901.01189;Fonseca2019

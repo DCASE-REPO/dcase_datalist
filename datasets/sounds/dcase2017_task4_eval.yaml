@@ -86,7 +86,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/ankitshah009/Task-4-Large-scale-weakly-supervised-sound-event-detection-for-smart-cars
-  cite: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
+  ref: http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf;Mesaros2017
 
 # === INFO ===
 info:

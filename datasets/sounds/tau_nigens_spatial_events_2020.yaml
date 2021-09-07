@@ -98,7 +98,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/sharathadavanne/seld-dcase2020
-  cite: https://arxiv.org/pdf/1807.00129.pdf;Adavanne2018
+  ref: https://arxiv.org/pdf/1807.00129.pdf;Adavanne2018
 
 # === INFO ===
 info:

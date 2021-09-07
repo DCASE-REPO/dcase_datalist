@@ -94,7 +94,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://code.soundsoftware.ac.uk/projects/smacpy
-  cite: https://hal.archives-ouvertes.fr/hal-01123764/document;Giannoulis2013
+  ref: https://hal.archives-ouvertes.fr/hal-01123764/document;Giannoulis2013
 
 # === INFO ===
 info:

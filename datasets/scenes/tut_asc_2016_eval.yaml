@@ -101,7 +101,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/TUT-ARG/DCASE2016-baseline-system-python
-  cite: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
+  ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf;Mesaros2016
 
 # === INFO ===
 info:

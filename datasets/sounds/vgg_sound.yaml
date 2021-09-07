@@ -98,5 +98,5 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/hche11/VGGSound
-  cite: https://arxiv.org/abs/2004.14368;Chen2020
+  ref: https://arxiv.org/abs/2004.14368;Chen2020
 

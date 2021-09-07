@@ -87,7 +87,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task4/
-  cite: https://hal.inria.fr/hal-01850270/file/task4.pdf;Serizel2018
+  ref: https://hal.inria.fr/hal-01850270/file/task4.pdf;Serizel2018
 
 # === INFO ===
 info:

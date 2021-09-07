@@ -100,7 +100,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url:                                  # [url], Link to baseline system source code
-  cite: https://ieeexplore.ieee.org/document/8683292;Kroos2019
+  ref: https://ieeexplore.ieee.org/document/8683292;Kroos2019
 
 # === INFO ===
 info:

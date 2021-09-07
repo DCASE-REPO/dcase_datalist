@@ -100,7 +100,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/pafoster/dcase2016_task4/tree/master/baseline
-  cite: https://ieeexplore.ieee.org/document/7336899;Foster2015
+  ref: https://ieeexplore.ieee.org/document/7336899;Foster2015
 
 # === INFO ===
 info:

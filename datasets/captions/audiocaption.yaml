@@ -109,4 +109,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/RicherMans/AudioCaption
-  cite: https://arxiv.org/abs/1902.09254;Wu2019
+  ref: https://arxiv.org/abs/1902.09254;Wu2019

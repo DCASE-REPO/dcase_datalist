@@ -96,4 +96,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://bitbucket.org/naoya1/aenet_release/src
-  cite: https://tik-old.ee.ethz.ch/file//bb2f1ebc2da22c3d0afba72241a57ab6/Takahashi_16a.pdf;Takahashi2016
+  ref: https://tik-old.ee.ethz.ch/file//bb2f1ebc2da22c3d0afba72241a57ab6/Takahashi_16a.pdf;Takahashi2016

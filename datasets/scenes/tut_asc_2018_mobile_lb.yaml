@@ -100,7 +100,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task1
-  cite: https://arxiv.org/pdf/1807.09840;Mesaros2018
+  ref: https://arxiv.org/pdf/1807.09840;Mesaros2018
 
 # === INFO ===
 info:

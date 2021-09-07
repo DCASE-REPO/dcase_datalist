@@ -94,7 +94,7 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/cdjkim/audiocaps/tree/master/code
-  cite:                                 # [url];[key], Paper to cite for the baseline
+  ref:                                 # [url];[key], Paper to cite for the baseline
 
 # === INFO ===
 info:

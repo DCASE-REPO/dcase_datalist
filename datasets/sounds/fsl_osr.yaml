@@ -1,0 +1,99 @@
+# === DATASET ===
+dataset:
+  name: An Open-set Recognition and Few-Shot Learning Dataset for Audio Event Classification in Domestic Environments
+  provider: Visualfy, Universitat de Valencia
+  abbreviation: FSL-OSR
+  year: 2021
+  modalities: Audio
+  collection_name: FSL-OSR
+  domain: Open-Set, Few-shot learning, Tagging
+  related_datasets:
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/3689288
+    size: 142.1 MB
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://arxiv.org/pdf/2002.11561.pdf;Naranjo-Alcazar2021
+    title: "An Open-Set Recognition and Few-Shot Learning Dataset for Audio Event Classification in Domestic Environments"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 16
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Original
+      variability_sources:              # [list]
+
+  content:
+    type: Isolated
+    scene: Constant
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 1360
+    total_duration_minutes: 90.666
+    file_length: Constant
+    file_length_seconds: 4
+
+# === META ===
+meta:
+  types: Event
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 11
+    class_balance: Yes
+
+    annotation:
+      type: Weak
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+      strong_amount_percentage: 0
+      overlapping_event_instances: No
+
+    labeling:
+      hierarchical: No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count: 1360
+      average_instaces_per_class: 123.63 # 40
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds:                                # [int], how many folds provided
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/Machine-Listeners-Valencia/fsl_osr_dataset_baseline
+  ref: https://arxiv.org/pdf/2002.11561.pdf;Naranjo-Alcazar2021
