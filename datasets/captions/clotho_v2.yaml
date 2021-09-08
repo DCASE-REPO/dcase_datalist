@@ -60,7 +60,7 @@ audio:
 
 # === META ===
 meta:
-  types: Caption
+  types: Caption, Tag
 
   scene:
     classes:                            # [int], Number of scene classes
