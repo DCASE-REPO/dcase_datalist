@@ -60,7 +60,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event, Scene, Caption
+  types: Tag, Scene, Caption
 
   scene:
     classes: 10
