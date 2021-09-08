@@ -6,7 +6,7 @@ dataset:
   year: 2019                                # [int], Release year
   modalities: Audio, Video
   collection_name: AudioCaps                     # [string], common name for all related datasets, used to group datasets coming from same source
-  domain: Captioning, Tagging
+  domain: Captioning, Tagging, Multi-annotator
   related_datasets:                     # [list], related datasets (name or abbreviation)
     - AudioSet
 
