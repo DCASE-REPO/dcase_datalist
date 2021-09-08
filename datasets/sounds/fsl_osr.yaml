@@ -60,7 +60,7 @@ audio:
 
 # === META ===
 meta:
-  types: Event
+  types: Tag
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost
