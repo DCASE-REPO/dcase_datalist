@@ -6,7 +6,7 @@ dataset:
   year: 2019
   modalities: Audio
   collection_name: Clotho
-  domain: Captioning
+  domain: Captioning, Tagging, Multi-annotator
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license: Free
