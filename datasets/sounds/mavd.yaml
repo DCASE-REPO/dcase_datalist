@@ -6,7 +6,7 @@ dataset:
   year: 2019
   modalities: Audio, Video
   collection_name: MAVD
-  domain: SED, Strong annotation, Traffic
+  domain: SED, Strong annotation, Traffic, Audio-visual
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license: Creative Commons, CC BY 4.0

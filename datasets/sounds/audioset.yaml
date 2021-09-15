@@ -6,7 +6,7 @@ dataset:
   year: 2017
   modalities: Audio, Video
   collection_name: AudioSet
-  domain: Tagging
+  domain: Tagging, Audio-visual
   related_datasets:
     - AudioSet-Strong
 
@@ -70,8 +70,8 @@ meta:
 
     annotation:
       type: Weak
-      source: Automatic
-      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      source:                              # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:                # [int], How many annotations there are available per item (possible multi-annotator setup)
       labelled_amount_percentage: 100
       validated_amount_percentage: 100     # [float], Percentage of all data, amount of data which is validated by human
       strong_amount_percentage: 0

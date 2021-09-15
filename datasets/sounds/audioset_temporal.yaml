@@ -6,7 +6,7 @@ dataset:
   year: 2021
   modalities: Audio, Video
   collection_name: AudioSet
-  domain: SED, Tagging
+  domain: SED, Tagging, Audio-visual
   related_datasets:
     - AudioSet
 
