@@ -96,7 +96,7 @@ meta:
       validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
       guidance:                         # [string or list], Type of guidance annotators were provided during the annotation, e.g. Video, Image, Tags
 
-    annotator_count:                    # [int], Count of annotators used in the dataset generation
+    annotator_count:                    # [int], Total count of annotators used for the data collection, count only annotators included in the released meta data.
     count:                              # [int], Count of all captions in the dataset
 
 # === CROSS-VALIDATION SETUP ===
