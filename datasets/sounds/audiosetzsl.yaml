@@ -1,7 +1,7 @@
 # === DATASET ===
 dataset:
   name: AudioSetZSL
-  provider: IIT Kanpur, University of Warwick, NEC Labs America
+  provider: IIT Kanpur
   abbreviation: AudioSetZSL
   year: 2020
   modalities: Audio, Video
