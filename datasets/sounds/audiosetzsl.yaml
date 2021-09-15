@@ -1,0 +1,93 @@
+# === DATASET ===
+dataset:
+  name: AudioSetZSL
+  provider: IIT Kanpur, University of Warwick, NEC Labs America
+  abbreviation: AudioSetZSL
+  year: 2020
+  modalities: Audio, Video
+  collection_name: AudioSetZSL
+  domain: Zero-shot learning, Tagging, Audio-visual
+  related_datasets:
+    - AudioSet
+
+  license: Non-commercial
+
+  download:
+    url: https://github.com/krantiparida/AudioSetZSL
+    size:                               # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://github.com/krantiparida/AudioSetZSL
+
+  citation:
+    ref: https://openaccess.thecvf.com/content_WACV_2020/papers/Parida_Coordinated_Joint_Multimodal_Embeddings_for_Generalized_Audio-Visual_Zero-shot_Classification_and_WACV_2020_paper.pdf;Parida2020
+    title:  "Coordinated Joint Multimodal Embeddings for Generalized Audio-Visual Zero-shot Classification and Retrieval of Videos"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: Yes
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Youtube
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+  recording:
+    setup: Uncontrolled
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown
+
+  files:
+    total_count: 156416
+    total_duration_minutes: 26069.3333
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Tag
+
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance: No
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 33
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source:                           # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:             # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+      strong_amount_percentage: 0
+      overlapping_event_instances: No
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: AudioSet
+
+    instance:
+      count: 156416
+      average_instaces_per_class: 4739.88
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
