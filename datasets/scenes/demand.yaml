@@ -57,12 +57,12 @@ meta:
     classes: 6
     class_balance: Yes
     list:
-      - Domestic
-      - Nature
-      - Office
-      - Public
-      - Street
-      - Transportation
+      - domestic
+      - nature
+      - office
+      - public
+      - street
+      - transportation
 
     annotation:
       type: Weak

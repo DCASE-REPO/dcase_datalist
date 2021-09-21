@@ -58,16 +58,16 @@ meta:
     classes: 10
     class_balance: Yes
     list:
-      - Bar
-      - Beach
-      - Bus
-      - Car
-      - Football match
-      - Laundrette
-      - Lecture
-      - Office
-      - Rail station
-      - Street
+      - bar
+      - beach
+      - bus
+      - car
+      - football match
+      - laundrette
+      - lecture
+      - office
+      - rail station
+      - street
 
     annotation:
       type: Weak

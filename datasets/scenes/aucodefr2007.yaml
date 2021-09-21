@@ -56,10 +56,10 @@ meta:
     classes: 4
     class_balance: No
     list:
-      - Avenue
-      - Street
-      - Market
-      - Park
+      - avenue
+      - street
+      - market
+      - park
 
     annotation:
       type: Weak

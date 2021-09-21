@@ -58,18 +58,18 @@ meta:
     classes: 10
     class_balance: Yes
     list:
-      - Building site
-      - Bus
-      - Car (city)
-      - Car (highway)
-      - Laundrette
-      - Office
-      - Presentation
-      - Shopping mall
-      - Street (people)
-      - Street (traffic)
-      - Supermarket
-      - Train
+      - building site
+      - bus
+      - car (city)
+      - car (highway)
+      - laundrette
+      - office
+      - presentation
+      - shopping mall
+      - street (people)
+      - street (traffic)
+      - supermarket
+      - train
 
     annotation:
       type: Weak
