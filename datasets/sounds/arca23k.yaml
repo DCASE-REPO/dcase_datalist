@@ -1,0 +1,90 @@
+# === DATASET ===
+dataset:
+  name: ARCA23K
+  provider: CVSSP
+  abbreviation: ARCA23K
+  year: 2021
+  modalities: Audio
+  collection_name: ARCA23K
+  domain: Tagging, Weak annotation, Noisy labels
+  related_datasets:
+    - ARCA23K-FSD
+    - FSD50K
+
+  license: "Creative Commons, CC BY 4.0"
+
+  download:
+    url: https://zenodo.org/record/5117901
+    size: 8.72GB
+
+  companion_site:
+
+  citation:
+    ref: https://arxiv.org/pdf/2109.09227.pdf;Iqbal2021
+    title: "ARCA23K: An audio dataset for investigating open-set label noise"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 23727
+    total_duration_minutes: 3108
+    file_length: Variable
+    file_length_seconds: 0.3 - 30
+
+# === META ===
+meta:
+  types: Tag
+
+  event:
+    classes: 70
+    class_balance: No
+
+    annotation:
+      type: Weak
+      source: Automatic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 0
+      strong_amount_percentage: 0
+      overlapping_event_instances: No
+
+    labeling:
+      hierarchical: No
+      ontology_name: AudioSet
+
+    instance:
+      count: 23727
+      average_instaces_per_class: 338.96
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
+
+# === INFO ===
+info:
+  comments: "Audio files for the validation set and test set are not distributed in the Zenodo release (only the ground truth data is provided). Since the validation set and test set are a subset of FSD50K, the omitted audio files can be obtained by downloading the FSD50K dataset."
