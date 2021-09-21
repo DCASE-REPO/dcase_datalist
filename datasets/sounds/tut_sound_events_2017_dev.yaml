@@ -65,6 +65,13 @@ meta:
 
   event:
     classes: 6
+    list:
+      - brakes squeaking
+      - car
+      - children
+      - large vehicle
+      - people speaking
+      - people walking
 
     annotation:
       type: Strong

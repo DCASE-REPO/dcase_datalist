@@ -70,6 +70,18 @@ meta:
   event:
     classes: 11
     class_balance: Yes
+    list:
+      - clearing throat
+      - coughing
+      - door knock
+      - door slam
+      - drawer
+      - human laughter
+      - keyboard
+      - keys
+      - page turning
+      - phone ringing
+      - speech
 
     annotation:
       type: Strong

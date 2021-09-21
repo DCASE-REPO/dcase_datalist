@@ -59,6 +59,22 @@ meta:
   event:
     classes: 14
     class_balance: No
+    list:
+      - alarm
+      - baby crying
+      - crash
+      - dog barking
+      - engine
+      - female scream
+      - female speech
+      - fire
+      - footsteps
+      - general
+      - knocking
+      - male scream
+      - male speech
+      - phone ringing
+      - piano
 
     annotation:
       type: Strong

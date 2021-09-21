@@ -74,6 +74,7 @@ meta:
   event:
     classes:                            # [int], Number of event classes
     class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
 
     annotation:
       type:                             # [string], possible values: Strong | Weak | Location | None

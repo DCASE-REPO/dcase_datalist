@@ -68,6 +68,29 @@ meta:
   event:
     classes: 21
     class_balance: No
+    list:
+      - bus
+      - bus/brakes
+      - bus/compressor
+      - bus/engine_accelerating
+      - bus/engine_idling
+      - bus/wheel_rolling
+      - car
+      - car/engine_accelerating
+      - car/engine_idling
+      - car/wheel_rolling
+      - chatter
+      - motorcycle
+      - motorcycle/brakes
+      - motorcycle/engine_accelerating
+      - motorcycle/engine_idling
+      - music
+      - other
+      - truck
+      - truck/brakes
+      - truck/compressor
+      - truck/engine_accelerating
+      - truck/wheel_rolling
 
     annotation:
       type: Strong

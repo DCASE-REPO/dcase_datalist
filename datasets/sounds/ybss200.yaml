@@ -74,6 +74,17 @@ meta:
   event:
     classes: 10
     class_balance: Yes
+    list:
+      - tap water
+      - auto-rickshaw
+      - cricket crowd
+      - toy helicopter
+      - formula one racing
+      - guitar
+      - road traffic
+      - sewing machine
+      - grass cutting machine
+      - stapler gun
 
     annotation:
       type: Weak

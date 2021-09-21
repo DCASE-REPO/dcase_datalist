@@ -76,6 +76,29 @@ meta:
   event:
     classes: 28
     class_balance: No
+    list:
+      - absence
+      - bathroom
+      - bedroom
+      - calling
+      - cooking
+      - dishwashing
+      - dressing
+      - eating
+      - getting dry
+      - hall
+      - living
+      - shaving
+      - showering
+      - sleeping
+      - toilet
+      - toothbrushing
+      - vacuumcleaner
+      - visit
+      - watching tv
+      - wcroom
+      - working
+      - other
 
     annotation:
       type: Strong

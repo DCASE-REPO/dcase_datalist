@@ -71,7 +71,24 @@ meta:
 
   event:
     classes: 16
-
+    list:
+      - alarm
+      - clearing throat
+      - cough
+      - door slam
+      - drawer
+      - keyboard
+      - keys
+      - door knock
+      - laughter
+      - mouse click
+      - page turning
+      - pendrop
+      - phone
+      - printer
+      - speech
+      - switch
+      
     annotation:
       type: Strong
       source: Synthetic

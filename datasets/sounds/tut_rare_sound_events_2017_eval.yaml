@@ -69,6 +69,10 @@ meta:
   event:
     classes: 3
     class_balance: Yes
+    list:
+      - baby crying
+      - glass breaking
+      - gunshot
 
     annotation:
       type: Strong

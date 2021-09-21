@@ -75,6 +75,14 @@ meta:
   event:
     classes: 7
     class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - child speech
+      - adult male speech
+      - adult female speech
+      - video game / TV
+      - percussive sounds
+      - broadband noise
+      - other identifiable sounds
 
     annotation:
       type: Weak

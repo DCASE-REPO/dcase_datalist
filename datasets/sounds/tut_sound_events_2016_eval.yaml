@@ -68,6 +68,25 @@ meta:
 
   event:
     classes: 18
+    list:
+      - (object) banging
+      - (object) rustling
+      - (object) snapping
+      - bird singing
+      - car passing by
+      - children shouting
+      - cupboard
+      - cutlery
+      - dishes
+      - drawer
+      - glass jingling
+      - object impact
+      - people speaking
+      - people walking
+      - people walking
+      - washing dishes
+      - water tap running
+      - wind blowing
 
     annotation:
       type: Strong

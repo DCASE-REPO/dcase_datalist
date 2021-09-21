@@ -72,6 +72,10 @@ meta:
   event:
     classes: 3
     class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - baby crying
+      - glass breaking
+      - gunshot
 
     annotation:
       type: Strong

@@ -58,6 +58,17 @@ meta:
   event:
     classes: 10
     class_balance: Yes
+    list:
+      - chainsaw
+      - clock tick
+      - crackling fire
+      - crying baby
+      - dog
+      - helicopter
+      - rain
+      - rooster
+      - sea waves
+      - sneezing
 
     annotation:
       type: Weak

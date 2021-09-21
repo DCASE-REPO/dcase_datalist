@@ -58,6 +58,55 @@ meta:
   event:
     classes: 50
     class_balance: Yes
+    list:
+      - airplane
+      - breathing
+      - brushing teeth
+      - car horn
+      - cat
+      - chainsaw
+      - chirping birds
+      - church bells
+      - clapping
+      - clock alarm
+      - clock tick
+      - coughing
+      - cow
+      - crackling fire
+      - crickets
+      - crow
+      - crying baby
+      - dog
+      - door knock
+      - drinking
+      - engine
+      - fireworks
+      - footsteps
+      - frog
+      - glass breaking
+      - hand saw
+      - helicopter
+      - hen
+      - insects
+      - keyboard typing
+      - laughing
+      - mouse click
+      - pig
+      - pouring water
+      - rain
+      - rooster
+      - sea waves
+      - sheep
+      - siren
+      - sneezing
+      - snoring
+      - thunderstorm
+      - toilet flush
+      - train
+      - washing machine
+      - water drops
+      - wind
+      - wood door creaks
 
     annotation:
       type: Weak

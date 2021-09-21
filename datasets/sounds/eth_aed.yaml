@@ -71,6 +71,35 @@ meta:
   event:
     classes: 28
     class_balance: No
+    list:
+      - acoustic guitar
+      - airplane
+      - applause
+      - bird
+      - car
+      - cat
+      - child
+      - church bell
+      - crowd
+      - dog barking
+      - engine
+      - fireworks
+      - footstpes
+      - glass breaking
+      - hammer
+      - helicopter
+      - knock
+      - laughter
+      - mouse click
+      - ocean surf
+      - rustle
+      - scream
+      - speech
+      - squeak
+      - tone
+      - violin
+      - water tap
+      - whistle
 
     annotation:
       type: Weak

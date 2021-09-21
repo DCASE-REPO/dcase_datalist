@@ -56,6 +56,9 @@ meta:
   event:
     classes: 2
     class_balance: Yes
+    list:
+      - car crash
+      - tire skidding
 
     annotation:
       type: Strong

@@ -66,6 +66,29 @@ meta:
   event:
     classes: 42
     class_balance: Almost
+    list:
+      - choking
+      - close microwave
+      - cuttlery
+      - door close
+      - door open
+      - eating
+      - fill a glass
+      - fingerclap
+      - fridge
+      - handclap
+      - key
+      - knock
+      - microwave
+      - move a chair
+      - open microwave
+      - open/close a drawer
+      - ripped paper
+      - running the tap
+      - speech
+      - toaster
+      - tongue clic
+      - zip
 
     annotation:
       type: Weak

@@ -74,6 +74,12 @@ meta:
   event:
     classes: 5
     class_balance: Yes
+    list:
+      - effects
+      - human
+      - music
+      - nature
+      - urban
 
     annotation:
       type: Weak

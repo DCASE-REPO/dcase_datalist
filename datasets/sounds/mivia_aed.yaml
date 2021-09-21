@@ -57,6 +57,10 @@ meta:
   event:
     classes: 3
     class_balance: Yes
+    list:
+      - glass breaking
+      - gun shot
+      - scream
 
     annotation:
       type: Strong

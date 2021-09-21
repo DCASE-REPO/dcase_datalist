@@ -63,6 +63,43 @@ meta:
   event:
     classes: 23
     class_balance:
+    list:
+      - alert signal
+      - amplified speech
+      - car alarm
+      - car horn
+      - chainsaw
+      - dog
+      - dog barking whining
+      - engine
+      - engine of uncertain size
+      - hoe ram
+      - human voice
+      - ice-cream truck
+      - jackhammer
+      - large crowd
+      - large rotating saw
+      - large sounding engine
+      - machinery impact
+      - medium sounding engine
+      - mobile music
+      - music
+      - music from uncertain source
+      - non-machinery impact
+      - other unknown alert signal
+      - other unknown human voice
+      - other unknown impact machinery
+      - other unknown powered saw
+      - person or small group shouting
+      - person or small group talking
+      - pile driver
+      - powered saw
+      - reverse beeper
+      - rock drill
+      - siren
+      - small medium rotating saw
+      - small sounding engine
+      - stationary music
 
     annotation:
       type: Weak
