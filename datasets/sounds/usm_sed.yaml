@@ -1,0 +1,122 @@
+# === DATASET ===
+dataset:
+  name: USM-SED Dataset - A Dataset for Polyphonic Sound Event Detection in Urban Sound Monitoring Scenarios
+  provider: Fraunhofer IDMT
+  abbreviation: USM-SED
+  year: 2021
+  modalities: Audio
+  collection_name: USM-SED
+  domain: SED
+  related_datasets:
+    - FSD50K
+
+  license: Creative Commons
+
+  download:
+    url: https://github.com/jakobabesser/USM_SED
+    size: 49.3GB
+
+  companion_site: https://github.com/jakobabesser/USM_SED
+
+  citation:
+    ref: https://arxiv.org/pdf/2105.02592.pdf;Abeßer2021
+    title: "USM-SED Dataset - A Dataset for Polyphonic Sound Event Detection in Urban Sound Monitoring Scenarios"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Stereo
+      number: 2
+
+    material:
+      source: Freesound
+      variability_sources:              # [list]
+
+  content:
+    type: Synthetic
+    scene: Constant
+
+    event:
+      spatial_location: Constant
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 20000
+    total_duration_minutes: 1666.6
+    file_length: Constant
+    file_length_seconds: 5
+
+# === META ===
+meta:
+  types:
+    - Event
+
+  event:
+    classes: 27
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - airplane
+      - alarm
+      - birds
+      - bus
+      - car
+      - cheering
+      - church bell
+      - dogs
+      - drilling
+      - glass break
+      - gunshot
+      - hammer
+      - helicopter
+      - jackhammer
+      - lawn mower
+      - motorcycle
+      - music
+      - rain
+      - sawing
+      - scream
+      - siren
+      - speech
+      - spray can
+      - thunderstorm
+      - train
+      - truck
+      - wind
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 100
+      overlapping_event_instances: Yes
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: USM-SED
+
+    instance:
+      count: 80037
+      average_instaces_per_class: 2964.333333333
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Val, Test
