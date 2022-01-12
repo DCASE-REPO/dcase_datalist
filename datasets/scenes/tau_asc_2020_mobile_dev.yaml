@@ -100,7 +100,7 @@ meta:
 
     instance:
       count: 23035
-      average_instaces_per_class: 2304
+      average_instances_per_class: 2304
 
 # === CROSS-VALIDATION SETUP ===
 split:
