@@ -94,9 +94,3 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/cdjkim/audiocaps/tree/master/code
-  ref:                                 # [url];[key], Paper to cite for the baseline
-
-# === INFO ===
-info:
-  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
-  comments:                             # [string], comments
