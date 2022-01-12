@@ -13,103 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://gitcdn.link/repo/toni-heittola/js-datatable/master/css.min/datatable.bundle.min.css">
     <link rel="stylesheet" href="assets/dcaseicons/css/dcaseicons.css">
-
-    <style>
-        p {text-align: justify;}
-        nav[data-toggle='toc'] {
-            margin-top: 30px;
-        }
-        @media (max-width: 768px) {
-            nav.affix[data-toggle='toc'] {
-                position: static;
-            }
-            nav[data-toggle='toc'] .nav .nav {
-                display: block;
-            }
-        }
-        .equal {
-            display: flex;
-            display: -webkit-flex;
-            flex-wrap: wrap;
-        }
-        .bottom {
-            position: absolute;
-            bottom: 0;
-        }
-        .row-height {
-            display: table;
-            table-layout: fixed;
-            height: 100%;
-            width: 100%;
-        }
-        .bottom-button {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%,0);
-            bottom: 0;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .col-sm-height {
-            display: table-cell;
-            float: none;
-            height: 100%;
-        }
-        .col-sm-top {
-            vertical-align: top;
-        }
-        .icon-color-active {
-            color: #e99002;
-        }
-        .icon-color-active2 {
-            color: #848383;
-        }
-        .icon-color {
-            color: #b4b4b4;
-        }
-        .icon-color2 {
-            color: #878787;
-        }
-        .top-center {
-            text-align: center;
-        }
-        .middle-center {
-            padding: 70px 0;
-            text-align: center;
-        }
-        .info{
-            padding: 7px;
-            background-color: #d0d0d0;
-        }
-        .page-top .page-heading {
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-        header .page-heading .bold {
-            color: #D7D7D7;
-            font-family: Heebo,'PT Sans Caption','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-            font-weight: 900;
-            text-shadow: 2px 2px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,3px 3px 5px #444;
-        }
-        .header-cc-logo {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            color: rgba(255,255,255,.3);
-            padding: 3px;
-            font-size: 1.1em;
-        }
-        .bg-light-gray {
-            background-color: #f7f7f7;
-        }
-        .gradient1r {
-            background: #fff;
-            background: -moz-linear-gradient(top,#f7f7f7 0,#fff 100%);
-            background: -webkit-linear-gradient(top,#f7f7f7 0,#fff 100%);
-            background: linear-gradient(to bottom,#f7f7f7 0,#fff 100%);
-        }
-        ul {padding-left: 15px;}
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -150,7 +54,7 @@
                     <div class="panel-heading">Contributing</div>
                     <div class="panel-body">
                         <p>
-                            The data listing is maintained through a <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you notice datasets missing, errors, or you want to contribute otherwise to the data listings, you can raise issues in the repository or fork it and make a pull request with your edits. Proposals for new data collections are welcomed as well.
+                            The data listing is maintained through a <a href="https://github.com/DCASE-REPO/dcase_datalist">Github repository</a>. In case you notice datasets missing, errors, or you want to contribute otherwise to the data listings, you can raise issues in the repository with a link to a new dataset or fork the repository and make a pull request with your edits. Proposals for new data collections are welcomed as well.
                         </p>
                         <p class="text-muted text-left">The list is maintained by <a href="https://github.com/toni-heittola">Toni Heittola</a>.</p>
                     </div>
@@ -176,7 +80,7 @@
             </div>
             <div class="col-md-8">
                 <p>
-                    This collection pools together all task-specific collections to ease the data search across collections.
+                    This collection pools together all task-specific collections into dynamic table to ease the data search across collections.
                 </p>
             </div>
             <div class="col-md-2 top-center" style="padding-top:20px;">
@@ -185,7 +89,28 @@
                 </a>
             </div>
         </div>
-
+        <div class="row" style="padding-bottom:25px;">
+            <div class="col-md-2 top-center">
+                <a href="datasets/list.html" title="Open collection">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active2">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-th-list fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count2"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    All datasets collected into single static table with links to dataset information pages.
+                </p>
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets/list.html" title="Open list">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active2" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <h2>Task-specific data collections</h2>
@@ -323,6 +248,7 @@
          $(document).ready(function() {
            $.getJSON('datasets.json', function(jd) {
                $('#dataset_count').text(jd.length);
+               $('#dataset_count2').text(jd.length);
            });
            $.getJSON('datasets_scenes.json', function(jd) {
                $('#dataset_count_scenes').text(jd.length);

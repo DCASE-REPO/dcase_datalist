@@ -1,0 +1,2998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DCASE Datalist / All dataset items</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://rawcdn.githack.com/toni-heittola/js-datatable/c476582b4c843fd691611857b0487885bcca239b/css.min/datatable.bundle.min.css">
+    <link rel="stylesheet" href="../../assets/dcaseicons/css/dcaseicons.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        ul {
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+            padding-left: 15px;
+        }
+
+        .label{
+            font-size: 100%;
+        }
+    </style>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript"
+            src="https://rawcdn.githack.com/toni-heittola/js-datatable/c476582b4c843fd691611857b0487885bcca239b/js.min/datatable.bundle.min.js"></script>
+
+    <script>
+        function back() {
+          window.history.back()
+        }
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Datasets</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right" style="padding-top: 20px;">
+                            <div class="btn-group">
+                                <a href="../../index.html" class="btn btn-default">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                                <a href="../../datasets.html" class="btn btn-default">
+                                    <i class="fa fa-table" aria-hidden="true"></i> All
+                                </a>
+                                <a href="../../datasets_scenes.html" class="btn btn-default">
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
+                                </a>
+                                <a href="../../datasets_captions.html" class="btn btn-default">
+                                    <i class="fa dc-captioning" aria-hidden="true"></i> Captions
+                                </a>
+                                <a href="../../datasets_sounds.html" class="btn btn-default">
+                                    <i class="fa fa-th" aria-hidden="true"></i> Sounds
+                                </a>
+                                <a href="list.html" class="btn btn-default active">
+                                    <i class="fa fa-th-list" aria-hidden="true"></i> Items
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table datatable table-striped table-hover2 table-condensed"
+                       data-sort-name="name"
+                       data-sort-order="asc"
+                       data-pagination="false"
+                       data-show-pagination-switch="false"
+                       data-show-toggle="false"
+                       data-search="true"
+                       data-search-align="left"
+                       data-search-highlight="true"
+                       data-filter-control="true"
+                       data-filter-show-clear="true"
+                >
+                    <thead>
+                        <tr>
+                            <th data-field="name" data-sortable="true">Name</th>
+                            <th data-field="provider" data-sortable="true">Provider</th>
+                            <th data-field="year" data-sortable="true">Year</th>
+                            <th data-field="category"
+                                data-sortable="true"
+                                data-visible="true"
+                                data-tag="true"
+                                data-filter-control="select"
+                                data-switchable="true">
+                                Category
+                            </th>
+                            <th>Download</th>
+                            <th>Site</th>
+                            <th>Cite</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019, Leaderboard dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2672993" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_lb.html" title="Item information page for [TAU Urban Acoustic Scenes 2019, Leaderboard dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Diverse Environments Multichannel Acoustic Noise Database</td>
+                                <td>Inria</td>
+                                <td>2013</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1227121" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-00796707/en" class="btn btn-default" target="_blank" title="[Thiemann2013] The Diverse Environments Multi-channel Acoustic Noise Database (DEMAND): A database of multichannel environmental noise recordings">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/demand.html" title="Item information page for [Diverse Environments Multichannel Acoustic Noise Database]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1293883" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_eval.html" title="Item information page for [TUT Urban Acoustic Scenes 2018, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1293883" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_openset_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Openset, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018, Leaderboard dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1245181" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_lb.html" title="Item information page for [TUT Urban Acoustic Scenes 2018, Leaderboard dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Acoustic Scenes 2017, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/400515" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2017_dev.html" title="Item information page for [TUT Acoustic Scenes 2017, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Acoustic Scenes 2016, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2016</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/165995" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf" class="btn btn-default" target="_blank" title="[Mesaros2016] TUT Database for Acoustic Scene Classificationand Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2016_eval.html" title="Item information page for [TUT Acoustic Scenes 2016, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1293901" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_mobile_eval.html" title="Item information page for [TUT Urban Acoustic Scenes 2018 Mobile, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Acoustic Scenes 2017, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1040168" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 Challenge Setup: Tasks, Datasets and Baseline System">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2017_eval.html" title="Item information page for [TUT Acoustic Scenes 2017, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2021 Mobile, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4767109" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2005.14623" class="btn btn-default" target="_blank" title="[Heittola2020] Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2021_mobile_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2021 Mobile, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3685835" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2005.14623" class="btn btn-default" target="_blank" title="[Heittola2020] Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2020_3class_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2020 3Class, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3063980" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_mobile_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Mobile, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018 Mobile, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1228235" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_mobile_dev.html" title="Item information page for [TUT Urban Acoustic Scenes 2018 Mobile, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Mobile, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2589332" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_mobile_dev.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Mobile, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Private Dataset for Scene Classification Task</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2013</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_scene_classification_testset" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/dcase2013_private.html" title="Item information page for [IEEE AASP CASA Challenge - Private Dataset for Scene Classification Task]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>ExtraSensory Dataset</td>
+                                <td>UCSD</td>
+                                <td>2017</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="http://extrasensory.ucsd.edu/~datasets/extrasensory/data/primary_data_files/ExtraSensory.per_uuid_features_labels.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://extrasensory.ucsd.edu/~datasets/extrasensory/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://extrasensory.ucsd.edu/~datasets/extrasensory/papers/vaizman2017a_pervasiveAcceptedVersion.pdf" class="btn btn-default" target="_blank" title="[Vaizman2017] Recognizing Detailed Human Context In-the-Wild from Smartphones and Smartwatches">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/extrasensory.html" title="Item information page for [ExtraSensory Dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Noise DB / Series 2</td>
+                                <td>UEA</td>
+                                <td>2006</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://lemur.cmp.uea.ac.uk/Research/noise_db/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://link.springer.com/article/10.1007%2Fs00779-005-0045-4" class="btn btn-default" target="_blank" title="[Smith2006] Acoustic environment as an indicator of social and physical context">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/uea_noise_db_s2.html" title="Item information page for [Noise DB / Series 2]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Public Dataset for Scene Classification Task</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2012</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_scene_classification" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/dcase2013_public.html" title="Item information page for [IEEE AASP CASA Challenge - Public Dataset for Scene Classification Task]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3685828" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2005.14623" class="btn btn-default" target="_blank" title="[Heittola2020] Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2020_mobile_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3063822" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_eval.html" title="Item information page for [TAU Urban Acoustic Scenes 2019, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2589280" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_dev.html" title="Item information page for [TAU Urban Acoustic Scenes 2019, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2020 Mobile, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3819968" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2005.14623" class="btn btn-default" target="_blank" title="[Heittola2020] Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2020_mobile_dev.html" title="Item information page for [TAU Urban Acoustic Scenes 2020 Mobile, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Audio-Visual Scenes 2021, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4477542" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2011.00030" class="btn btn-default" target="_blank" title="[Wang2021] A curated dataset of urban scenes for audio-visual scene analysis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_avsc_2021_dev.html" title="Item information page for [TAU Urban Audio-Visual Scenes 2021, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AucoDefr07</td>
+                                <td>AucoDefr07</td>
+                                <td>2015</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/defreville-Aucouturier_urbanDb" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01082501v2" class="btn btn-default" target="_blank" title="[Lagrange2015] The bag-of-frames approach: a not so sufficient model for urban soundscapes">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/aucodefr2007.html" title="Item information page for [AucoDefr07]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Noise DB / Series 1</td>
+                                <td>UEA</td>
+                                <td>2006</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://lemur.cmp.uea.ac.uk/Research/noise_db/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://link.springer.com/article/10.1007%2Fs00779-005-0045-4" class="btn btn-default" target="_blank" title="[Smith2006] Acoustic environment as an indicator of social and physical context">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/uea_noise_db_s1.html" title="Item information page for [Noise DB / Series 1]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1245184" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_mobile_lb.html" title="Item information page for [TUT Urban Acoustic Scenes 2018 Mobile, Leaderboard dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2673004" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_mobile_lb.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Mobile, Leaderboard dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Acoustic Scenes 2016, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2016</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/45739" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf" class="btn btn-default" target="_blank" title="[Mesaros2016] TUT Database for Acoustic Scene Classificationand Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2016_dev.html" title="Item information page for [TUT Acoustic Scenes 2016, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>WSJ0 Hipster Ambient Mixtures noise dataset</td>
+                                <td>Whisper/MERL</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://storage.googleapis.com/whisper-public/wham_noise.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://wham.whisper.ai/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1907.01160.pdf" class="btn btn-default" target="_blank" title="[Wichern2019] WHAM!: Extending Speech Separation to Noisy Environments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/whisper.html" title="Item information page for [WSJ0 Hipster Ambient Mixtures noise dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1245181" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_openset_lb.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Openset, Leaderboard dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Urban Acoustic Scenes 2018, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2018</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1228142" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tut_asc_2018_dev.html" title="Item information page for [TUT Urban Acoustic Scenes 2018, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2020 3Class, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3670185" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2005.14623" class="btn btn-default" target="_blank" title="[Heittola2020] Acoustic scene classification in dcase 2020 challenge: generalization across devices and low complexity solutions">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2020_3class_dev.html" title="Item information page for [TAU Urban Acoustic Scenes 2020 3Class, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Audio-Visual Scenes 2021, Evaluation dataset</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4767109" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2011.00030" class="btn btn-default" target="_blank" title="[Wang2021] A curated dataset of urban scenes for audio-visual scene analysis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_avsc_2021_eval.html" title="Item information page for [TAU Urban Audio-Visual Scenes 2021, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Urban Acoustic Scenes 2019 Openset, Development dataset</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>scenes</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2591503" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1807.09840" class="btn btn-default" target="_blank" title="[Mesaros2018] A multi-device dataset for urban acoustic scene classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="scenes/tau_asc_2019_openset_dev.html" title="Item information page for [TAU Urban Acoustic Scenes 2019 Openset, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                    
+                        
+                            
+                            <tr>
+                                <td>MACS: Multi-Annotator Captioned Soundscapes</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>captions</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/5114771" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2021/proceedings/DCASE2021Workshop_Martin_34.pdf" class="btn btn-default" target="_blank" title="[Martin2021] Diversity and bias in audio captioning datasets">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="captions/macs.html" title="Item information page for [MACS: Multi-Annotator Captioned Soundscapes]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AudioCaps: Generating Captions for Audios in The Wild</td>
+                                <td>SNU</td>
+                                <td>2019</td>
+                                <td>captions</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/cdjkim/audiocaps" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://www.aclweb.org/anthology/N19-1011/" class="btn btn-default" target="_blank" title="[Kim2019] AudioCaps: Generating Captions for Audios in The Wild">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="captions/audiocaps.html" title="Item information page for [AudioCaps: Generating Captions for Audios in The Wild]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Clotho dataset (v2)</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>captions</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4783391" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/audio-captioning/clotho-dataset" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/1910.09387" class="btn btn-default" target="_blank" title="[Drossos2019] Clotho: an Audio Captioning Dataset">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="captions/clotho_v2.html" title="Item information page for [Clotho dataset (v2)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AudioCaption: Listen and Tell</td>
+                                <td>SJTU</td>
+                                <td>2019</td>
+                                <td>captions</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4671263#.YSK8E1tRW7A" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/richermans/AudioCaption" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/1902.09254" class="btn btn-default" target="_blank" title="[Wu2019] Audio Caption: Listen and Tell">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="captions/audiocaption.html" title="Item information page for [AudioCaption: Listen and Tell]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                    
+                        
+                            
+                            <tr>
+                                <td>IEEE DCASE 2016 Challenge - Task 2 - Train/Development Datasets</td>
+                                <td>IRCCYN</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2016_task2_train_dev" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/25293/Benetos%20Sound%20Event%20Detection%202017%20Accepted.pdf?sequence=1&isAllowed=y" class="btn btn-default" target="_blank" title="[Lafay2017] Sound event detection in synthetic audio: analysis of the DCASE 2016 task results">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2016_task2_dev.html" title="Item information page for [IEEE DCASE 2016 Challenge - Task 2 - Train/Development Datasets]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Sound events 2016, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/996424" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf" class="btn btn-default" target="_blank" title="[Mesaros2016] TUT Database for Acoustic Scene Classification and Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_sound_events_2016_eval.html" title="Item information page for [TUT Sound events 2016, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AudioSetZSL</td>
+                                <td>IIT Kanpur</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/krantiparida/AudioSetZSL" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/krantiparida/AudioSetZSL" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Parida_Coordinated_Joint_Multimodal_Embeddings_for_Generalized_Audio-Visual_Zero-shot_Classification_and_WACV_2020_paper.pdf" class="btn btn-default" target="_blank" title="[Parida2020] Coordinated Joint Multimodal Embeddings for Generalized Audio-Visual Zero-shot Classification and Retrieval of Videos">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/audiosetzsl.html" title="Item information page for [AudioSetZSL]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Testing Dataset for Event Detection Task (subtask OS)</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_event_detection_testset_OS" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2013_private_synthetic.html" title="Item information page for [IEEE AASP CASA Challenge - Testing Dataset for Event Detection Task (subtask OS)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>UrbanSound</td>
+                                <td>NYU</td>
+                                <td>2014</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://urbansounddataset.weebly.com/urbansound.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://urbansounddataset.weebly.com/urbansound.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf" class="btn btn-default" target="_blank" title="[Salamon2014] A Dataset and Taxonomy for Urban Sound Research">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/urbansound.html" title="Item information page for [UrbanSound]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OS)</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_event_detection_development_OS" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2013_public_synthetic.html" title="Item information page for [IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OS)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>NAR</td>
+                                <td>INRIA</td>
+                                <td>2014</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://perception.inrialpes.fr/Free_Access_Data/Data/NAR_Dataset/NAR_dataset.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://team.inria.fr/perception/nard/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://hal.inria.fr/hal-00952092/en" class="btn btn-default" target="_blank" title="[Janvier2014] Sound Representation and Classification Benchmark for Domestic Robots">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/inria_nar.html" title="Item information page for [NAR]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Sound events 2016, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/45759" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://homepages.tuni.fi/annamaria.mesaros/pubs/mesaros_eusipco2016-dcase.pdf" class="btn btn-default" target="_blank" title="[Mesaros2016] TUT Database for Acoustic Scene Classification and Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_sound_events_2016_dev.html" title="Item information page for [TUT Sound events 2016, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>NIGENS general sound events database</td>
+                                <td>NIGENS</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2535878" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1902.08314.pdf" class="btn btn-default" target="_blank" title="[Trowitzsch2019] The NIGENS General Sound Events Database">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/nigens_sound_events.html" title="Item information page for [NIGENS general sound events database]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DESED public evaluation dataset</td>
+                                <td>None</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4569096" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://project.inria.fr/desed/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-02160855v2/document" class="btn btn-default" target="_blank" title="[Turpault2019] Sound event detection in domestic environments with weakly labeled data and soundscape synthesis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/desed2019_eval_synthetic.html" title="Item information page for [DESED public evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Making Sense of Sounds</td>
+                                <td>CVSSP</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://salford.figshare.com/articles/dataset/Making_Sense_Of_Sounds_Data_for_the_machine_learning_challenge_2018/6901475/4" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://cvssp.org/projects/making_sense_of_sounds/site/challenge/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://ieeexplore.ieee.org/document/8683292" class="btn btn-default" target="_blank" title="[Kroos2019] Generalisation in Environmental Sound Classification: The ‘Making Sense of Sounds’ Data Set and Challenge">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/msos.html" title="Item information page for [Making Sense of Sounds]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>RWCP Sound Scene Database</td>
+                                <td>NII-SRC</td>
+                                <td>2000</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://www.openslr.org/resources/13/RWCP.tar.gz" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://www.openslr.org/13/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.463.357&rep=rep1&type=pdf" class="btn btn-default" target="_blank" title="[Nakamura2000] Acoustical Sound Database in Real Environments for Sound Scene Understanding and Hands-Free Speech Recognition">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/rwsp.html" title="Item information page for [RWCP Sound Scene Database]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DESED development dataset (real recordings)</td>
+                                <td>None</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/turpaultn/DCASE2019_task4/" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://project.inria.fr/desed/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-02160855v2/document" class="btn btn-default" target="_blank" title="[Turpault2019] Sound event detection in domestic environments with weakly labeled data and soundscape synthesis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/desed2019_dev_real.html" title="Item information page for [DESED development dataset (real recordings)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DCASE2017 task 4 evaluation dataset</td>
+                                <td>DCASE</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://dl.dropboxusercontent.com/s/bbgqfd47cudwe9y/DCASE_2017_evaluation_set_audio_files.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2017_task4_eval.html" title="Item information page for [DCASE2017 task 4 evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array, Evaluation Datasets</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3377088" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1905.08546" class="btn btn-default" target="_blank" title="[Adavanne2019] A multi-room reverberant dataset for sound event localization and detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tau_spatial_events_2019_eval.html" title="Item information page for [TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array, Evaluation Datasets]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>UPC-TALP database of isolated meeting-room acoustic events</td>
+                                <td>CHIL</td>
+                                <td>2008</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://catalog.elra.info/en-us/repository/browse/ELRA-S0268/" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/upc_talp.html" title="Item information page for [UPC-TALP database of isolated meeting-room acoustic events]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>YBSS-200</td>
+                                <td>YBSS</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/project-noise-2019/ybss-200" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://ieeexplore.ieee.org/document/8906597" class="btn btn-default" target="_blank" title="[Singh2019] Background Sound Classification in Speech Audio Segments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/ybss200.html" title="Item information page for [YBSS-200]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU-NIGENS Spatial Sound Events 2020</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4064792" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2006.01919.pdf" class="btn btn-default" target="_blank" title="[Politis2020] A dataset of reverberant spatial sound scenes with moving sources for sound event localization and detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tau_nigens_spatial_events_2020.html" title="Item information page for [TAU-NIGENS Spatial Sound Events 2020]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>MAVD-traffic dataset</td>
+                                <td>MAVD</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4741232" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2019/proceedings/DCASE2019Workshop_Zinemanas_70.pdf" class="btn btn-default" target="_blank" title="[Zinemanas2019] MAVD: A Dataset for Sound Event Detection in Urban Environments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/mavd.html" title="Item information page for [MAVD-traffic dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Freiburg-106, Audio Data Set for Human Activity Recognition</td>
+                                <td>Freiburg</td>
+                                <td>2012</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://www.csc.kth.se/~jastork/downloads/building_106_kitchen.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://www.csc.kth.se/~jastork/pages/datasets.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://ieeexplore.ieee.org/document/6343802" class="btn btn-default" target="_blank" title="[Stork2012] Audio-based human activity recognition using Non-Markovian Ensemble Voting">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/freiburg106.html" title="Item information page for [Freiburg-106, Audio Data Set for Human Activity Recognition]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>VGGSound</td>
+                                <td>VGG</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://www.robots.ox.ac.uk/~vgg/data/vggsound/vggsound.csv" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://www.robots.ox.ac.uk/~vgg/data/vggsound/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/2004.14368" class="btn btn-default" target="_blank" title="[Chen2020] VGGSound: A Large-scale Audio-Visual Dataset">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/vgg_sound.html" title="Item information page for [VGGSound]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DESED development dataset (synthetic clips)</td>
+                                <td>None</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2583796" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://project.inria.fr/desed/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-02160855v2/document" class="btn btn-default" target="_blank" title="[Turpault2019] Sound event detection in domestic environments with weakly labeled data and soundscape synthesis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/desed2019_dev_synthetic.html" title="Item information page for [DESED development dataset (synthetic clips)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DCASE 2018, Task 5: Monitoring of domestic activities based on multi-channel acoustics - Development dataset</td>
+                                <td>KU Leuven</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1247102" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Dekkers_141.pdf" class="btn btn-default" target="_blank" title="[Dekkers2017] The SINS Database for Detection of Daily Activities in a Home Environment Using an Acoustic Sensor Network">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2018_task5_dev.html" title="Item information page for [DCASE 2018, Task 5: Monitoring of domestic activities based on multi-channel acoustics - Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Rare sound events 2017, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1160455#.X9yFFdaxW7A" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_rare_sound_events_2017_eval.html" title="Item information page for [TUT Rare sound events 2017, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>An Open-set Recognition and Few-Shot Learning Dataset for Audio Event Classification in Domestic Environments</td>
+                                <td>Visualfy, Universitat de Valencia</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3689288" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2002.11561.pdf" class="btn btn-default" target="_blank" title="[Naranjo-Alcazar2021] An Open-Set Recognition and Few-Shot Learning Dataset for Audio Event Classification in Domestic Environments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/fsl_osr.html" title="Item information page for [An Open-set Recognition and Few-Shot Learning Dataset for Audio Event Classification in Domestic Environments]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>USM-SED Dataset - A Dataset for Polyphonic Sound Event Detection in Urban Sound Monitoring Scenarios</td>
+                                <td>Fraunhofer IDMT</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/jakobabesser/USM_SED" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/jakobabesser/USM_SED" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2105.02592.pdf" class="btn btn-default" target="_blank" title="[Abeßer2021] USM-SED Dataset - A Dataset for Polyphonic Sound Event Detection in Urban Sound Monitoring Scenarios">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/usm_sed.html" title="Item information page for [USM-SED Dataset - A Dataset for Polyphonic Sound Event Detection in Urban Sound Monitoring Scenarios]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AVE: The Audio-Visual Event Dataset</td>
+                                <td>UR</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://drive.google.com/open?id=1FjKwe79e0u96vdjIVwfRQ1V6SoDHe7kK" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/YapengTian/AVE-ECCV18" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/1803.08842" class="btn btn-default" target="_blank" title="[Tian2018] Audio-Visual Event Localization in Unconstrained Videos">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/ave.html" title="Item information page for [AVE: The Audio-Visual Event Dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>ARCA23K-FSD</td>
+                                <td>CVSSP</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/5117901" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2109.09227.pdf" class="btn btn-default" target="_blank" title="[Iqbal2021] ARCA23K: An audio dataset for investigating open-set label noise">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/arca23k_fsd.html" title="Item information page for [ARCA23K-FSD]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>ARCA23K</td>
+                                <td>CVSSP</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/5117901" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2109.09227.pdf" class="btn btn-default" target="_blank" title="[Iqbal2021] ARCA23K: An audio dataset for investigating open-set label noise">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/arca23k.html" title="Item information page for [ARCA23K]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Evaluation set DCASE 2020 task 4</td>
+                                <td>None</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3866455" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://project.inria.fr/desed/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-02160855v2/document" class="btn btn-default" target="_blank" title="[Turpault2019] Sound event detection in domestic environments with weakly labeled data and soundscape synthesis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/desed2020_eval_sed.html" title="Item information page for [Evaluation set DCASE 2020 task 4]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>VOICe Dataset</td>
+                                <td>TAU</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3514950" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1911.07098.pdf" class="btn btn-default" target="_blank" title="[Gharib2020] VOICe: A Sound Event Detection Dataset For Generalizable Domain Adaptation">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/voice.html" title="Item information page for [VOICe Dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>UrbanSound8K</td>
+                                <td>NYU</td>
+                                <td>2014</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://urbansounddataset.weebly.com/download-urbansound8k.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://urbansounddataset.weebly.com/urbansound8k.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_urbansound_acmmm14.pdf" class="btn btn-default" target="_blank" title="[Salamon2014] A Dataset and Taxonomy for Urban Sound Research">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/urbansound8k.html" title="Item information page for [UrbanSound8K]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AudioSet with Temporally-Strong Labels</td>
+                                <td>Google</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://research.google.com/audioset/download_strong.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://research.google.com/audioset/download_strong.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/2105.07031" class="btn btn-default" target="_blank" title="[Hershey2021] The Benefit Of Temporally-Strong Labels In Audio Event Classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/audioset_temporal.html" title="Item information page for [AudioSet with Temporally-Strong Labels]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT-SED Synthetic 2016</td>
+                                <td>TUT</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://webpages.tuni.fi/arg/paper/taslp2017-crnn-sed/tut-sed-synthetic-2016" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1702.06286" class="btn btn-default" target="_blank" title="[Cakir2017] Convolutional Recurrent Neural Networks forPolyphonic Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_synthetic_2016.html" title="Item information page for [TUT-SED Synthetic 2016]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>SONYC Urban Sound Tagging</td>
+                                <td>NYU</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3966543" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://cacm.acm.org/magazines/2019/2/234354-sonyc/pdf" class="btn btn-default" target="_blank" title="[Bello2019] Sonyc: a system for monitoring, analyzing, and mitigating urban noise pollution.">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/sonyc.html" title="Item information page for [SONYC Urban Sound Tagging]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Audio Events Data Set for Road Surveillance Applications</td>
+                                <td>MIVIA</td>
+                                <td>2014</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://mivia.unisa.it/datasets-request/" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://mivia.unisa.it/datasets/audio-analysis/mivia-road-audio-events-data-set/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://ieeexplore.ieee.org/document/6918643" class="btn btn-default" target="_blank" title="[Foggia2014] Cascade Classifiers Trained on Gammatonegrams for Reliably Detecting Audio Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/mivia_aed_road.html" title="Item information page for [Audio Events Data Set for Road Surveillance Applications]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IDMT-Traffic: An Open Benchmark Dataset for Acoustic Traffic Monitoring Research</td>
+                                <td>Fraunhofer IDMT</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/traffic.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/traffic.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2104.13620.pdf" class="btn btn-default" target="_blank" title="[Abeßer2021] IDMT-Traffic: An Open Benchmark Dataset for Acoustic Traffic Monitoring Research">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/idmt_traffic.html" title="Item information page for [IDMT-Traffic: An Open Benchmark Dataset for Acoustic Traffic Monitoring Research]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>ETH Acoustic Event Dataset</td>
+                                <td>ETH</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://data.vision.ee.ethz.ch/cvl/ae_dataset/ae_dataset.zip" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://data.vision.ee.ethz.ch/cvl/ae_dataset/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://tik-old.ee.ethz.ch/file//bb2f1ebc2da22c3d0afba72241a57ab6/Takahashi_16a.pdf" class="btn btn-default" target="_blank" title="[Takahashi2016] Deep Convolutional Neural Networks and Data Augmentation for Acoustic Event Recognition">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/eth_aed.html" title="Item information page for [ETH Acoustic Event Dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OL)</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2012</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_event_detection_development" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2013_public_live.html" title="Item information page for [IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OL)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>FSD50K</td>
+                                <td>UPF</td>
+                                <td>2020</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4060432#.X65IJRGxW7A" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://annotator.freesound.org/fsd/release/FSD50K/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2010.00475.pdf" class="btn btn-default" target="_blank" title="[Fonseca2020] FSD50K: an Open Dataset of Human-Labeled Sound Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/fsd50k.html" title="Item information page for [FSD50K]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>SINS database</td>
+                                <td>KU Leuven</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/KULeuvenADVISE/SINS_database" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Dekkers_141.pdf" class="btn btn-default" target="_blank" title="[Dekkers2017] The SINS Database for Detection of Daily Activities in a Home Environment Using an Acoustic Sensor Network">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/sins.html" title="Item information page for [SINS database]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IDMT-DESED-FL</td>
+                                <td>Fraunhofer IDMT</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2102.08833.pdf" class="btn btn-default" target="_blank" title="[Johnson2021] DESED-FL and URBAN-FL: Federated Learning Datasets for Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/idmt_desed_fl.html" title="Item information page for [IDMT-DESED-FL]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Isolated urban sound database</td>
+                                <td>None</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1213793" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="None" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01635393" class="btn btn-default" target="_blank" title="[Gloaguen2018] Creation of a corpus of realistic urban sound scenes with controlled acoustic properties">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/iusd.html" title="Item information page for [Isolated urban sound database]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Multi-channel acoustic event dataset</td>
+                                <td>TU Dortmund</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://patrec.cs.tu-dortmund.de/files/datasets/dcase2016_multichannel-aed_dortmund.7z" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2016/proceedings/Kuerby-DCASE2016workshop.pdf" class="btn btn-default" target="_blank" title="[Kuerby2016] Bag-of-Features Acoustic Event Detection for Sensor Networks">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tu_dortmund_sed.html" title="Item information page for [Multi-channel acoustic event dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>CHiME-Home, development & evaluation dataset</td>
+                                <td>QMUL</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/download/chime-home/chime_home.tar.gz" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/chime-home" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://ieeexplore.ieee.org/document/7336899" class="btn btn-default" target="_blank" title="[Foster2015] CHiME-Home: A Dataset for Sound Source Recognition in a Domestic Environment">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/chime_home.html" title="Item information page for [CHiME-Home, development & evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Dataset for Environmental Sound Classification, 50 classes</td>
+                                <td>ESC</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/karoldvl/ESC-50" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf" class="btn btn-default" target="_blank" title="[Piczak2015] ESC: Dataset for Environmental Sound Classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/esc_50.html" title="Item information page for [Dataset for Environmental Sound Classification, 50 classes]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>URBAN-SED</td>
+                                <td>NYU</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://urbansed.weebly.com/download.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://urbansed.weebly.com/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://www.justinsalamon.com/uploads/4/3/9/4/4394963/salamon_scaper_waspaa_2017.pdf" class="btn btn-default" target="_blank" title="[Salamon2017] Scaper: A library for soundscape synthesis and augmentation">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/urbansed.html" title="Item information page for [URBAN-SED]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array, Development Datasets</td>
+                                <td>TAU</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2599196" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1905.08546" class="btn btn-default" target="_blank" title="[Adavanne2019] A multi-room reverberant dataset for sound event localization and detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tau_spatial_events_2019_dev.html" title="Item information page for [TAU Spatial Sound Events 2019 - Ambisonic and Microphone Array, Development Datasets]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DCASE2018 Task 4 dataset</td>
+                                <td>None</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/DCASE-REPO/dcase2018_baseline/tree/master/task4/dataset" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-01850270/file/task4.pdf" class="btn btn-default" target="_blank" title="[Serizel2018] Large-scale weakly labeled semi-supervised sound event detection in domestic environments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2018_task4.html" title="Item information page for [DCASE2018 Task 4 dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OL)</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2012</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_event_detection_testset_OL" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2013_private_live.html" title="Item information page for [IEEE AASP CASA Challenge - Development Dataset for Event Detection Task (subtask OL)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DCASE 2018, Task 5: Monitoring of domestic activities based on multi-channel acoustics - Evaluation dataset</td>
+                                <td>KU Leuven</td>
+                                <td>2018</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1964758" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Dekkers_141.pdf" class="btn btn-default" target="_blank" title="[Dekkers2017] The SINS Database for Detection of Daily Activities in a Home Environment Using an Acoustic Sensor Network">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2018_task5_eval.html" title="Item information page for [DCASE 2018, Task 5: Monitoring of domestic activities based on multi-channel acoustics - Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IDMT-URBAN-FL</td>
+                                <td>Fraunhofer IDMT</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/2102.08833.pdf" class="btn btn-default" target="_blank" title="[Johnson2021] DESED-FL and URBAN-FL: Federated Learning Datasets for Sound Event Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/idmt_urban_fl.html" title="Item information page for [IDMT-URBAN-FL]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Dataset for Environmental Sound Classification, 10 classes</td>
+                                <td>ESC</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/karoldvl/ESC-10" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf" class="btn btn-default" target="_blank" title="[Piczak2015] ESC: Dataset for Environmental Sound Classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/esc_10.html" title="Item information page for [Dataset for Environmental Sound Classification, 10 classes]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DCASE2017 task 4 development dataset</td>
+                                <td>DCASE</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://github.com/ankitshah009/Task-4-Large-scale-weakly-supervised-sound-event-detection-for-smart-cars" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://github.com/ankitshah009/Task-4-Large-scale-weakly-supervised-sound-event-detection-for-smart-cars" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2017_task4_dev.html" title="Item information page for [DCASE2017 task 4 development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>FSDKaggle2019</td>
+                                <td>UPF</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/3612637" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://www.kaggle.com/c/freesound-audio-tagging-2019" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/1906.02975" class="btn btn-default" target="_blank" title="[Fonseca2019] Audio tagging with noisy labels and minimal supervision">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/fsdkaggle2019.html" title="Item information page for [FSDKaggle2019]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE AASP CASA Challenge - Training Dataset for Event Detection Task (subtasks OL, OS)</td>
+                                <td>IEEE AASP Challenge 2013</td>
+                                <td>2012</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2013_event_detection_training" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://c4dm.eecs.qmul.ac.uk/sceneseventschallenge/description.html" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.archives-ouvertes.fr/hal-01253912/document" class="btn btn-default" target="_blank" title="[Stowell2015] Detection and Classification of Acoustic Scenes and Events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2013_public_isolated.html" title="Item information page for [IEEE AASP CASA Challenge - Training Dataset for Event Detection Task (subtasks OL, OS)]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>DESED public evaluation dataset</td>
+                                <td>None</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4560759" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://project.inria.fr/desed/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://hal.inria.fr/hal-02160855v2/document" class="btn btn-default" target="_blank" title="[Turpault2019] Sound event detection in domestic environments with weakly labeled data and soundscape synthesis">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/desed2019_eval_real.html" title="Item information page for [DESED public evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Freefield1010</td>
+                                <td>QMUL</td>
+                                <td>2013</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/freefield1010" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/pdf/1309.5275" class="btn btn-default" target="_blank" title="[Stowell2013] An open dataset for research on audio field recording archives: freefield1010">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/qmul_freefield1010.html" title="Item information page for [Freefield1010]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Dataset for Environmental Sound Classification, unlabeled dataset</td>
+                                <td>ESC</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YDEPUT" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://karol.piczak.com/papers/Piczak2015-ESC-Dataset.pdf" class="btn btn-default" target="_blank" title="[Piczak2015] ESC: Dataset for Environmental Sound Classification">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/esc_us.html" title="Item information page for [Dataset for Environmental Sound Classification, unlabeled dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>FSDnoisy18k</td>
+                                <td>UPF</td>
+                                <td>2019</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/2529934" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="http://www.eduardofonseca.net/FSDnoisy18k/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/1901.01189" class="btn btn-default" target="_blank" title="[Fonseca2019] Learning Sound Event Classifiers from Web Audio with Noisy Labels">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/fsdnoisy18k.html" title="Item information page for [FSDnoisy18k]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>FBK-Irst database of isolated meeting-room acoustic events</td>
+                                <td>CHIL</td>
+                                <td>2009</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="http://catalog.elra.info/product_info.php?products_id=1093" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/fbk_irst.html" title="Item information page for [FBK-Irst database of isolated meeting-room acoustic events]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>AudioSet</td>
+                                <td>Google</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://research.google.com/audioset/" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://research.google.com/audioset/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://research.google.com/pubs/pub45857.html" class="btn btn-default" target="_blank" title="[Gemmeke2017] Audio Set: An ontology and human-labeled dataset for audio events">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/audioset.html" title="Item information page for [AudioSet]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Sound events 2017, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/400516" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_sound_events_2017_dev.html" title="Item information page for [TUT Sound events 2017, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TAU-NIGENS Spatial Sound Events 2021</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4844825" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://arxiv.org/abs/2106.06999" class="btn btn-default" target="_blank" title="[Politis2020] A Dataset of Dynamic Reverberant Sound Scenes with Directional Interferers for Sound Event Localization and Detection">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tau_nigens_spatial_events_2021.html" title="Item information page for [TAU-NIGENS Spatial Sound Events 2021]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>Audio Events Data Set for Surveillance Applications</td>
+                                <td>MIVIA</td>
+                                <td>2015</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://mivia.unisa.it/datasets-request/" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    <a href="https://mivia.unisa.it/datasets/audio-analysis/mivia-audio-events/" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://www.sciencedirect.com/science/article/pii/S0167865515001981" class="btn btn-default" target="_blank" title="[Foggia2015] Reliable Detection of Audio Events in Highly Noisy Environments">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/mivia_aed.html" title="Item information page for [Audio Events Data Set for Surveillance Applications]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>IEEE DCASE 2016 Challenge - Task 2 - Test Dataset</td>
+                                <td>IRCCYN</td>
+                                <td>2016</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://archive.org/details/dcase2016_task2_test_public" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/25293/Benetos%20Sound%20Event%20Detection%202017%20Accepted.pdf?sequence=1&isAllowed=y" class="btn btn-default" target="_blank" title="[Lafay2017] Sound event detection in synthetic audio: analysis of the DCASE 2016 task results">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/dcase2016_task2_eval.html" title="Item information page for [IEEE DCASE 2016 Challenge - Task 2 - Test Dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Sound events 2017, Evaluation dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/1040179" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_sound_events_2017_eval.html" title="Item information page for [TUT Sound events 2017, Evaluation dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>TUT Rare sound events 2017, Development dataset</td>
+                                <td>TUT</td>
+                                <td>2017</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/401395#.X9yFSdaxUXU" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="http://dcase.community/documents/workshop2017/proceedings/DCASE2017Workshop_Mesaros_100.pdf" class="btn btn-default" target="_blank" title="[Mesaros2017] DCASE 2017 challenge setup: tasks, datasets and baseline system">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tut_rare_sound_events_2017_dev.html" title="Item information page for [TUT Rare sound events 2017, Development dataset]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                            
+                            <tr>
+                                <td>MATS - Multi-Annotator Tagged Soundscapes</td>
+                                <td>TAU</td>
+                                <td>2021</td>
+                                <td>sounds</td>
+                                <td>
+                                    
+                                    <a href="https://zenodo.org/record/4774960#.YSKywltRW7A" class="btn btn-success" target="_blank">Download</a>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                    
+                                    <a href="https://homepages.tuni.fi/annamaria.mesaros/pubs/martinmorato_eusipco2021.pdf" class="btn btn-default" target="_blank" title="[MartinMorato2021] What is the ground truth? reliability of multi-annotator data for audio tagging">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    
+                                </td>
+                                <td><a class="btn2 btn-success2" href="sounds/tau_mats.html" title="Item information page for [MATS - Multi-Annotator Tagged Soundscapes]"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a></td>
+                            </tr>
+                            
+                        
+                    
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

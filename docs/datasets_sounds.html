@@ -13,32 +13,9 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet"
-          href="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/css.min/datatable.bundle.min.css">
+          href="https://rawcdn.githack.com/toni-heittola/js-datatable/c476582b4c843fd691611857b0487885bcca239b/css.min/datatable.bundle.min.css">
     <link rel="stylesheet" href="assets/dcaseicons/css/dcaseicons.css">
-
-    <style>
-        p {
-            text-align: justify;
-        }
-
-        nav[data-toggle='toc'] {
-            margin-top: 30px;
-        }
-
-        @media (max-width: 768px) {
-            nav.affix[data-toggle='toc'] {
-                position: static;
-            }
-
-            nav[data-toggle='toc'] .nav .nav {
-                display: block;
-            }
-        }
-        .search input{
-            height:32px;
-            padding-left:5px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body data-spy="scroll" data-target="#toc">
@@ -70,6 +47,9 @@
                             </a>
                             <a href="datasets_sounds.html" class="btn btn-default active">
                                 <i class="fa fa-th" aria-hidden="true"></i> Sounds
+                            </a>
+                            <a href="datasets/list.html" class="btn btn-default">
+                                <i class="fa fa-th-list" aria-hidden="true"></i> Items
                             </a>
                         </div>
                     </div>
@@ -106,6 +86,12 @@
                     <thead>
                     <tr>
                         <!-- DATASET -->
+                        <th data-field="item_link_html"
+                            data-sortable="false"
+                            data-visible="true"
+                            data-value-type="html">
+                            <span data-toggle="tooltip" title="Dataset information page">Info <br>page</span>
+                        </th>
                         <th data-field="dataset-name"
                             data-sortable="true">
                             <span data-toggle="tooltip" title="Dataset name">Name</span>
@@ -728,7 +714,7 @@
             crossorigin="anonymous"></script>
 
     <script type="text/javascript"
-            src="https://rawcdn.githack.com/toni-heittola/js-datatable/fb8efed1f6a2a7d608b83a3f075073f538493470/js.min/datatable.bundle.min.js"></script>
+            src="https://rawcdn.githack.com/toni-heittola/js-datatable/c476582b4c843fd691611857b0487885bcca239b/js.min/datatable.bundle.min.js"></script>
 </body>
 
 </html>

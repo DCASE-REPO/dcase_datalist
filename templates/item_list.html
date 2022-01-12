@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'parts/head_list.html' %}
+{% from "utils/macros.jinja" import  subheader,row,row_label,row_url,row_download,row_citation,row_bool  with context %}
+<body data-spy="scroll" data-target="#toc">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Datasets</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right" style="padding-top: 20px;">
+                            <div class="btn-group">
+                                <a href="../../index.html" class="btn btn-default">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </a>
+                                <a href="../../datasets.html" class="btn btn-default">
+                                    <i class="fa fa-table" aria-hidden="true"></i> All
+                                </a>
+                                <a href="../../datasets_scenes.html" class="btn btn-default">
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
+                                </a>
+                                <a href="../../datasets_captions.html" class="btn btn-default">
+                                    <i class="fa dc-captioning" aria-hidden="true"></i> Captions
+                                </a>
+                                <a href="../../datasets_sounds.html" class="btn btn-default">
+                                    <i class="fa fa-th" aria-hidden="true"></i> Sounds
+                                </a>
+                                <a href="list.html" class="btn btn-default active">
+                                    <i class="fa fa-th-list" aria-hidden="true"></i> Items
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table datatable table-striped table-hover2 table-condensed"
+                       data-sort-name="name"
+                       data-sort-order="asc"
+                       data-pagination="false"
+                       data-show-pagination-switch="false"
+                       data-show-toggle="false"
+                       data-search="true"
+                       data-search-align="left"
+                       data-search-highlight="true"
+                       data-filter-control="true"
+                       data-filter-show-clear="true"
+                >
+                    <thead>
+                        <tr>
+                            <th data-field="name" data-sortable="true">Name</th>
+                            <th data-field="provider" data-sortable="true">Provider</th>
+                            <th data-field="year" data-sortable="true">Year</th>
+                            <th data-field="category"
+                                data-sortable="true"
+                                data-visible="true"
+                                data-tag="true"
+                                data-filter-control="select"
+                                data-switchable="true">
+                                Category
+                            </th>
+                            <th>Download</th>
+                            <th>Site</th>
+                            <th>Cite</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for category in data %}
+                        {% for item in data[category] %}
+                            {% if 'skip' not in data[category][item] or not data[category][item]['skip'] %}
+                            <tr>
+                                <td>{{data[category][item].dataset.name}}</td>
+                                <td>{{data[category][item].dataset.provider}}</td>
+                                <td>{{data[category][item].dataset.year}}</td>
+                                <td>{{category}}</td>
+                                <td>
+                                    {% if data[category][item].dataset.download is defined %}
+                                    <a href="{{data[category][item].dataset.download.url}}" class="btn btn-success" target="_blank">Download</a>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if data[category][item].dataset.companion_site is defined %}
+                                    <a href="{{data[category][item].dataset.companion_site}}" class="btn btn-info" target="_blank"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if data[category][item].dataset.citation is defined %}
+                                    {% set ref = data[category][item].dataset.citation.ref.split(';') %}
+                                    <a href="{{ref[0]}}" class="btn btn-default" target="_blank" title="[{{ref[1]}}] {{data[category][item].dataset.citation.title}}">
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                    </a>
+                                    {% endif %}
+                                </td>
+                                <td>{{data[category][item].item_link_html2}}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
