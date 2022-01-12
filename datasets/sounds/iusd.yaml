@@ -1,0 +1,125 @@
+# === DATASET ===
+dataset:
+  name: Isolated urban sound database
+  provider:                             # [string]
+  abbreviation: IUSD
+  year: 2018                                # [int], Release year
+  modalities: Audio
+  collection_name: IUSD
+  domain:                               # [list], related domains, e.g., SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+    - UrbanSound8K
+
+  license: Creative Commons, CC BY 4.0
+
+  download:
+    url: https://zenodo.org/record/1213793
+    size: 2.3GB
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://hal.archives-ouvertes.fr/hal-01635393;Gloaguen2018
+    title: "Creation of a corpus of realistic urban sound scenes with controlled acoustic properties"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: UrbanSound8K, Freesound
+      variability_sources:              # [list]
+
+  content:
+    type: Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+  recording:
+    setup: Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 399
+    total_duration_minutes: 288
+    file_length: Variable
+    file_length_seconds: 1-60
+
+# === META ===
+meta:
+  types:
+    - Tag
+
+  scene:
+    classes: 10
+    class_balance: No
+    list:
+      - bird
+      - construction site
+      - crowd
+      - fountain
+      - park
+      - rain
+      - school yard
+      - traffic
+      - ventilation
+      - wind tree
+
+  event:
+    classes: 21
+    class_balance: No
+    list:
+      - bell
+      - whistle bird
+      - sweeping broom
+      - car horn
+      - car
+      - hammer and drill
+      - coughing
+      - dog barking
+      - car door
+      - house door
+      - plane
+      - siren
+      - foot step
+      - thunder
+      - street noise
+      - suitcase rolling
+      - train passing
+      - tramway passing
+      - truck
+      - voice
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+      strong_amount_percentage: 0
+      overlapping_event_instances: No
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 231
+      average_instances_per_class: 11.55
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
