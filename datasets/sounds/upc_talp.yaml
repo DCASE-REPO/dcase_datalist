@@ -15,10 +15,6 @@ dataset:
     url: http://catalog.elra.info/en-us/repository/browse/ELRA-S0268/
     size:
 
-  citation:
-    ref:
-    title:                              # [string], Paper title, use quotes if title contains colons
-
 # === AUDIO ===
 audio:
   data:
@@ -81,7 +77,7 @@ meta:
 
     instance:
       count: 1026
-      average_instaces_per_class: 73.2857142857
+      average_instances_per_class: 73.2857142857
 
 # === CROSS-VALIDATION SETUP ===
 split:
