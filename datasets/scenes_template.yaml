@@ -9,7 +9,7 @@ dataset:
   domain:                               # [list], related domains, e.g., Scenes, Mobile devices, Audio-visual, Open set, Ambient noise, Unlabelled, Multiple sensors
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
-  license:                              # [string], possible values: Creative Commons | Free | Commercial | Proprietary | R&D only
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
                                         # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
 
   download:
@@ -34,7 +34,7 @@ audio:
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
-      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Variable
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
       number:                           # [int], Number of channels
 
     material:
@@ -42,8 +42,8 @@ audio:
       variability_sources:              # [list], possible values: Country | City | Location | Position | Device
 
   content:
-    type:                               # [list], possible values: Freefield | Synthetic | Isolated
-    scene:                              # [string], possible values: Constant | Variable
+    type:                               # [list], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
 
   recording:
     setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
@@ -78,18 +78,18 @@ meta:
 
     instance:
       count:                            # [int], Count of all scene instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      average_instances_per_class:       # [float], average per class instance count
 
 # === CROSS-VALIDATION SETUP ===
 split:
   provided:                             # [bool], Is data splits provided, possible values: Yes | No
   folds:                                # [int], how many folds provided
-  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Eval
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
 
 # === BASELINE SYSTEM ===
 baseline:
   url:                                  # [url], Link to baseline system source code
-  ref:                                  # [url];[key], Paper to cite for the baseline
+  ref:                                 # [url];[key], Paper to cite for the baseline
 
 # === INFO ===
 info:

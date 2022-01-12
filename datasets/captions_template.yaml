@@ -30,7 +30,7 @@ audio:
       type:                             # [string], possible values: Constant | Variable
       format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
       lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
-      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      bit_rate:                         # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
@@ -42,7 +42,7 @@ audio:
       variability_sources:              # [list]
 
   content:
-    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    type:                               # [list], content type, possible values: Freefield | Synthetic | Isolated
     scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
 
     synthetic:
@@ -62,7 +62,7 @@ audio:
 # === META ===
 meta:
   types:                                # [list], list of meta data types provided for the data,
-                                        # possible values: Event, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+                                        # possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
   scene:
     classes:                            # [int], Number of scene classes
     class_balance:                      # [string], possible values: Yes | No | Almost
@@ -86,7 +86,7 @@ meta:
 
     instance:
       count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      average_instances_per_class:       # [float], average per class instance count
 
   caption:
     annotation:
@@ -103,12 +103,12 @@ meta:
 split:
   provided:                             # [bool], Is data splits provided, possible values: Yes | No
   folds:                                # [int], how many folds provided
-  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Eval
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
 
 # === BASELINE SYSTEM ===
 baseline:
   url:                                  # [url], Link to baseline system source code
-  ref:                                  # [url];[key], Paper to cite for the baseline
+  ref:                                 # [url];[key], Paper to cite for the baseline
 
 # === INFO ===
 info:
