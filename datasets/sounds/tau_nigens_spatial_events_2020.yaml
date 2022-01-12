@@ -85,7 +85,7 @@ meta:
 
     instance:
       count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      average_instances_per_class:       # [float], average per class instance count
 
 # === CROSS-VALIDATION SETUP ===
 split:

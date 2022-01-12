@@ -1,0 +1,141 @@
+{% macro subheader(title, headers, indent) %}
+{% if indent == 0 %}
+<tr class="active"><td colspan="6"><h3>{{title}}</h3></td></tr>
+{% elif indent == 1 %}
+<tr>
+    {% for i in range(indent) %}
+    <th></th>
+    {% endfor %}
+    <td colspan="{{6-indent}}"><h4>{{title}}</h4></td></tr>
+{% elif indent == 2 %}
+<tr>
+    {% for i in range(indent) %}
+    <th></th>
+    {% endfor %}
+    <td colspan="{{6-indent}}"><h5>{{title}}</h5></td></tr>
+{% endif %}
+{% if headers %}
+<tr>
+    {% for i in range(indent) %}
+    <th></th>
+    {% endfor %}
+    <th colspan="{{4-indent}}" class="col-md-2 text-left">Label</th>
+    <th class="col-md-6 text-left">Value</th>
+    <th class="col-md-4 text-left">Description</th>
+</tr>
+{% endif %}
+{% endmacro %}
+
+{% macro row(name, value, desc, indent, unit) %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    {% if value is iterable and (value is not string and value is not mapping) %}
+    <td>
+        <ul>
+    {% for v in value %}
+            <li>{{ v }} {% if dataset.name is defined %}{{unit}}{% endif %}</li>
+    {% endfor %}
+        </ul>
+    </td>
+    {% else %}
+    <td>{{value}} {% if dataset.name is defined %}{{unit}}{% endif %}</td>
+    {% endif %}
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}
+
+{% macro row_url(name, url, title, desc, indent) %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    <td>
+    {% if url is iterable and (url is not string and url is not mapping) %}
+    <ul>
+        {% for v in url %}
+            <li>
+                <a href="{{v.url}}">{{v.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <a href="{{url}}" class="btn btn-info" target="_blank">{{title}}</a>
+    {% endif %}
+    </td>
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}
+
+{% macro row_download(name, url, desc, indent, size) %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    <td><a href="{{url}}" class="btn btn-success" target="_blank">Download
+    {% if size is defined %}
+    ({{size}})
+    {% endif %}
+    </a></td>
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}
+
+{% macro row_citation(name, ref, title, desc, indent) %}
+{% set ref = ref.split(';') %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    <td>
+        <a href="{{ref[0]}}" target="_blank">[{{ref[1]}}] <em>{{title}}</em></a>
+    </td>
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}
+
+{% macro row_label(name, label, desc, indent) %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    <td>
+        {% if label is iterable and (label is not string and label is not mapping) %}
+    {% for l in label %}
+            <span class="label label-default">{{l}}</span>
+    {% endfor %}
+    {% elif label is iterable and ',' in label %}
+    {% set list = label.split(',') %}
+        {% for l in list %}
+            <span class="label label-default">{{l}}</span>
+        {% endfor %}
+    {% else %}
+        <span class="label label-default">{{label}}</span>
+    {% endif %}
+    </td>
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}
+
+{% macro row_bool(name, value, desc, indent) %}
+<tr>
+    {% for i in range(indent) %}
+    <td></td>
+    {% endfor %}
+    <td colspan="{{4-indent}}" class="text-muted"><strong>{{name}}</strong></td>
+    <td>
+        {% if value %}
+        <span class="label label-primary">Yes</span>
+        {% else %}
+        <span class="label label-info">No</span>
+        {% endif %}
+    </td>
+    <td class="small text-muted">{{desc}}</td>
+</tr>
+{% endmacro %}

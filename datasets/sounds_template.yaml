@@ -6,7 +6,7 @@ dataset:
   year:                                 # [int], Release year
   modalities:                           # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name:                      # [string], common name for all related datasets, used to group datasets coming from same source
-  domain:                               # [list], related domains, e.g., SED, SELD, Tagging, Strong annotation, Weak annotation, Unlabelled
+  domain:                               # [list], related domains, e.g., SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled, Multi-annotator
   related_datasets:                     # [list], related datasets (name or abbreviation)
 
   license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
@@ -30,7 +30,7 @@ audio:
       type:                             # [string], possible values: Constant | Variable
       format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
       lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
-      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      bit_rate:                         # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
       sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
 
     channels:
@@ -42,7 +42,7 @@ audio:
       variability_sources:              # [list]
 
   content:
-    type:                               # [string], content type, possible values: Freefield | Synthetic | Isolated
+    type:                               # [list], content type, possible values: Freefield | Synthetic | Isolated
     scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
 
     event:
@@ -91,7 +91,7 @@ meta:
 
     instance:
       count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      average_instances_per_class:       # [float], average per class instance count
 
 # === CROSS-VALIDATION SETUP ===
 split:

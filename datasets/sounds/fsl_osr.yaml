@@ -61,10 +61,10 @@ audio:
 # === META ===
 meta:
   types: Tag
-  scene:
-    classes:                            # [int], Number of scene classes
-    class_balance:                      # [string], possible values: Yes | No | Almost
-    list:                               # [list], list of scene classes
+  #scene:
+  #  classes:                            # [int], Number of scene classes
+  #  class_balance:                      # [string], possible values: Yes | No | Almost
+  #  list:                               # [list], list of scene classes
 
   event:
     classes: 11
@@ -84,7 +84,7 @@ meta:
 
     instance:
       count: 1360
-      average_instaces_per_class: 123.63 # 40
+      average_instances_per_class: 123.63 # 40
 
 # === CROSS-VALIDATION SETUP ===
 split:

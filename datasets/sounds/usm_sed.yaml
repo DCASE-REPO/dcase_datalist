@@ -103,7 +103,7 @@ meta:
       source: Synthetic
       annotations_per_item: 1
       labelled_amount_percentage: 100
-      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      #validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
       strong_amount_percentage: 100
       overlapping_event_instances: Yes
 
@@ -113,7 +113,7 @@ meta:
 
     instance:
       count: 80037
-      average_instaces_per_class: 2964.333333333
+      average_instances_per_class: 2964.333333333
 
 # === CROSS-VALIDATION SETUP ===
 split:

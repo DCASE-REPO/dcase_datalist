@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'parts/head_item.html' %}
+{% from "utils/macros.jinja" import  subheader,row,row_label,row_url,row_download,row_citation,row_bool  with context %}
+<body data-spy="scroll" data-target="#toc">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h1>{{dataset.name}}</h1>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-xs-2" style="padding-top:20px;">
+                                <span class="label label-default">{{category_label}}</span>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="pull-right" style="padding-top: 20px;">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-info" onclick="back()" title="Back">
+                                            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                        </button>
+                                        <a href="../../index.html" class="btn btn-default">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="btn-group">
+                        {% if dataset.download is defined %}
+                        <a href="{{dataset.download.url}}" class="btn btn-success" target="_blank">
+                            <i class="fa fa-download" aria-hidden="true"></i> Download
+                        </a>
+                        {% endif %}
+
+                        {% if dataset.companion_site is defined and dataset.companion_site %}
+                            <a href="{{dataset.companion_site}}" class="btn btn-info" target="_blank">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> Site
+                            </a>
+                        {% endif %}
+
+                        {% if dataset.citation is defined %}
+                            {% set ref = dataset.citation.ref.split(';') %}
+                            <a href="{{ref[0]}}" class="btn btn-default" target="_blank" title="[{{ref[1]}}]">
+                                <i class="fa fa-file" aria-hidden="true"></i> {{ref[1]}}
+                            </a>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <table class="table table-striped2 table-hover2 table-condensed">
+                    <tbody>
+                    {% include 'parts/dataset_information.html' %}
+                    {% include 'parts/audio_information.html' %}
+                    {% include 'parts/meta_information.html' %}
+                    {% include 'parts/split_information.html' %}
+                    {% include 'parts/baseline_information.html' %}
+                    {% include 'parts/info_information.html' %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

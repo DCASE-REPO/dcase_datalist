@@ -91,15 +91,4 @@ meta:
 
     instance:
       count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
-
-# === CROSS-VALIDATION SETUP ===
-split:
-  provided:                             # [bool], Is data splits provided, possible values: Yes | No
-  folds:                                # [int], how many folds provided
-  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
-
-# === BASELINE SYSTEM ===
-baseline:
-  url:                                  # [url], Link to baseline system source code
-  ref:                                 # [url];[key], Paper to cite for the baseline
+      average_instances_per_class:       # [float], average per class instance count

@@ -2,7 +2,7 @@
 dataset:
   name: TAU Urban Acoustic Scenes 2020 Mobile, Evaluation dataset
   provider: TAU
-  abbreviation: TAU-ASC2020-MOBILE-DEV
+  abbreviation: TAU-ASC2020-MOBILE-EVAL
   year: 2020
   modalities: Audio
   collection_name: TAU Urban Acoustic Scenes

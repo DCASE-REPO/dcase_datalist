@@ -14,7 +14,7 @@ dataset:
 
   download:
     url: https://zenodo.org/record/4774960#.YSKywltRW7A
-    size:                               # [string], Approximate package size (unit GB, MB)
+    #size:                               # [string], Approximate package size (unit GB, MB)
 
   citation:
     ref: https://homepages.tuni.fi/annamaria.mesaros/pubs/martinmorato_eusipco2021.pdf;MartinMorato2021
@@ -88,7 +88,7 @@ meta:
 
     instance:
       count:                            # [int], Count of all event instances in the dataset
-      average_instaces_per_class:       # [float], average per class instance count
+      average_instances_per_class:       # [float], average per class instance count
 
 # === CROSS-VALIDATION SETUP ===
 split:

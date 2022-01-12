@@ -102,7 +102,7 @@ meta:
 
     instance:
       count: 310
-      average_instaces_per_class: 19.375
+      average_instances_per_class: 19.375
 
 # === INFO ===
 info:

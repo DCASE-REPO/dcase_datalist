@@ -91,7 +91,7 @@ meta:
 
     instance:
       count: 3026
-      average_instaces_per_class: 159.263157895
+      average_instances_per_class: 159.263157895
 
 # === CROSS-VALIDATION SETUP ===
 split:
@@ -101,7 +101,6 @@ split:
 
 # === BASELINE SYSTEM ===
 baseline:
-  url:                                  # [url], Link to baseline system source code
   ref: http://ieeexplore.ieee.org/document/6971128;Rakotomamonjy2015
 
 # === INFO ===

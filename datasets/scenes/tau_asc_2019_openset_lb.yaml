@@ -9,7 +9,7 @@ dataset:
   domain: ASC, Open set
   related_datasets:
     - TUT-ASC2018-DEV
-    - TUT-ASC2019-DEV
+    - TAU-ASC2019-DEV
     - TUT-ASC2018-EVAL
     - TUT-ASC2018-LB
     - TUT-ASC2018-MOBILE-DEV

@@ -8,7 +8,7 @@ dataset:
   collection_name: TAU Urban Acoustic Scenes
   domain: ASC
   related_datasets:
-    - TUT-ASC2019-DEV
+    - TAU-ASC2019-DEV
     - TUT-ASC2018-EVAL
     - TUT-ASC2018-LB
     - TUT-ASC2018-MOBILE-DEV
@@ -102,7 +102,7 @@ meta:
 
     instance:
       count: 14400
-      average_instaces_per_class: 1440
+      average_instances_per_class: 1440
 
 # === CROSS-VALIDATION SETUP ===
 split:

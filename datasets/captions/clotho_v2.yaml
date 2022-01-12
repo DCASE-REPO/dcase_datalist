@@ -64,12 +64,12 @@ meta:
 
   scene:
     classes:                            # [int], Number of scene classes
-    class_balance:                      # [string], possible values: Yes | No | Almost
-    list:                               # [list], list of scene classes
+  #  class_balance:                      # [string], possible values: Yes | No | Almost
+  #  list:                               # [list], list of scene classes
 
   event:
     classes:                            # [int], Number of event classes
-    class_balance:                      # [string], possible values: Yes | No | Almost
+  #  class_balance:                      # [string], possible values: Yes | No | Almost
 
   caption:
     annotation:
@@ -90,7 +90,6 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/audio-captioning/dcase-2021-baseline
-  ref:                                 # [url];[key], Paper to cite for the baseline
 
 # === INFO ===
 info:

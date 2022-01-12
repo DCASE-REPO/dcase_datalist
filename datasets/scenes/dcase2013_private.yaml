@@ -7,7 +7,8 @@ dataset:
   modalities: Audio
   collection_name: DCASE 2013
   domain: ASC
-  related_datasets: DCASE2013-ASC-DEV
+  related_datasets:
+    - DCASE2013-ASC-DEV
 
   license: Creative commons, CC BY 2.0 UK
 
@@ -84,7 +85,7 @@ meta:
 
     instance:
       count: 100
-      average_instaces_per_class: 10
+      average_instances_per_class: 10
 
 # === CROSS-VALIDATION SETUP ===
 split:

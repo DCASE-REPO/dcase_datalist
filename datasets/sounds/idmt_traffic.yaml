@@ -1,0 +1,105 @@
+# === DATASET ===
+dataset:
+  name: "IDMT-Traffic: An Open Benchmark Dataset for Acoustic Traffic Monitoring Research"
+  provider: Fraunhofer IDMT
+  abbreviation: IDMT-Traffic
+  year: 2021
+  modalities: Audio
+  collection_name: IDMT-Traffic
+  domain: SED, Tagging, Traffic Monitoring
+  related_datasets:
+
+  license: Creative Commons, CC BY-NC 4.0
+
+  download:
+    url: https://www.idmt.fraunhofer.de/en/publications/traffic.html
+    size: 9.0GB
+
+  companion_site: https://www.idmt.fraunhofer.de/en/publications/traffic.html
+
+  citation:
+    ref: https://arxiv.org/pdf/2104.13620.pdf;Abeßer2021
+    title: "IDMT-Traffic: An Open Benchmark Dataset for Acoustic Traffic Monitoring Research"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 32
+      sampling_rate_khz: 48
+
+    channels:
+      setup: Stereo
+      number: 2
+
+    material:
+      source: Original
+      variability_sources:
+        - speed limit
+        - weather/road conditions
+        - daytime
+
+  content:
+    type: Freefield
+    scene: Constant
+
+    event:
+      spatial_location: Moving
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 2
+    spot_type: Fixed
+
+  files:
+    total_count: 17506
+    total_duration_minutes: 583.53
+    file_length: Constant
+    file_length_seconds: 2
+
+# === META ===
+meta:
+  types:
+    - Tag
+    - Movement direction
+    - Weather
+    - Daytime
+
+  scene:
+    classes: 1
+
+  event:
+    classes: 4
+    class_balance: No
+    list:
+      - car
+      - truck
+      - bus
+      - motorcycle
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+      strong_amount_percentage: 100
+      overlapping_event_instances: Yes
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 4718
+      average_instances_per_class: 1179.5
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
