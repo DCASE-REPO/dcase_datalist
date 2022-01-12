@@ -1,0 +1,108 @@
+# === DATASET ===
+dataset:
+  name: IDMT-URBAN-FL
+  provider: Fraunhofer IDMT
+  abbreviation: IDMT-URBAN-FL
+  year: 2021
+  modalities: Audio
+  collection_name: IDMT-URBAN-FL
+  domain: SED, FL
+  related_datasets:
+    - UrbanSound8K
+
+  license: Creative Commons, CC BY-SA 4.0
+
+  download:
+    url: https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html
+    size:
+
+  companion_site: https://www.idmt.fraunhofer.de/en/publications/idmt-fl.html
+
+  citation:
+    ref: https://arxiv.org/pdf/2102.08833.pdf;Johnson2021
+    title: "DESED-FL and URBAN-FL: Federated Learning Datasets for Sound Event Detection"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type:                             # [string], possible values: Constant | Variable
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [number], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz:                # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup:                            # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source:                           # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list]
+
+  content:
+    type: Synthetic
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 30000
+    total_duration_minutes: 5000
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types:                                # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    classes: 5
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:
+      - birds
+      - crowd
+      - fountain
+      - rain
+      - traffic
+
+  event:
+    classes: 10
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
+      - air conditioner
+      - car horn
+      - children playing
+      - dog bark
+      - drilling
+      - engine idling
+      - gun shot
+      - jackhammer
+      - siren
+      - street music
+
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 100
+      overlapping_event_instances: Yes
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instances_per_class:       # [float], average per class instance count
