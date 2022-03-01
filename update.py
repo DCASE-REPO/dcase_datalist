@@ -69,6 +69,8 @@ def main(argv):
                     data['item_html_filename2'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0] + '.html')
                     data['item_link_html2'] = '<a class="btn2 btn-success2" href="' + data['item_html_filename2'] + '" title="Item information page for [' + data['dataset']['name'] + ']"><i class="fa fa-arrow-circle-right fa-3x icon-color-active2" aria-hidden="true"></i></a>'
 
+                    data['dataset_id'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0])
+
                     #print(data['dataset']['abbreviation'])
                     all_data[category_label][data['dataset']['abbreviation']] = data
 
@@ -96,6 +98,7 @@ def main(argv):
 
                     if category_label in all_data and data['dataset']['abbreviation'] in all_data[category_label]:
                         item['item_link_html'] = all_data[category_label][data['dataset']['abbreviation']]['item_link_html']
+                        item['dataset-id'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0])
 
                     list_data.append(item)
                     if item['dataset-name'] not in global_list_data:
