@@ -157,6 +157,7 @@ def main(argv):
                 data = yaml.load(file, Loader=yaml.FullLoader)
                 if 'skip' not in data or data['skip'] is False:
                     data['category_label'] = category_label
+
                     if 'related_datasets' in data['dataset'] and data['dataset']['related_datasets']:
                         rel_list = []
                         for rel in data['dataset']['related_datasets']:
@@ -175,6 +176,8 @@ def main(argv):
                                 )
 
                         data['dataset']['related_datasets_linked'] = rel_list
+
+                    data['dataset']['id'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0])
 
                     dataset_item_html_filename = os.path.join('docs', 'datasets', category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0] + '.html')
 
