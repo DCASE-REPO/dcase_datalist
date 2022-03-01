@@ -98,6 +98,7 @@ def main(argv):
 
                     if category_label in all_data and data['dataset']['abbreviation'] in all_data[category_label]:
                         item['item_link_html'] = all_data[category_label][data['dataset']['abbreviation']]['item_link_html']
+                        item['item_html_filename'] = all_data[category_label][data['dataset']['abbreviation']]['item_html_filename']
                         item['dataset-id'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0])
 
                     list_data.append(item)
