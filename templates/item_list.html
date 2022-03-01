@@ -49,6 +49,7 @@
                 >
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th data-field="name" data-sortable="true">Name</th>
                             <th data-field="provider" data-sortable="true">Provider</th>
                             <th data-field="year" data-sortable="true">Year</th>
@@ -63,6 +64,7 @@
                             <th>Download</th>
                             <th>Site</th>
                             <th>Cite</th>
+
                             <th></th>
                         </tr>
                     </thead>
@@ -71,6 +73,7 @@
                         {% for item in data[category] %}
                             {% if 'skip' not in data[category][item] or not data[category][item]['skip'] %}
                             <tr>
+                                <td><small class="text-muted">{{data[category][item].dataset_id}}</small></td>
                                 <td>{{data[category][item].dataset.name}}</td>
                                 <td>{{data[category][item].dataset.provider}}</td>
                                 <td>{{data[category][item].dataset.year}}</td>
@@ -93,6 +96,7 @@
                                     </a>
                                     {% endif %}
                                 </td>
+
                                 <td>{{data[category][item].item_link_html2}}</td>
                             </tr>
                             {% endif %}
