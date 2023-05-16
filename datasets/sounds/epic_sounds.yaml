@@ -1,0 +1,137 @@
+# === DATASET ===
+dataset:
+  name: EPIC-SOUNDS
+  provider: University of Oxford, University of Bristol
+  abbreviation: EPIC-SOUNDS
+  year: 2023
+  modalities: Audio | Video
+  collection_name: 
+  domain: SED, Strong annotation
+  related_datasets:
+    - EPIC-KITCHENS-100
+
+  license: Creative Commons, CC BY-NC 4.0
+
+  download:
+    url: https://epic-kitchens.github.io/epic-sounds/
+
+  companion_site: https://epic-kitchens.github.io/epic-sounds/
+
+  citation:
+    ref: https://arxiv.org/pdf/2302.00646.pdf
+    title: "Epic-Sounds: A Large-scale Dataset of Actions That Sound"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio 
+    file_format:
+      type: Constant
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 24
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: EPIC-KITCHENS-100
+
+  content:
+    type: Freefield                    
+    scene: Variable
+
+    event:
+      spatial_location: Moving
+
+  recording:
+    setup: Uncontrolled
+    setup_count: 1
+    spot_type: Unknown
+
+  files:
+    total_count: 700
+    total_duration_minutes: 6002
+    file_length: Variable
+    file_length_seconds: 10-3708
+
+# === META ===
+meta:
+  types:
+      - Event
+      - Timestamp
+
+  event:
+    classes: 44 
+    class_balance: No 
+    list: 
+      - background
+      - beep
+      - ceramic / glass collision
+      - ceramic / marble collision
+      - ceramic / wood collision
+      - ceramic-only collision
+      - click
+      - cloth-only collision
+      - cut / chop
+      - drink / eat
+      - footstep
+      - glass / marble collision
+      - glass-only collision
+      - hoover / fan
+      - human
+      - kettle / mixer / appliance
+      - kneading
+      - metal / ceramic collision
+      - metal / cloth collision
+      - metal / glass collision
+      - metal / marble collision
+      - metal / paper collision
+      - metal / plastic collision
+      - metal / wood collision
+      - metal-only collision
+      - open / close
+      - paper-only collision
+      - plastic / ceramic collision
+      - plastic / glass collision
+      - plastic / marble collision
+      - plastic / paper collision
+      - plastic / wood collision
+      - plastic-only collision
+      - pour
+      - rustle
+      - scrub / scrape / scour / wipe
+      - sizzling / boiling
+      - slide object
+      - spray
+      - stir / mix / whisk
+      - water
+      - wood / glass collision
+      - wood-only collision
+      - zip
+    annotation:
+      type: Strong
+      annotations_per_item: 1
+      labelled_amount_percentage: 66.7
+      validated_amount_percentage: 66.7
+      strong_amount_percentage: 66.7
+      overlapping_event_instances: Yes
+
+    labeling:
+      hierarchical: No
+      ontology_name: Dataset specific 
+
+    instance:
+      count: 117553
+      average_instances_per_class: 2672
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  sets: Train, Val, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/epic-kitchens/epic-sounds-annotations
+  ref: https://arxiv.org/pdf/2302.00646.pdf
