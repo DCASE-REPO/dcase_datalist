@@ -1,0 +1,157 @@
+{% if meta is defined %}
+    {{subheader('Meta',1, 0)}}
+
+    {% if meta.types is defined %}
+        {{row_label('Types', meta.types, 'List of meta data types provided for the data, possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.',1)}}
+    {% endif %}
+
+    {% if meta.scene is defined and meta.scene is not none %}
+        {{subheader('Scene',0, 1)}}
+
+        {% if meta.scene.classes is defined and meta.scene.classes is not none %}
+            {{row('Classes', meta.scene.classes, 'Number of scene classes',2)}}
+        {% endif %}
+
+        {% if meta.scene.class_balance is defined and meta.scene.class_balance is not none %}
+            {{row_label('Classes', meta.scene.class_balance, 'Possible values: True | False | Almost',2)}}
+        {% endif %}
+
+        {% if meta.scene.list is defined and meta.scene.list is not none %}
+            {{row('Classes', meta.scene.list, '',2)}}
+        {% endif %}
+
+        {% if meta.scene.annotation is defined %}
+            {{subheader('Annotation',0, 2)}}
+            {% if meta.scene.annotation.type is defined and meta.scene.annotation.type is not none%}
+                {{row_label('Type', meta.scene.annotation.type, 'Possible values: Strong | Weak | None',3)}}
+            {% endif %}
+            {% if meta.scene.annotation.source is defined and meta.scene.annotation.source is not none %}
+                {{row_label('Source', meta.scene.annotation.source, 'Possible values: Experts | Crowdsourced | Synthetic | Location',3)}}
+            {% endif %}
+            {% if meta.scene.annotation.annotations_per_item is defined and meta.scene.annotation.annotations_per_item is not none %}
+                {{row('Annotations per item', meta.scene.annotation.annotations_per_item, 'How many annotations there are available per item (possible multi-annotator setup)',3)}}
+            {% endif %}
+            {% if meta.scene.annotation.labelled_amount_percentage is defined and meta.scene.annotation.labelled_amount_percentage is not none %}
+                {{row('Labelled amount (%)', meta.scene.annotation.labelled_amount_percentage, 'Percentage of all data, amount of data which is labelled',3,'%')}}
+            {% endif %}
+            {% if meta.scene.annotation.validated_amount_percentage is defined and meta.scene.annotation.validated_amount_percentage is not none %}
+                {{row('Validated amount (%)', meta.scene.annotation.validated_amount_percentage, 'Percentage of all data, amount of data which is validated by human',3,'%')}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.scene.labeling is defined %}
+            {{subheader('Labeling',0, 2)}}
+            {% if meta.scene.labeling.hierarchical is defined and meta.scene.labeling.hierarchical is not none %}
+                {{row_bool('Hierarchical', meta.scene.labeling.hierarchical, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.scene.instance is defined %}
+            {{subheader('Instance',0, 2)}}
+            {% if meta.scene.instance.count is defined and meta.scene.instance.count is not none %}
+                {{row('Count', meta.scene.instance.count, 'Count of all scene instances in the dataset',3)}}
+            {% endif %}
+            {% if meta.scene.instance.average_instaces_per_class is defined and meta.scene.instance.average_instaces_per_class is not none %}
+                {{row('Average instances per class', meta.scene.instance.average_instaces_per_class, 'Average per class instance count',3)}}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if meta.event is defined and meta.event is not none %}
+        {{subheader('Event',0, 1)}}
+        {% if meta.event.classes is defined and meta.event.classes is not none %}
+            {{row('Classes', meta.event.classes, 'Number of event classes',2)}}
+        {% endif %}
+
+        {% if meta.event.class_balance is defined and meta.event.class_balance is not none %}
+            {{row_label('Classes', meta.event.class_balance, 'Possible values: True | False | Almost',2)}}
+        {% endif %}
+
+        {% if meta.event.list is defined and meta.event.list is not none %}
+            {{row('Classes', meta.event.list, '',2)}}
+        {% endif %}
+
+        {% if meta.event.annotation is defined %}
+            {{subheader('Annotation',0, 2)}}
+            {% if meta.event.annotation.type is defined and meta.event.annotation.type is not none %}
+                {{row_label('Type', meta.event.annotation.type, 'Possible values: Strong | Weak | Location | None',3)}}
+            {% endif %}
+            {% if meta.event.annotation.source is defined and meta.event.annotation.source is not none %}
+                {{row_label('Source', meta.event.annotation.source, 'Possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic',3)}}
+            {% endif %}
+            {% if meta.event.annotation.annotations_per_item is defined and meta.event.annotation.annotations_per_item is not none %}
+                {{row('Annotations per item', meta.event.annotation.annotations_per_item, 'How many annotations there are available per item (possible multi-annotator setup)',3)}}
+            {% endif %}
+            {% if meta.event.annotation.labelled_amount_percentage is defined and meta.event.annotation.labelled_amount_percentage is not none %}
+                {{row('Labelled amount (%)', meta.event.annotation.labelled_amount_percentage, 'Percentage of all data, amount of data which is labelled',3,'%')}}
+            {% endif %}
+            {% if meta.event.annotation.validated_amount_percentage is defined and meta.event.annotation.validated_amount_percentage is not none %}
+                {{row('Validated amount (%)', meta.event.annotation.validated_amount_percentage, 'Percentage of all data, amount of data which is validated by human',3,'%')}}
+            {% endif %}
+            {% if meta.event.annotation.strong_amount_percentage is defined and meta.event.annotation.strong_amount_percentage is not none %}
+                {{row('Strong annotations amount (%)', meta.event.annotation.strong_amount_percentage, 'Percentage of all data, amount of data which has strong annotations',3,'%')}}
+            {% endif %}
+            {% if meta.event.annotation.overlapping_event_instances is defined and meta.event.annotation.overlapping_event_instances is not none %}
+                {{row_bool('Overlapping event instances', meta.event.annotation.overlapping_event_instances, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.event.labeling is defined %}
+            {{subheader('Labeling',0, 2)}}
+            {% if meta.event.labeling.hierarchical is defined and meta.event.labeling.hierarchical is not none %}
+                {{row_bool('Hierarchical', meta.event.labeling.hierarchical, '',3)}}
+            {% endif %}
+            {% if meta.event.labeling.ontology_name is defined and meta.event.labeling.ontology_name is not none %}
+                {{row_bool('Ontology name', meta.event.labeling.ontology_name, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.event.instance is defined %}
+            {{subheader('Instance',0, 2)}}
+            {% if meta.event.instance.count is defined and meta.event.instance.count is not none %}
+                {{row('Count', meta.event.instance.count, 'Count of all event instances in the dataset',3)}}
+            {% endif %}
+            {% if meta.event.instance.average_instances_per_class is defined and meta.event.instance.average_instances_per_class is not none %}
+                {{row('Average instances per class', meta.event.instance.average_instances_per_class, 'Average per class instance count',3)}}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if meta.caption is defined %}
+        {{subheader('Caption',0, 1)}}
+
+        {% if meta.caption.annotation is defined %}
+            {{subheader('Annotation',0, 2)}}
+            {% if meta.caption.annotation.languages is defined and meta.caption.annotation.languages is not none %}
+                {{row('Languages', meta.caption.annotation.languages, 'Languages used for annotation',2)}}
+            {% endif %}
+
+            {% if meta.caption.annotation.source is defined and meta.caption.annotation.source is not none %}
+                {{row_label('Source', meta.caption.annotation.source, 'Possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic',3)}}
+            {% endif %}
+
+            {% if meta.caption.annotation.captions_per_item is defined and meta.caption.annotation.captions_per_item is not none %}
+                {{row('Captions per item', meta.caption.annotation.captions_per_item, 'How many annotations there are available per item (possible multi-annotator setup)',3)}}
+            {% endif %}
+
+            {% if meta.caption.annotation.validated_amount_percentage is defined and meta.caption.annotation.validated_amount_percentage is not none %}
+                {{row('Validated amount (%)', meta.caption.annotation.validated_amount_percentage, 'Percentage of all data, amount of data which is validated by human',3,'%')}}
+            {% endif %}
+
+            {% if meta.caption.annotation.guidance is defined and meta.caption.annotation.guidance is not none %}
+                {{row_label('Guidance', meta.caption.annotation.guidance, 'Type of guidance annotators were provided during the annotation, e.g. Video, Image, Tags',3)}}
+            {% endif %}
+
+            {% if meta.caption.annotation.annotator_count is defined and meta.caption.annotation.annotator_count is not none %}
+                {{row('Annotator count', meta.caption.annotation.annotator_count, 'Total count of annotators used for the data collection, count only annotators included in the released meta data.',3)}}
+            {% endif %}
+
+            {% if meta.caption.annotation.count is defined and meta.caption.annotation.count is not none %}
+                {{row('Count', meta.caption.annotation.count, 'Count of all captions in the dataset',3)}}
+            {% endif %}
+
+        {% endif %}
+
+    {% endif %}
+
+{% endif %}

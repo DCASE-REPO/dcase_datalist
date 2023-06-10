@@ -1,0 +1,15 @@
+{% if split is defined %}
+    {{subheader('Cross-validation setup',1, 0)}}
+
+    {% if split.provided is defined and split.provided is not none %}
+        {{row_bool('Provided', split.provided, '', 2)}}
+    {% endif %}
+
+    {% if split.folds is defined and split.folds is not none %}
+        {{row('Folds', split.folds, '', 2)}}
+    {% endif %}
+
+    {% if split.sets is defined and split.sets is not none %}
+        {{row_label('Sets', split.sets, 'Set types provided in the split, possible values: Train | Test | Val | Dev | Eval', 2)}}
+    {% endif %}
+{% endif %}

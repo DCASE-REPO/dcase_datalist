@@ -1,0 +1,55 @@
+{% if dataset is defined %}
+    {{subheader('General information',1, 0)}}
+
+    {% if dataset.name is defined and dataset.name is not none %}
+        {{row('Name', dataset.name, 'Full dataset name',1)}}
+    {% endif %}
+
+    {% if dataset.id is defined and dataset.id is not none %}
+        {{row_label('ID', dataset.id, 'Datalist id for external indexing',1)}}
+    {% endif %}
+
+    {% if dataset.abbreviation is defined and dataset.abbreviation is not none %}
+        {{row('Abbreviation', dataset.abbreviation, 'Official dataset abbreviation, e.g. one used in the original paper',1)}}
+    {% endif %}
+
+    {% if dataset.provider is defined and dataset.provider is not none %}
+        {{row('Provider', dataset.provider, '',1)}}
+    {% endif %}
+
+    {% if dataset.year is defined and dataset.year is not none %}
+        {{row('Year', dataset.year, 'Dataset release year',1)}}
+    {% endif %}
+
+    {% if dataset.modalities is defined and dataset.modalities is not none %}
+        {{row_label('Modalities', dataset.modalities, 'Data modalities included in the dataset',1)}}
+    {% endif %}
+
+    {% if dataset.collection_name is defined and dataset.collection_name is not none %}
+        {{row('Collection name', dataset.collection_name, 'Common name for all related datasets, used to group datasets coming from same source',1)}}
+    {% endif %}
+
+    {% if dataset.domain is defined and dataset.domain is not none %}
+        {{row_label('Research domain', dataset.domain, 'Related domains, e.g., Scenes, Mobile devices, Audio-visual, Open set, Ambient noise, Unlabelled, Multiple sensors, SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled, Multi-annotator',1)}}
+    {% endif %}
+
+    {% if dataset.related_datasets_linked is defined and dataset.related_datasets_linked is not none %}
+        {{row_url('Related datasets name', dataset.related_datasets_linked, '', '',1)}}
+    {% endif %}
+
+    {% if dataset.license is defined and dataset.license is not none %}
+        {{row('License', dataset.license, '',1)}}
+    {% endif %}
+
+    {% if dataset.download is defined and dataset.download is not none %}
+        {{row_download('Download', dataset.download.url, '', 1, dataset.download.size)}}
+    {% endif %}
+
+    {% if dataset.companion_site is defined and dataset.companion_site is not none %}
+        {{row_url('Companion site', dataset.companion_site, 'Site', 'Link to the companion site for the dataset',1)}}
+    {% endif %}
+
+    {% if dataset.citation is defined and dataset.citation is not none %}
+        {{row_citation('Citation', dataset.citation.ref, dataset.citation.title, '',1)}}
+    {% endif %}
+{% endif %}
