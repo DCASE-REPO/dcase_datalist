@@ -5,7 +5,7 @@ dataset:
   abbreviation: EPIC-SOUNDS
   year: 2023
   modalities: Audio | Video
-  collection_name: 
+  collection_name: EPIC-KITCHENS
   domain: SED, Strong annotation
   related_datasets:
     - EPIC-KITCHENS-100
@@ -18,7 +18,7 @@ dataset:
   companion_site: https://epic-kitchens.github.io/epic-sounds/
 
   citation:
-    ref: https://arxiv.org/pdf/2302.00646.pdf
+    ref: https://arxiv.org/pdf/2302.00646.pdf;Huh2023
     title: "Epic-Sounds: A Large-scale Dataset of Actions That Sound"
 
 # === AUDIO ===
@@ -134,4 +134,4 @@ split:
 # === BASELINE SYSTEM ===
 baseline:
   url: https://github.com/epic-kitchens/epic-sounds-annotations
-  ref: https://arxiv.org/pdf/2302.00646.pdf
+  ref: https://arxiv.org/pdf/2302.00646.pdf;Huh2023
