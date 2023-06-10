@@ -1,0 +1,116 @@
+{% if audio is defined %}
+    {{subheader('Audio',1, 0)}}
+
+    {% if audio.data is defined %}
+        {{subheader('Data',0, 1)}}
+        {% if audio.data.type is defined and audio.data.type is not none %}
+            {{row_label('Data type', audio.data.type, 'Possible values: Audio | Features',2)}}
+        {% endif %}
+
+        {% if audio.data.file_format is defined and audio.data.file_format is not none %}
+            {{subheader('File format',0, 2)}}
+            {% if audio.data.file_format.type is defined and audio.data.file_format.type is not none %}
+                {{row_label('File format type', audio.data.file_format.type, 'Possible values: Constant | Variable',3)}}
+            {% endif %}
+            {% if audio.data.file_format.format is defined and audio.data.file_format.format is not none %}
+                {{row_label('File format', audio.data.file_format.format, 'Possible value: wav | aiff | flac | mp3 | aac | ogg',3)}}
+            {% endif %}
+            {% if audio.data.file_format.lossy_compression is defined and audio.data.file_format.lossy_compression is not none %}
+                {{row_bool('Lossy compression', audio.data.file_format.lossy_compression, 'is audio compressed in a lossy manner',3)}}
+            {% endif %}
+            {% if audio.data.file_format.bit_rate is defined and audio.data.file_format.bit_rate is not none %}
+                {{row('Bit rate', audio.data.file_format.bit_rate, 'Bit depth of audio, possible values: 8 | 16 | 24 | 32',3)}}
+            {% endif %}
+            {% if audio.data.file_format.sampling_rate_khz is defined and audio.data.file_format.sampling_rate_khz is not none %}
+                {{row('Sampling rate (kHz)', audio.data.file_format.sampling_rate_khz, 'Sampling rate in kHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48',3,'kHz')}}
+            {% endif %}
+        {% endif %}
+
+        {% if audio.data.channels is defined %}
+            {{subheader('Channels',0, 2)}}
+            {% if audio.data.channels.setup is defined and audio.data.channels.setup is not none %}
+                {{row_label('Setup', audio.data.channels.setup, 'Possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable',3)}}
+            {% endif %}
+            {% if audio.data.channels.number is defined and audio.data.channels.number is not none %}
+                {{row('Number of channels', audio.data.channels.number, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if audio.data.material is defined %}
+            {{subheader('Material',0, 2)}}
+            {% if audio.data.material.source is defined and audio.data.material.source is not none %}
+                {{row_label(
+                'Source',
+                audio.data.material.source,
+                'Possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]',
+                3)}}
+            {% endif %}
+
+            {% if audio.data.material.variability_sources is defined and audio.data.material.variability_sources is not none %}
+                {{row_label(
+                'Variability sources',
+                audio.data.material.variability_sources,
+                'Possible values: Country | City | Location | Position | Device',
+                3)}}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if audio.content is defined %}
+        {{subheader('Content',0, 1)}}
+        {% if audio.content.type is defined and audio.content.type is not none %}
+            {{row_label('Content type', audio.content.type, 'Possible values: Freefield | Synthetic | Isolated',2)}}
+        {% endif %}
+
+        {% if audio.content.scene is defined and audio.content.scene is not none %}
+            {{row_label('Scene', audio.content.scene, 'Is the scene class constant for single recording, possible values: Constant | Variable',2)}}
+        {% endif %}
+
+        {% if audio.content.event is defined %}
+            {% if audio.content.event.spatial_location is defined and audio.content.event.spatial_location is not none %}
+                {{row_label('Event / Spatial location', audio.content.event.spatial_location, 'Possible values: Constant | Moving | Unknown',2)}}
+            {% endif %}
+            {% if audio.content.event.synthetic is defined and audio.content.event.synthetic is not none %}
+                {% if audio.content.event.synthetic.event_instance_count is defined %}
+                    {{row('Event / Synthetic / Event instance count', audio.content.event.synthetic.event_instance_count, 'Amount of unique sound event instances used in synthetic mixture generation',2)}}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+    {% if audio.recording is defined %}
+        {{subheader('Recording',0, 1)}}
+
+        {% if audio.recording.setup is defined and audio.recording.setup is not none %}
+            {{row_label('Setup', audio.recording.setup, 'Possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown',2)}}
+        {% endif %}
+
+        {% if audio.recording.setup_count is defined and audio.recording.setup_count is not none %}
+            {{row('Setup count', audio.recording.setup_count, 'Amount of different recording setups (microphone and recording device) used',2)}}
+        {% endif %}
+
+        {% if audio.recording.spot_type is defined and audio.recording.spot_type is not none %}
+            {{row_label('Spot type', audio.recording.spot_type, 'Possible values: Fixed | Moving | Unknown',2)}}
+        {% endif %}
+    {% endif %}
+
+    {% if audio.files is defined %}
+        {{subheader('Files',0, 1)}}
+
+        {% if audio.files.total_count is defined and audio.files.total_count is not none %}
+            {{row('Count', audio.files.total_count, 'Total number of files',2, 'files')}}
+        {% endif %}
+
+        {% if audio.files.total_duration_minutes is defined and audio.files.total_duration_minutes is not none %}
+            {{row('Total duration (minutes)', audio.files.total_duration_minutes, 'Total duration of the dataset in minutes',2,'min')}}
+        {% endif %}
+
+        {% if audio.files.file_length is defined and audio.files.file_length is not none %}
+            {{row_label('File length', audio.files.file_length, 'Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable',2)}}
+        {% endif %}
+
+        {% if audio.files.file_length_seconds is defined and audio.files.file_length_seconds is not none %}
+            {{row('File length (seconds)', audio.files.file_length_seconds, 'Approximate length of files',2,'sec')}}
+        {% endif %}
+    {% endif %}
+{% endif %}

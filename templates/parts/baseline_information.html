@@ -1,0 +1,9 @@
+{% if baseline is defined %}
+    {{subheader('Baseline',1, 0)}}
+    {% if baseline.url is defined and baseline.url is not none %}
+        {{row_download('Download', baseline.url, 'Link to baseline system source code', 2)}}
+    {% endif %}
+    {% if baseline.ref is defined and baseline.ref is not none %}
+        {{row_citation('Citation', baseline.ref, '', 'Paper to cite for the baseline', 2)}}
+    {% endif %}
+{% endif %}

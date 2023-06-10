@@ -1,0 +1,11 @@
+{% if info is defined %}
+    {{subheader('Info',1, 0)}}
+
+    {% if info.evaluation_campaign is defined and info.evaluation_campaign is not none %}
+        {{row('Evaluation campaign', info.evaluation_campaign, 'Evaluation campaigns where the dataset was used.', 2)}}
+    {% endif %}
+
+    {% if info.comments is defined and info.comments is not none %}
+        {{row('Comments', info.comments, '', 2)}}
+    {% endif %}
+{% endif %}
