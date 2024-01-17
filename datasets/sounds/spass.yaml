@@ -1,0 +1,129 @@
+# === DATASET ===
+dataset:
+  name: "SPASS dataset: A synthetic polyphonic dataset with spatiotemporal labels of sound sources"
+  provider: SPASS
+  abbreviation: SPASS
+  year: 2023
+  modalities: Audio
+  collection_name: SPASS
+  related_datasets:
+  domain: SED, SELD, Synthetic, Strong annotation, Multi-channel
+  license: Creative Commons, CC BY-NC 4.0
+
+  download:
+    url: https://zenodo.org/records/8239067
+    size: 40GB
+
+  citation:
+    ref: https://www.sciencedirect.com/science/article/pii/S0003682X23004632;Viveros-munoz2023
+    title: "The SPASS dataset: A new synthetic polyphonic dataset with spatiotemporal labels of sound sources"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 44.1
+      sampling_rate_khz: 32
+
+    channels:
+      setup: Mono                       # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number: 1                         # [int], Number of channels
+
+    material:
+      source: ESC-50, UrbanSound8K, ETH Acoustic Event Dataset, Freesound, Making Sense of Sounds
+      variability_sources:              # [list]
+
+  content:
+    type: Synthetic                     # [string], content type, possible values: Freefield | Synthetic | Isolated
+    scene: Variable                     # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count: 2307        # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Unknown
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 25000
+    total_duration_minutes: 4166.66666
+    file_length: Constant
+    file_length_seconds: 10
+
+# === META ===
+meta:
+  types: Event, Spatial location
+
+  scene:
+    classes: 5                          # [int], Number of scene classes
+    class_balance: Yes                  # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+      - park
+      - square
+      - street
+      - waterfront
+      - market
+
+  event:
+    classes: 28
+    class_balance: No
+    list:
+      - talk
+      - scream
+      - crowd
+      - steps
+      - music
+      - dog
+      - bird
+      - rain
+      - river
+      - water
+      - waves
+      - wind
+      - air conditioner
+      - cutting
+      - digging
+      - explosive
+      - fireworks
+      - impact
+      - car
+      - bus/truck
+      - motorcycle
+      - water vehicle
+      - airborne
+      - alarm
+      - bell
+      - braking
+      - horns
+      - siren
+    annotation:
+      type: Strong
+      source: Synthetic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 0
+      overlapping_event_instances: Yes
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: SPASS Taxonomy
+
+    instance:
+      count: 351340
+      average_instances_per_class: 12547
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No
+
+# === BASELINE SYSTEM ===
+baseline:
+  url:
+  ref:
