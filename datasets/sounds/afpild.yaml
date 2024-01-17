@@ -1,0 +1,88 @@
+# === DATASET ===
+dataset:
+  name: Acoustic footstep dataset collected using one microphone array and LiDAR sensor for person identification and localization
+  provider:
+  abbreviation: AFPILD
+  year: 2023
+  modalities: Audio
+  collection_name: AFPILD dataset
+  domain: SED, Strong annotation
+  related_datasets:
+
+  license: Creative Commons, CC BY-NC-SA 4.0
+
+  download:
+    url: https://drive.google.com/file/d/1FQMWbG8oAoZKXfLYsNZ_W_yLj9cZOUGu/view?usp=share_link
+    size: 3.2GB
+
+  companion_site: https://github.com/NkuSRLab/AFPILD-CRNN
+
+  citation:
+    ref: https://www.sciencedirect.com/science/article/pii/S1566253523004979;Wu2023
+    title: "AFPILD: Acoustic footstep dataset collected using one microphone array and LiDAR sensor for person identification and localization"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 16
+
+    channels:
+      setup: Array
+      number: 4
+
+    material:
+      source: Original
+
+  content:
+    type: Freefield
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 160
+    total_duration_minutes: 597
+    file_length: Quasi-constant
+    file_length_seconds: 214-236
+
+# === META ===
+meta:
+  types: Event
+
+  event:
+    classes: 1
+    class_balance: No
+    list:
+      - footstep
+
+    annotation:
+      type: Strong
+      source: Automatic
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      strong_amount_percentage: 100
+      overlapping_event_instances: No
+
+    labeling:
+      hierarchical: No
+
+    instance:
+      count: 62174
+      average_instances_per_class: 62174
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 5
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/NkuSRLab/AFPILD-CRNN
+  ref: https://www.sciencedirect.com/science/article/pii/S1566253523004979;Wu2023
