@@ -1,7 +1,7 @@
 # === DATASET ===
 dataset:
-  provider: NYU
   name: URBAN-SED
+  provider: NYU
   abbreviation: URBAN-SED
   year: 2017
   modalities: Audio
