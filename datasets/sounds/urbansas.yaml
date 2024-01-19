@@ -1,0 +1,102 @@
+# === DATASET ===
+dataset:
+  name: Urban Sound & Sight             # [string], Full dataset name
+  provider: NYU                         # [string]
+  abbreviation: Urbansas                # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year: 2022                            # [int], Release year
+  modalities: Audio, Video              # [list], data modalities included in the dataset, possible values: Audio | Video
+  collection_name: Urbansas             # [string], common name for all related datasets, used to group datasets coming from same source
+  domain: SED, Strong annotation        # [list], related domains, e.g., SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled, Multi-annotator
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+    - MAVD
+    - TAU-UAVS2021-DEV
+  license:                              # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+    - Non-commercial                    # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://zenodo.org/records/6658386 # [url], Link to download the dataset
+    size: 9.6 GB                        # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://beasteers.github.io/urbansas-website/
+
+  citation:
+    ref: https://ieeexplore.ieee.org/document/9747644;Fuentes2022
+    title: "Urban Sound & Sight: Dataset And Benchmark For Audio-Visual Urban Scene Understanding"
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio                         # [string], data type, possible values: Audio | Features
+    file_format:
+      type: Constant                    # [string], possible values: Constant | Variable
+      format: wav                       # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: No             # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate: 24                      # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz: 48             # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Binaural                   # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number: 2                         # [int], Number of channels
+
+    material:
+      source: MAVD, TAU-UAVS2021-DEV  # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield                     # [list], content type, possible values: Freefield | Synthetic | Isolated
+    scene: Constant                     # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+  recording:
+    setup: Uncontrolled                 # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count: 2                      # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Fixed                    # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 1080                   # [int], Total number of files
+    total_duration_minutes: 179         # [int], Total duration of the dataset in minutes
+    file_length: Constant               # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds: 10             # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event                          # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+
+  event:
+    classes: 5                          # [int], Number of event classes
+    class_balance: No                   # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
+      - car
+      - offscreen
+      - motorbike
+      - bus
+      - truck
+
+    annotation:
+      type: Strong                      # [string], possible values: Strong | Weak | Location | None
+      source: Experts                   # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item: 1           # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100   # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage: 100  # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 100     # [float], Percentage of all data, amount of data which has strong annotations
+      overlapping_event_instances: Yes  # [string], possible values: Yes | No
+
+    labeling:
+      hierarchical: No                  # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count: 1957                       # [int], Count of all event instances in the dataset
+      average_instances_per_class: 391.4     # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No                          # [bool], Is data splits provided, possible values: Yes | No
+  folds:                                # [int], how many folds provided
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/magdalenafuentes/urbansas                                 # [url], Link to baseline system source code
+  ref: https://ieeexplore.ieee.org/document/9747644;Fuentes2022                                # [url];[key], Paper to cite for the baseline
+
