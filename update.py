@@ -71,7 +71,6 @@ def main(argv):
 
                     data['dataset_id'] = os.path.join(category_label, os.path.splitext(os.path.split(dataset_meta_file)[-1])[0])
 
-                    #print(data['dataset']['abbreviation'])
                     all_data[category_label][data['dataset']['abbreviation']] = data
 
     global_list_data = {}
@@ -162,6 +161,7 @@ def main(argv):
                     if 'related_datasets' in data['dataset'] and data['dataset']['related_datasets']:
                         rel_list = []
                         for rel in data['dataset']['related_datasets']:
+
                             if rel in all_data[category_label]:
                                 rel_list.append(
                                     {
@@ -170,11 +170,23 @@ def main(argv):
                                     }
                                 )
                             else:
-                                rel_list.append(
-                                    {
-                                        'title': rel
-                                    }
-                                )
+                                found = False
+                                for cat in all_data:
+                                    if rel in all_data[cat]:
+                                        rel_list.append(
+                                            {
+                                                'title': rel,
+                                                'url': '../../' + all_data[cat][rel]['item_html_filename']
+                                            }
+                                        )
+                                        found = True
+                                        break
+                                if not found:
+                                    rel_list.append(
+                                        {
+                                            'title': rel
+                                        }
+                                    )
 
                         data['dataset']['related_datasets_linked'] = rel_list
 
