@@ -7,7 +7,8 @@ dataset:
   modalities: Audio                          # [list], data modalities included in the dataset, possible values: Audio | Video
   collection_name: WildDESED                      # [string], common name for all related datasets, used to group datasets coming from same source
   domain: SED, Noisy                              # [list], related domains, e.g., SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled, Multi-annotator
-  related_datasets: DESED                     # [list], related datasets (name or abbreviation)
+  related_datasets:
+    - DESED                     # [list], related datasets (name or abbreviation)
 
   license: Creative Commons, CC BY-SA 4.0                             # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
                                         # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
@@ -19,8 +20,8 @@ dataset:
   companion_site: https://zenodo.org/records/13357912                      # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
 
   citation:
-    ref: https://dcase.community/documents/workshop2024/proceedings/DCASE2024Workshop_Xiao_2.pdf                                # [url];[key], Paper to cite for the dataset, URL to access the PDF
-    title:  WildDESED:An LLM-Powered Dataset for Wild Domestic Environment Sound Event Detection System                            # [string], Paper title, use quotes if title contains colons
+    ref: https://dcase.community/documents/workshop2024/proceedings/DCASE2024Workshop_Xiao_2.pdf;Xiao2024                           # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title: "WildDESED:An LLM-Powered Dataset for Wild Domestic Environment Sound Event Detection System"                            # [string], Paper title, use quotes if title contains colons
 
 # === AUDIO ===
 audio:
