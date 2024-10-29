@@ -1,0 +1,110 @@
+# === DATASET ===
+dataset:
+  name: WildDESED                                # [string], Full dataset name
+  provider: Fortemedia                            # [string]
+  abbreviation: WildDESED                        # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year: 2024                                # [int], Release year
+  modalities: Audio                          # [list], data modalities included in the dataset, possible values: Audio | Video
+  collection_name: WildDESED                      # [string], common name for all related datasets, used to group datasets coming from same source
+  domain: SED, Noisy                              # [list], related domains, e.g., SED, SELD, Tagging, FL, Strong annotation, Weak annotation, Unlabelled, Multi-annotator
+  related_datasets: DESED                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, CC BY-SA 4.0                             # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://zenodo.org/records/13357912                               # [url], Link to download the dataset
+    size:  15.4GB                             # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://zenodo.org/records/13357912                      # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://dcase.community/documents/workshop2024/proceedings/DCASE2024Workshop_Xiao_2.pdf                                # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title:  WildDESED:An LLM-Powered Dataset for Wild Domestic Environment Sound Event Detection System                            # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data: 
+    type: Audio                              # [string], data type, possible values: Audio | Features
+    file_format:
+      type: Constant                            # [string], possible values: Constant | Variable
+      format: wav                          # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate:                         # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz: 16               # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono                           # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number:                           # [int], Number of channels
+
+    material:
+      source: DESED, Youtube, Audioset                          # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list]
+
+  content:
+    type: Synthetic                              # [list], content type, possible values: Freefield | Synthetic | Isolated
+    scene:                              # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location:                 # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup:                              # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count:                        # [int], amount of different recording setups (microphone and recording device) used
+    spot_type:                          # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count:                        # [int], Total number of files
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length: Constant                       # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds: 10               # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Event                               # [list], list of meta data types provided for the data,
+                                        # possible values: Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 10                           # [int], Number of event classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
+     - alarm bell
+     - blender
+     - cat
+     - dog
+     - dishes
+     - electric shaver/toothbrush
+     - frying
+     - running water
+     - speech
+     - vacuum cleaner
+    annotation:
+      type: Strong                            # [string], possible values: Strong | Weak | Location | None
+      source: Synthetic                          # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item:  1           # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage:  100     # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage:      # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage: 100        # [float], Percentage of all data, amount of data which has strong annotations
+      overlapping_event_instances:  Yes    # [string], possible values: Yes | No
+
+    labeling:
+      hierarchical:                     # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instances_per_class:       # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided:  Yes                           # [bool], Is data splits provided, possible values: Yes | No
+  folds:                                # [int], how many folds provided
+  sets:  Train,Test,Val                                # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
