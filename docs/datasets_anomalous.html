@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>DCASE Datalist / Acoustic scenes</title>
+    <title>DCASE Datalist / Anomalous sound datasets</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-12">
-                <h1>Acoustic scene datasets <small>DCASE Datalist</small>
+                <h1>Anomalous sound datasets <small>DCASE Datalist</small>
                     <div class="pull-right">
                         <div class="btn-group">
                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#helpModal">
@@ -39,10 +39,10 @@
                             <a href="datasets.html" class="btn btn-default">
                                 <i class="fa fa-table" aria-hidden="true"></i> All
                             </a>
-                            <a href="datasets_scenes.html" class="btn btn-default active">
+                            <a href="datasets_scenes.html" class="btn btn-default">
                                 <i class="fa fa-picture-o" aria-hidden="true"></i> Scenes
                             </a>
-                            <a href="datasets_anomalous.html" class="btn btn-default">
+                            <a href="datasets_anomalous.html" class="btn btn-default active">
                                 <i class="fa dc-large-scale" aria-hidden="true"></i> Anomalous
                             </a>
                             <a href="datasets_captions.html" class="btn btn-default">
@@ -64,7 +64,7 @@
         <div class="row-fluid">
             <div class="col-md-12">
                 <table class="table datatable"
-                       data-json="datasets_scenes.json"
+                       data-json="datasets_anomalous.json"
                        data-id-field="dataset-name"
                        data-sort-name="dataset-year"
                        data-sort-order="desc"
@@ -99,8 +99,7 @@
                             data-sortable="true">
                             <span data-toggle="tooltip" title="Dataset name">Name</span>
                         </th>
-
-                        <th data-field="dataset-collection_name"
+                        <th class="small" data-field="dataset-collection_name"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -120,6 +119,8 @@
                         <th data-field="dataset-provider"
                             data-sortable="true"
                             data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
                             data-switchable="true">
                             Provider
                         </th>
@@ -162,6 +163,7 @@
                         <th data-field="dataset-year"
                             data-sortable="true"
                             data-visible="true"
+                            data-value-type="int"
                             data-switchable="true">
                             Year
                         </th>
@@ -181,7 +183,7 @@
                             data-switchable="true">
                             Paper title
                         </th>
-                        <th data-field="dataset-domain"
+                        <th class="small" data-field="dataset-domain"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -191,7 +193,7 @@
                         </th>
                         <th data-field="dataset-modalities"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -203,7 +205,7 @@
                             data-field="audio-files-total_duration_minutes"
                             data-sortable="true"
                             data-visible="true"
-                            data-chartable="true"
+                            data-chartable="false"
                             data-value-type="int"
                             data-switchable="true">
                             Total <br>duration <br>(min)
@@ -231,7 +233,7 @@
 
                         <th data-field="audio-content-type"
                             data-sortable="true"
-                            data-visible="false"
+                            data-visible="true"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -245,6 +247,14 @@
                             data-switchable="true">
                             Scene <br>content
                         </th>
+                        <th data-field="audio-content-synthetic-event_instance_count"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-switchable="true">
+                            Unique <br> event <br>instances <br>in synthetic <br> mixtures
+                        </th>
+
+
                         <th data-field="audio-recording-setup"
                             data-sortable="true"
                             data-visible="false"
@@ -255,7 +265,7 @@
                         </th>
                         <th data-field="audio-recording-setup_count"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-filter-control="select"
                             data-switchable="true">
                             Recording <br>setups
@@ -270,13 +280,13 @@
                         </th>
                         <th data-field="audio-data-type"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
                             Data <br>type
                         </th>
-                        <th data-field="audio-data-material-source"
+                        <th class="small" data-field="audio-data-material-source"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -295,7 +305,7 @@
 
                         <th data-field="audio-data-file_format-type"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
@@ -349,7 +359,7 @@
 
                         <!-- META -->
                         <th data-field="meta-types"
-                            class="sep-left-cell"
+                            class="small sep-left-cell"
                             data-sortable="true"
                             data-visible="true"
                             data-tag="true"
@@ -361,18 +371,20 @@
                         <th data-field="meta-scene-classes"
                             class="sep-left-cell"
                             data-sortable="true"
-                            data-visible="true"
+                            data-visible="false"
                             data-value-type="int"
                             data-switchable="true">
-                            Scene <br>Classes
+                            Scene <br>classes
                         </th>
+
+
                         <th data-field="meta-scene-class_balance"
                             data-sortable="true"
                             data-visible="false"
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Class <br>balance
+                            Scene <br>class <br>balance
                         </th>
                         <th data-field="meta-scene-list"
                             data-sortable="true"
@@ -380,71 +392,218 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Class <br>list
+                            Scene <br>class <br>list
                         </th>
 
-                        <th data-field="meta-scene-annotation-type"
-                            data-sortable="true"
-                            data-visible="false"
-                            data-tag="true"
-                            data-filter-control="select"
-                            data-switchable="true">
-                            Annotation <br>type
-                        </th>
-                        <th data-field="meta-scene-annotation-source"
-                            data-sortable="true"
-                            data-visible="false"
-                            data-tag="true"
-                            data-filter-control="select"
-                            data-switchable="true">
-                            Annotation <br>source
-                        </th>
-                        <th data-field="meta-scene-annotation-annotations_per_item"
-                            data-sortable="true"
-                            data-visible="false"
-                            data-tag="true"
-                            data-filter-control="select"
-                            data-switchable="true">
-                            Annotations <br>per item
-                        </th>
-                        <th data-field="meta-scene-annotation-labelled_amount_percentage"
+                        <th data-field="meta-event-classes"
+                            class="sep-left-cell"
                             data-sortable="true"
                             data-visible="true"
-                            data-value-type="int-percentage"
-                            data-switchable="true">
-                            Labelled <br>amount
-                        </th>
-                        <th data-field="meta-scene-annotation-validated_amount_percentage"
-                            data-sortable="true"
-                            data-visible="false"
-                            data-value-type="int-percentage"
-                            data-switchable="true">
-                            Validated <br>amount
-                        </th>
-
-                        <th data-field="meta-scene-labeling-hierarchical"
-                            data-sortable="true"
-                            data-visible="false"
-                            data-tag="true"
-                            data-filter-control="select"
-                            data-switchable="true">
-                            Labeling / <br>hierarchical
-                        </th>
-
-                        <th data-field="meta-scene-instance-count"
-                            data-sortable="true"
-                            data-visible="false"
                             data-value-type="int"
                             data-switchable="true">
-                            Instance<br> count
+                            Event <br>classes
                         </th>
-                        <th data-field="meta-scene-instance-average_instaces_per_class"
+                        <th data-field="meta-event-list"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>list
+                        </th>
+                        <th data-field="meta-event-instance-count"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Event <br>instance<br> count
+                        </th>
+                        <th data-field="meta-event-instance-average_instaces_per_class"
                             data-sortable="true"
                             data-visible="false"
                             data-value-type="float1"
                             data-switchable="true">
-                            Instance<br> per class
+                            Event <br>instance<br> per class
                         </th>
+                        <th data-field="meta-event-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>class <br>balance
+                        </th>
+                        <th data-field="meta-event-annotation-type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>annotation<br> type
+                        </th>
+                        <th data-field="meta-event-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>annotation<br> source
+                        </th>
+                        <th data-field="meta-event-annotation-overlapping_event_instances"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>ann.<br> overlapping <br>instances
+                        </th>
+
+
+                        <th data-field="meta-event-annotation-labelled_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Event <br>ann.<br> labelled
+                        </th>
+                        <th data-field="meta-event-annotation-validated_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Event <br>ann.<br> validated
+                        </th>
+                        <th data-field="meta-event-annotation-strong_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Event <br>ann.<br> strong
+                        </th>
+
+                        <th data-field="meta-event-labeling-hierarchical"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>labeling / <br>hierarchical
+                        </th>
+
+                        <th data-field="meta-event-labeling-ontology_name"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Event <br>labeling / <br>ontology
+                        </th>
+
+
+
+
+                        <th data-field="meta-condition-classes"
+                            class="sep-left-cell"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Condition <br>classes
+                        </th>
+                        <th data-field="meta-condition-list"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>list
+                        </th>
+                        <th data-field="meta-condition-instance-count"
+                            data-sortable="true"
+                            data-visible="true"
+                            data-value-type="int"
+                            data-switchable="true">
+                            Condition <br>instance<br> count
+                        </th>
+                        <th data-field="meta-condition-instance-average_instaces_per_class"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="float1"
+                            data-switchable="true">
+                            Condition <br>instance<br> per class
+                        </th>
+                        <th data-field="meta-condition-class_balance"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>class <br>balance
+                        </th>
+                        <th data-field="meta-condition-annotation-type"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>annotation<br> type
+                        </th>
+                        <th data-field="meta-condition-annotation-source"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>annotation<br> source
+                        </th>
+                        <th data-field="meta-condition-annotation-overlapping_event_instances"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>ann.<br> overlapping <br>instances
+                        </th>
+
+
+                        <th data-field="meta-condition-annotation-labelled_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Condition <br>ann.<br> labelled
+                        </th>
+                        <th data-field="meta-condition-annotation-validated_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Condition <br>ann.<br> validated
+                        </th>
+                        <th data-field="meta-condition-annotation-strong_amount_percentage"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-value-type="int-percentage"
+                            data-switchable="true">
+                            Condition <br>ann.<br> strong
+                        </th>
+
+                        <th data-field="meta-condition-labeling-hierarchical"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>labeling / <br>hierarchical
+                        </th>
+
+                        <th data-field="meta-condition-labeling-ontology_name"
+                            data-sortable="true"
+                            data-visible="false"
+                            data-tag="true"
+                            data-filter-control="select"
+                            data-switchable="true">
+                            Condition <br>labeling / <br>ontology
+                        </th>
+
 
                         <!-- CROSS-VALIDATION SETUP -->
                         <th class="sep-left-cell"
@@ -497,7 +656,7 @@
                             data-tag="true"
                             data-filter-control="select"
                             data-switchable="true">
-                            Evaluation <br>campaigns
+                            Evaluation campaigns
                         </th>
                         <th data-field="info-comments"
                             class="sep-left-cell"
@@ -517,10 +676,10 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-md-6">
-                <h3>Acoustic scenes</h3>
-                <p>
-                    An <em>acoustic scene</em> is a descriptor for the surrounding acoustic environment defined by physical and social situations in the scene. The acoustic scene is identified by <em>scene label</em>, for example, “outdoor market”, “busy street”, and “office”. The goal of automatic acoustic scene classification is to classify a test recording into one of the predefined classes that characterize the environment in which it was recorded.
-                </p>
+                <h3>Anomalous sounds</h3>
+            <p>
+                This data list pulls together various type of datasets containing <em>anomalous sounds</em>. These datasets are suitable for research focusing on anomalous sound detection (ASD) where the task is to identify whether the sound emitted from a target device/machine is normal or anomalous.
+            </p>
             </div>
         </div>
     </div>
@@ -564,9 +723,14 @@
                 <div class="col-md-6">
                     <p>Audio content type:</p>
                     <ul>
-                        <li><strong>Freefield</strong>, audio captured in real uncontrolled environment</li>
-                        <li><strong>Synthetic</strong>, audio created synthetic means by mixing audio from various sources</li>
-                        <li><strong>Isolated</strong>, audio recorded in controlled environment where only single sound source is active at time</li>
+                        <li><strong>Freefield</strong>, audio captured in real uncontrolled environment
+                        </li>
+                        <li><strong>Synthetic</strong>, audio created synthetic means by mixing audio
+                            from various sources
+                        </li>
+                        <li><strong>Isolated</strong>, audio recorded in controlled environment where
+                            only single sound source is active at time
+                        </li>
                     </ul>
                     <p>Scene content:</p>
                     <ul>
@@ -604,18 +768,10 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
-                    <p>Variability source:</p>
-                    <ul>
-                        <li><strong>Country</strong></li>
-                        <li><strong>City</strong></li>
-                        <li><strong>Location</strong></li>
-                        <li><strong>Position</strong></li>
-                        <li><strong>Device</strong></li>
-                    </ul>
                     <p>Annotation type:</p>
                     <ul>
-                        <li><strong>Weak</strong>, scene class annotation done per audio recording</li>
-                        <li><strong>Strong</strong>, scene class annotation done with exact onsets and
+                        <li><strong>Weak</strong>, sound event class annotation done per audio recording</li>
+                        <li><strong>Strong</strong>, sound event class annotation done with exact onsets and
                             offsets
                         </li>
                         <li><strong>None</strong>, no annotation provided</li>
@@ -626,6 +782,13 @@
                         <li><strong>Crowdsourced</strong></li>
                         <li><strong>Synthetic</strong></li>
                         <li><strong>Location</strong></li>
+                    </ul>
+                    <p>Event annotation parameters:</p>
+                    <ul>
+                        <li><strong>Event ann. labelled</strong>, percentage of data that is labelled (weak or strong).</li>
+                        <li><strong>Event ann. validated</strong>, percentage of data that is validated by human.</li>
+                        <li><strong>Event ann. strong</strong>, percentage of data that is annotated with strong annotations.</li>
+
                     </ul>
                     <p>License type:</p>
                     <ul>

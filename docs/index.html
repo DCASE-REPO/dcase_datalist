@@ -146,6 +146,34 @@
 
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
+                <h2>Anomalous sounds</h2>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom:25px;">
+            <div class="col-md-2 top-center">
+                <a href="datasets_anomalous.html" title="Open collection">
+                    <span class="fa-stack fa-lg fa-4x icon-color-active">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa dc-large-scale fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+                <br>
+                <em class="text-muted"><span id="dataset_count_anomalous"></span> datasets</em>
+            </div>
+            <div class="col-md-8">
+                <p>
+                    This data list pulls together various type of datasets containing <em>anomalous sounds</em>. These datasets are suitable for research focusing on anomalous sound detection (ASD) where the task is to identify whether the sound emitted from a target device/machine is normal or anomalous.
+                </p>
+            </div>
+            <div class="col-md-2 top-center" style="padding-top:20px;">
+                <a href="datasets_anomalous.html" title="Open collection">
+                    <i class="fa fa-arrow-circle-right fa-lg fa-4x icon-color-active2" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
                 <h2>Audio captions</h2>
             </div>
         </div>
@@ -258,6 +286,9 @@
            });
            $.getJSON('datasets_captions.json', function(jd) {
                $('#dataset_count_captions').text(jd.length);
+           });
+           $.getJSON('datasets_anomalous.json', function(jd) {
+               $('#dataset_count_anomalous').text(jd.length);
            });
          });
       </script>
