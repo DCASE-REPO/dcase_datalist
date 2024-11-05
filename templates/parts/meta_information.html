@@ -117,6 +117,66 @@
         {% endif %}
     {% endif %}
 
+    {% if meta.condition is defined and meta.condition is not none %}
+        {{subheader('Condition',0, 1)}}
+        {% if meta.condition.classes is defined and meta.condition.classes is not none %}
+            {{row('Classes', meta.condition.classes, 'Number of condition classes',2)}}
+        {% endif %}
+
+        {% if meta.condition.class_balance is defined and meta.condition.class_balance is not none %}
+            {{row_label('Classes', meta.condition.class_balance, 'Possible values: True | False | Almost',2)}}
+        {% endif %}
+
+        {% if meta.condition.list is defined and meta.condition.list is not none %}
+            {{row('Classes', meta.condition.list, '',2)}}
+        {% endif %}
+
+        {% if meta.condition.annotation is defined %}
+            {{subheader('Annotation',0, 2)}}
+            {% if meta.condition.annotation.type is defined and meta.condition.annotation.type is not none %}
+                {{row_label('Type', meta.condition.annotation.type, 'Possible values: Strong | Weak | Location | None',3)}}
+            {% endif %}
+            {% if meta.condition.annotation.source is defined and meta.condition.annotation.source is not none %}
+                {{row_label('Source', meta.condition.annotation.source, 'Possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic | Operation',3)}}
+            {% endif %}
+            {% if meta.condition.annotation.annotations_per_item is defined and meta.condition.annotation.annotations_per_item is not none %}
+                {{row('Annotations per item', meta.condition.annotation.annotations_per_item, 'How many annotations there are available per item (possible multi-annotator setup)',3)}}
+            {% endif %}
+            {% if meta.condition.annotation.labelled_amount_percentage is defined and meta.condition.annotation.labelled_amount_percentage is not none %}
+                {{row('Labelled amount (%)', meta.condition.annotation.labelled_amount_percentage, 'Percentage of all data, amount of data which is labelled',3,'%')}}
+            {% endif %}
+            {% if meta.condition.annotation.validated_amount_percentage is defined and meta.condition.annotation.validated_amount_percentage is not none %}
+                {{row('Validated amount (%)', meta.condition.annotation.validated_amount_percentage, 'Percentage of all data, amount of data which is validated by human',3,'%')}}
+            {% endif %}
+            {% if meta.condition.annotation.strong_amount_percentage is defined and meta.condition.annotation.strong_amount_percentage is not none %}
+                {{row('Strong annotations amount (%)', meta.condition.annotation.strong_amount_percentage, 'Percentage of all data, amount of data which has strong annotations',3,'%')}}
+            {% endif %}
+            {% if meta.condition.annotation.overlapping_event_instances is defined and meta.condition.annotation.overlapping_event_instances is not none %}
+                {{row_bool('Overlapping event instances', meta.condition.annotation.overlapping_event_instances, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.condition.labeling is defined %}
+            {{subheader('Labeling',0, 2)}}
+            {% if meta.condition.labeling.hierarchical is defined and meta.condition.labeling.hierarchical is not none %}
+                {{row_bool('Hierarchical', meta.condition.labeling.hierarchical, '',3)}}
+            {% endif %}
+            {% if meta.condition.labeling.ontology_name is defined and meta.condition.labeling.ontology_name is not none %}
+                {{row_bool('Ontology name', meta.condition.labeling.ontology_name, '',3)}}
+            {% endif %}
+        {% endif %}
+
+        {% if meta.condition.instance is defined %}
+            {{subheader('Instance',0, 2)}}
+            {% if meta.condition.instance.count is defined and meta.condition.instance.count is not none %}
+                {{row('Count', meta.condition.instance.count, 'Count of all event instances in the dataset',3)}}
+            {% endif %}
+            {% if meta.condition.instance.average_instances_per_class is defined and meta.condition.instance.average_instances_per_class is not none %}
+                {{row('Average instances per class', meta.condition.instance.average_instances_per_class, 'Average per class instance count',3)}}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
     {% if meta.caption is defined %}
         {{subheader('Caption',0, 1)}}
 

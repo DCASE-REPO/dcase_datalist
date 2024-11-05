@@ -12,7 +12,7 @@ dataset:
 
   download: 
     url: https://drive.google.com/file/d/1jyEwyY7TqevOqwMzM1kmWf7gbhrT4Yj0/view
-    size: 7,4GB
+    size: 7.4GB
 
   companion_site: https://github.com/allholy/BSD10k
 
