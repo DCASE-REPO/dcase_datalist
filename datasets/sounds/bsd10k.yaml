@@ -17,7 +17,7 @@ dataset:
   companion_site: https://github.com/allholy/BSD10k
 
   citation:
-    ref: https://arxiv.org/abs/2410.00980
+    ref: https://arxiv.org/abs/2410.00980;Anastasopoulou2024
     title: Heterogeneous sound classification with the Broad Sound Taxonomy and Dataset
 
 # === AUDIO ===
