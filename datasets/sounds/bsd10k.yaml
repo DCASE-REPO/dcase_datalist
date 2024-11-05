@@ -1,0 +1,114 @@
+# === DATASET ===
+dataset:
+  name: BSD10k
+  provider: UPF
+  abbreviation: BSD10k            
+  year: 2024        
+  modalities: Audio
+  collection_name: Broad Sound Dataset (BSD)  
+  domain: Weak annotation, Isolated sounds, Acoustic scenes
+
+  license: Creative Commons 
+
+  download: 
+    url: https://drive.google.com/file/d/1jyEwyY7TqevOqwMzM1kmWf7gbhrT4Yj0/view
+    size: 7,4GB
+
+  companion_site: https://github.com/allholy/BSD10k
+
+  citation:
+    ref: https://arxiv.org/abs/2410.00980;Anastasopoulou2024
+    title: Heterogeneous sound classification with the Broad Sound Taxonomy and Dataset
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio
+    file_format:
+      type: Constant
+      format: wav
+      lossy_compression: No
+      bit_rate: 16
+      sampling_rate_khz: 44.1
+
+    channels:
+      setup: Mono
+      number: 1
+
+    material:
+      source: Freesound
+
+  content:
+    type: Freefield
+    scene: Variable
+
+  recording:
+    setup: Unknown
+    spot_type: Unknown
+
+  files:
+    total_count: 10309         
+    total_duration_minutes: 1950
+    file_length: Variable
+    file_length_seconds: 0-30
+
+# === META ===
+meta:
+  types: Tag
+
+  scene:
+    class_balance: No
+
+  event:
+    classes: 23
+    class_balance: No
+    list:
+      - Solo percussion
+      - Solo instrument
+      - Multiple instruments
+      - Percussion
+      - String
+      - Wind
+      - Piano / Keyboard instruments
+      - Synths / Electronic
+      - Solo
+      - Conversation / Crowd
+      - Processed / Synthetic
+      - Objects / House appliances
+      - Vehicles
+      - Other mechanisms, engines, machines
+      - Human sounds and actions
+      - Animals
+      - Natural elements and explosions
+      - Experimental
+      - Electronic / Design
+      - Nature
+      - Indoors
+      - Urban
+      - Synthetic / Artificial
+
+    annotation:
+      type: Weak
+      source: Experts
+      annotations_per_item: 1
+      labelled_amount_percentage: 100
+      validated_amount_percentage: 100
+
+    labeling:
+      hierarchical: Yes
+      ontology_name: Broad Sound Taxonomy
+
+    instance:
+      count: 10309                      
+      average_instances_per_class: 448.2
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes
+  folds: 1
+  sets: Train, Test
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://arxiv.org/abs/2410.00980
+
