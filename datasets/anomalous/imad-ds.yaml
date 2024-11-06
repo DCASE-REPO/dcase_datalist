@@ -72,7 +72,7 @@ meta:
     list:                               # [list], list of scene classes
 
   event:
-    classes:                            # [int], Number of sound event classes, e.g. types of machines
+    classes: 2                          # [int], Number of sound event classes, e.g. types of machines
     class_balance: No                   # [string], possible values: Yes | No | Almost
     list:                               # [list], list of event classes
       - RoboticArm
@@ -132,8 +132,5 @@ baseline:
 
 # === INFO ===
 info:
-  evaluation_campaign: DCASE2024 task2  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
   comments:                             # [string], comments
-
-# === DEBUG ===
-skip:                                   # [bool], extra field to temporally omit dataset from listings, can be used while collecting meta information for the dataset, possible values: Yes | No
