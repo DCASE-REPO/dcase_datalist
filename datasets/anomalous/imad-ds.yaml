@@ -1,0 +1,136 @@
+# === DATASET ===
+dataset:
+  name: IMAD-DS                         # [string], Full dataset name
+  provider: STMicroelectronics          # [string]
+  abbreviation: IMAD-DS                 # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year: 2024                            # [int], Release year
+  modalities: Audio, vibrations (accelerometer), angular velocity (gyroscope) # [list], data modalities included in the dataset, possible values: Audio | Video
+  collection_name: IMAD-DS              # [string], common name for all related datasets, used to group datasets coming from same source
+  domain: ASD                           # [list], related domains, e.g., ASD, first-shot, unsupervised, domain shift,
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, CC BY-SA 4.0 # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://zenodo.org/records/12636236 # [url], Link to download the dataset
+    size: 5.1GB                              # [string], Approximate package size (unit GB, MB)
+
+  companion_site:                       # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://dcase.community/documents/workshop2024/proceedings/DCASE2024Workshop_Albertini_45.pdf;Albertini2024 # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title: "IMAD-DS: A Dataset for Industrial Multi-Sensor Anomaly Detection Under Domain Shift Conditions"                             # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio                         # [string], data type, possible values: Audio | Features
+    file_format:
+      type:                             # [string], possible values: Constant | Variable
+      format:                           # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression:                # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate: 16                      # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz: 16             # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono                       # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number: 1                         # [int], Number of channels
+
+    material:
+      source: Original                  # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list]
+
+  content:
+    type: Freefield                     # [list], content type, possible values: Freefield | Synthetic | Isolated
+    scene: Constant                     # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+    event:
+      spatial_location: Constant        # [string], possible values: Constant | Moving | Unknown
+
+    synthetic:
+      event_instance_count:             # [int], amount of unique sound event instances used in synthetic mixture generation
+
+  recording:
+    setup: Near-field                   # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count: 1                      # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Fixed                    # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count:                        # [int], Total number of files
+    total_duration_minutes:             # [int], Total duration of the dataset in minutes
+    file_length:                        # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds:                # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types: Condition, Event               # [list], list of meta data types provided for the data,
+                                        # possible values: Condition, Event, Tag, Scene, Caption, Geolocation, Spatial location, Annotator, Timestamp, Presence, Proximity, etc.
+  scene:
+    classes:                            # [int], Number of scene classes
+    class_balance:                      # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+
+  event:
+    classes: 2                          # [int], Number of sound event classes, e.g. types of machines
+    class_balance: No                   # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
+      - RoboticArm
+      - BrushlessMotor
+
+    annotation:
+      type: Weak                        # [string], possible values: Strong | Weak | Location | None
+      source: Experts                   # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic
+      annotations_per_item: 1           # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100   # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage: 100  # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+      overlapping_event_instances:      # [string], possible values: Yes | No
+
+    labeling:
+      hierarchical: No                  # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instances_per_class:      # [float], average per class instance count
+
+  condition:
+    classes: 2                          # [int], Number of states/condition, e.g 2 when normal/anomalous condition annotated
+    class_balance: No                   # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of event classes
+      - normal
+      - abnormal
+
+    annotation:
+      type: Weak                        # [string], possible values: Strong | Weak | Location | None
+      source: Operation                 # [string], possible values: Experts | Crowdsourced | Synthetic | Metadata | Automatic | Operation
+      annotations_per_item: 1           # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100   # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage: 100  # [float], Percentage of all data, amount of data which is validated by human
+      strong_amount_percentage:         # [float], Percentage of all data, amount of data which has strong annotations
+      overlapping_event_instances: no   # [string], possible values: Yes | No
+
+    labeling:
+      hierarchical:                     # [bool], possible values: Yes | No
+      ontology_name:                    # [string], possible values: Dataset specific | AudioSet | SONYC | Urban Sound Taxonomy
+
+    instance:
+      count:                            # [int], Count of all event instances in the dataset
+      average_instances_per_class:      # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: No                          # [bool], Is data splits provided, possible values: Yes | No
+  folds:                                # [int], how many folds provided
+  sets:                                 # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/augustif/IMAD-DS_baseline # [url], Link to baseline system source code
+  ref: https://dcase.community/workshop2024/proceedings;Albertini2024 # [url];[key], Paper to cite for the baseline
+
+# === INFO ===
+info:
+  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  comments:                             # [string], comments
