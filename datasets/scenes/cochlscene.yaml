@@ -1,0 +1,110 @@
+# === DATASET ===
+dataset:
+  name: "CochlScene: Acquisition of Acoustic Scene Data Using Crowdsourcing" # [string], Full dataset name
+  provider: Cochl                       # [string]
+  abbreviation: CochlScene              # [string], Official dataset abbreviation, e.g. one used in the original paper
+  year: 2022                            # [int], Release year
+  modalities: Audio                     # [list], data modalities included in the dataset, possible values: Audio | Video
+  collection_name: CochlScene           # [string], common name for all related datasets, used to group datasets coming from same source
+  domain: Scenes, Crowdsourcing         # [list], related domains, e.g., Scenes, Mobile devices, Audio-visual, Open set, Ambient noise, Unlabelled, Multiple sensors
+  related_datasets:                     # [list], related datasets (name or abbreviation)
+
+  license: Creative Commons, CC BY-SA 3.0 # [string], possible values: Creative Commons | Free | Non-commercial | Commercial | Proprietary | R&D only
+                                        # In case of Creative commons license, one can add licence type too, e.g., "Creative Commons, CC BY-SA 3.0"
+
+  download:
+    url: https://zenodo.org/records/7080122 # [url], Link to download the dataset
+    size: 53.3GB                        # [string], Approximate package size (unit GB, MB)
+
+  companion_site: https://github.com/cochlearai/cochlscene  # [url], Link to the companion site for the dataset, in case of single source, use data_url-field
+
+  citation:
+    ref: https://arxiv.org/pdf/2211.02289;Jeong2022  # [url];[key], Paper to cite for the dataset, URL to access the PDF
+    title: "CochlScene: Acquisition of acoustic scene data using crowdsourcing"  # [string], Paper title, use quotes if title contains colons
+
+# === AUDIO ===
+audio:
+  data:
+    type: Audio                         # [string], data type, possible values: Audio | Features
+    file_format:
+      type: Constant                    # [string], possible values: Constant | Variable
+      format: wav                       # [string], Audio file format, possible value: wav | aiff | flac | mp3 | aac | ogg
+      lossy_compression: No             # [bool], is audio compressed in a lossy manner, possible values: Yes | No
+      bit_rate: 16                      # [int], Bit depth of audio, possible values: 8 | 16 | 24 | 32
+      sampling_rate_khz: 44.1           # [float], Sampling rate in KHz, possible values: 8 | 16 | 22.05 | 32 | 44.1 | 48
+
+    channels:
+      setup: Mono                       # [string], possible values: Mono | Stereo | Binaural | Ambisonic | Array | Multi-Channel | Variable
+      number: 1                         # [int], Number of channels
+
+    material:
+      source: Crowdsourced              # [string or list], possible values: Original | Youtube | Freesound | Online | Crowdsourced | [Dataset name]
+      variability_sources:              # [list], possible values: Country | City | Location | Position | Device
+
+  content:
+    type: Freefield                     # [list], content type, possible values: Freefield | Synthetic | Isolated
+    scene: Constant                     # [string], is the scene class constant for single recording, possible values: Constant | Variable
+
+  recording:
+    setup: Uncontrolled                 # [string], possible values: Near-field | Far-field | Mixed | Uncontrolled | Unknown
+    setup_count: 831                    # [int], amount of different recording setups (microphone and recording device) used
+    spot_type: Unknown                  # [string], possible values: Fixed | Moving | Unknown
+
+  files:
+    total_count: 76115                  # [int], Total number of files
+    total_duration_minutes: 12685.8     # [int], Total duration of the dataset in minutes
+    file_length: Constant               # [string], Characterization of the file lengths, possible values: Constant | Quasi-constant | Variable
+    file_length_seconds: 10             # [string], Approximate length of files, can use also 4-10 notation
+
+# === META ===
+meta:
+  types:                                # [list], list of meta data types provided for the data,
+    - Scene                             # possible values: Event, Scene, Geolocation, Spatial location, etc.
+
+  scene:
+    classes: 13                         # [int], Number of scene classes
+    class_balance: Almost               # [string], possible values: Yes | No | Almost
+    list:                               # [list], list of scene classes
+      - bus
+      - cafe
+      - car
+      - crowded indoor
+      - elevator
+      - kitchen
+      - park
+      - residential area
+      - restaurant
+      - restroom
+      - street
+      - subway
+      - subway station
+    annotation:
+      type: Weak                        # [string], possible values: Strong | Weak | None
+      source: Crowdsourced              # [string], possible values: Experts | Crowdsourced | Synthetic | Location
+      annotations_per_item: 1           # [int], How many annotations there are available per item (possible multi-annotator setup)
+      labelled_amount_percentage: 100   # [float], Percentage of all data, amount of data which is labelled
+      validated_amount_percentage: 100  # [float], Percentage of all data, amount of data which is validated by human
+
+    labeling:
+      hierarchical: No                    # [bool], possible values: Yes | No
+
+    instance:
+      count: 76115                       # [int], Count of all scene instances in the dataset
+      average_instances_per_class: 5855  # [float], average per class instance count
+
+# === CROSS-VALIDATION SETUP ===
+split:
+  provided: Yes                         # [bool], Is data splits provided, possible values: Yes | No
+  folds: 1                              # [int], how many folds provided
+  sets: Train, Val, Test                # [string or list], set types provided in the split, if string use a comma separated list, possible values: Train | Test | Val | Dev | Eval
+
+# === BASELINE SYSTEM ===
+baseline:
+  url: https://github.com/cochlearai/cochlscene                                 # [url], Link to baseline system source code
+  ref: https://arxiv.org/pdf/2211.02289;Jeong2022                                 # [url];[key], Paper to cite for the baseline
+
+# === INFO ===
+info:
+  evaluation_campaign:                  # [string or list], if string use a comma separated list, Evaluation campaign where used e.g. DCASE2016 task1, DCASE2018 task4, CLEAR 2016, etc.
+  comments:                             # [string], comments
+
