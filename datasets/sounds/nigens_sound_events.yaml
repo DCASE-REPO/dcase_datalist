@@ -11,7 +11,7 @@ dataset:
     - GRID
     - TIMIT
 
-  license: Creative Commons, CC BY 4.0
+  license: Creative Commons, CC BY-NC-ND 4.0
 
   download:
     url: https://zenodo.org/record/2535878
